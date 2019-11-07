@@ -13,10 +13,9 @@ end ProgramCounterTopLevel;
 
 architecture behavioral of ProgramCounterTopLevel is
 
-signal DFFinD_iINMUXin0 : std_logic_vector(7 downto 0);
-signal DFFinCLK_OUTMUXout : std_logic_vector (7 downto 0);
-signal DFFoutQN_OUTMUXin0 : std_logic_vector (7 downto 0);
-
+signal DATA_DMUX_BitFF: std_logic_vector(7 downto 0);
+signal COUNT_CMUX_BitFF : std_logic_vector (7 downto 0);
+signal COUNT_BitFF_CMUX_DMUX : std_logic_vector (7 downto 0);
 
 component DFF_1 is
 port
@@ -44,18 +43,22 @@ end component;
 
 begin
 GenerateDFFs:
-for i  in 1 to 7 generate 
-DFFn : DFF_1 port map (DFFinD_iINMUXin0(i),DFFinCLK_OUTMUXout(i),RESET,PC_COUNT_OUT(i),DFFoutQN_OUTMUXin0(i));
-end generate;
-
-GenerateINMUX:
 for i  in 0 to 7 generate 
-INMUX : MUX_2_1 port map (DFFinD_iINMUXin0(i) , PC_DATA_IN(i) ,LOAD , DFFoutQN_OUTMUXin0(i));
+DFFn : DFF_1 port map (DATA_DMUX_BitFF(i),COUNT_CMUX_BitFF(i),RESET ,PC_COUNT_OUT(i),COUNT_BitFF_CMUX_DMUX(i));
 end generate;
 
-GenerateOUTMUX:
+GenerateDMUX:
+for i  in 0 to 7 generate 
+DMUX : MUX_2_1 port map (COUNT_BitFF_CMUX_DMUX(i) , PC_DATA_IN(i) ,LOAD , DATA_DMUX_BitFF(i));
+end generate;
+
+
+CMUX1 : MUX_2_1 port map (COUNT , WRITE_DATA ,LOAD , COUNT_CMUX_BitFF(0));
+
+
+GenerateCMUX:
 for i  in 1 to 7 generate 
-outMUX : MUX_2_1 port map (DFFoutQN_OUTMUXin0(i) , WRITE_DATA ,LOAD , DFFinCLK_OUTMUXout(i));
+CMUX : MUX_2_1 port map (COUNT_BitFF_CMUX_DMUX(i) , WRITE_DATA ,LOAD , COUNT_CMUX_BitFF(i));
 end generate;
 
 end;

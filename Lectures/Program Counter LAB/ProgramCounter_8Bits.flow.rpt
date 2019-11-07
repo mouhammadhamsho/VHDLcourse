@@ -1,6 +1,6 @@
 Flow report for ProgramCounter_8Bits
-Mon Nov 04 00:29:26 2019
-Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+Thu Nov 07 20:46:58 2019
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
 ---------------------
@@ -13,13 +13,15 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
   5. Flow Elapsed Time
   6. Flow OS Summary
   7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2010 Altera Corporation
+Copyright (C) 1991-2013 Altera Corporation
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -35,26 +37,26 @@ applicable agreement for further details.
 
 
 
-+------------------------------------------------------------------------------+
-; Flow Summary                                                                 ;
-+-------------------------------+----------------------------------------------+
-; Flow Status                   ; Flow Failed - Mon Nov 04 00:29:26 2019       ;
-; Quartus II Version            ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
-; Revision Name                 ; ProgramCounter_8Bits                         ;
-; Top-level Entity Name         ; ProgramCounterTopLevel                       ;
-; Family                        ; Stratix II                                   ;
-; Met timing requirements       ; N/A                                          ;
-; Logic utilization             ; N/A until Partition Merge                    ;
-;     Combinational ALUTs       ; N/A until Partition Merge                    ;
-;     Dedicated logic registers ; N/A until Partition Merge                    ;
-; Total registers               ; N/A until Partition Merge                    ;
-; Total pins                    ; N/A until Partition Merge                    ;
-; Total virtual pins            ; N/A until Partition Merge                    ;
-; Total block memory bits       ; N/A until Partition Merge                    ;
-; DSP block 9-bit elements      ; N/A until Partition Merge                    ;
-; Total PLLs                    ; N/A until Partition Merge                    ;
-; Total DLLs                    ; N/A until Partition Merge                    ;
-+-------------------------------+----------------------------------------------+
++---------------------------------------------------------------------------------+
+; Flow Summary                                                                    ;
++------------------------------------+--------------------------------------------+
+; Flow Status                        ; Successful - Thu Nov 07 20:46:58 2019      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; ProgramCounter_8Bits                       ;
+; Top-level Entity Name              ; ProgramCounterTopLevel                     ;
+; Family                             ; Cyclone IV E                               ;
+; Device                             ; EP4CE10F17I7                               ;
+; Timing Models                      ; Final                                      ;
+; Total logic elements               ; 36 / 10,320 ( < 1 % )                      ;
+;     Total combinational functions  ; 24 / 10,320 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 16 / 10,320 ( < 1 % )                      ;
+; Total registers                    ; 16                                         ;
+; Total pins                         ; 20 / 180 ( 11 % )                          ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0 / 423,936 ( 0 % )                        ;
+; Embedded Multiplier 9-bit elements ; 0 / 46 ( 0 % )                             ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                              ;
++------------------------------------+--------------------------------------------+
 
 
 +------------------------------------------+
@@ -62,7 +64,7 @@ applicable agreement for further details.
 +-------------------+----------------------+
 ; Option            ; Setting              ;
 +-------------------+----------------------+
-; Start date & time ; 11/04/2019 00:29:25  ;
+; Start date & time ; 11/07/2019 20:46:43  ;
 ; Main task         ; Compilation          ;
 ; Revision Name     ; ProgramCounter_8Bits ;
 +-------------------+----------------------+
@@ -73,41 +75,56 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------+----------------------+------------------------+----------------+
 ; Assignment Name                      ; Value                           ; Default Value        ; Entity Name            ; Section Id     ;
 +--------------------------------------+---------------------------------+----------------------+------------------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 180649687681063.157281656535984 ; --                   ; --                     ; --             ;
+; COMPILER_SIGNATURE_ID                ; 180649687681063.157315960308876 ; --                   ; --                     ; --             ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Timers                          ; --                   ; --                     ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                            ; --                   ; --                     ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)          ; <None>               ; --                     ; --             ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                 ; --                   ; --                     ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP               ; 100                             ; --                   ; --                     ; --             ;
+; MIN_CORE_JUNCTION_TEMP               ; -40                             ; --                   ; --                     ; --             ;
 ; PARTITION_COLOR                      ; 16764057                        ; --                   ; ProgramCounterTopLevel ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING           ; --                   ; ProgramCounterTopLevel ; Top            ;
 ; PARTITION_NETLIST_TYPE               ; SOURCE                          ; --                   ; ProgramCounterTopLevel ; Top            ;
 ; TOP_LEVEL_ENTITY                     ; ProgramCounterTopLevel          ; ProgramCounter_8Bits ; --                     ; --             ;
 ; USE_GENERATED_PHYSICAL_CONSTRAINTS   ; Off                             ; --                   ; --                     ; eda_blast_fpga ;
 +--------------------------------------+---------------------------------+----------------------+------------------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:02     ; 1.0                     ; 246 MB              ; 00:00:01                           ;
-; Total                ; 00:00:02     ; --                      ; --                  ; 00:00:01                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 536 MB              ; 00:00:01                           ;
+; Fitter                    ; 00:00:05     ; 1.0                     ; 834 MB              ; 00:00:05                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 452 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 496 MB              ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 427 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:11     ; --                      ; --                  ; 00:00:10                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+---------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                       ;
-+----------------------+------------------+---------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
-+----------------------+------------------+---------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-NNDVAI0  ; Windows Vista ; 6.2        ; x86_64         ;
-+----------------------+------------------+---------------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; DESKTOP-G25O981  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; DESKTOP-G25O981  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; DESKTOP-G25O981  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-G25O981  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-G25O981  ; Windows 7 ; 6.2        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off ProgramCounter_8Bits -c ProgramCounter_8Bits
+quartus_fit --read_settings_files=off --write_settings_files=off ProgramCounter_8Bits -c ProgramCounter_8Bits
+quartus_asm --read_settings_files=off --write_settings_files=off ProgramCounter_8Bits -c ProgramCounter_8Bits
+quartus_sta ProgramCounter_8Bits -c ProgramCounter_8Bits
+quartus_eda --read_settings_files=off --write_settings_files=off ProgramCounter_8Bits -c ProgramCounter_8Bits
 
 
 
