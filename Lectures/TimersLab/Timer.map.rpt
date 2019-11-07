@@ -1,0 +1,453 @@
+Analysis & Synthesis report for Timer
+Sat Oct 26 02:27:18 2019
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Inverted Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |T18_Timer
+ 12. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                 ;
++-------------------------------+----------------------------------------------+
+; Analysis & Synthesis Status   ; Successful - Sat Oct 26 02:27:18 2019        ;
+; Quartus II Version            ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
+; Revision Name                 ; Timer                                        ;
+; Top-level Entity Name         ; T18_Timer                                    ;
+; Family                        ; Stratix II                                   ;
+; Logic utilization             ; N/A                                          ;
+;     Combinational ALUTs       ; 81                                           ;
+;     Dedicated logic registers ; 64                                           ;
+; Total registers               ; 64                                           ;
+; Total pins                    ; 66                                           ;
+; Total virtual pins            ; 0                                            ;
+; Total block memory bits       ; 0                                            ;
+; DSP block 9-bit elements      ; 0                                            ;
+; Total PLLs                    ; 0                                            ;
+; Total DLLs                    ; 0                                            ;
++-------------------------------+----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; T18_Timer          ; Timer              ;
+; Family name                                                                ; Stratix II         ; Stratix II         ;
+; Use Generated Physical Constraints File                                    ; Off                ;                    ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                               ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                  ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------+
+; T18_Timer.vhd                    ; yes             ; User VHDL File  ; E:/MyFiles/Courses/VHDL fromwire to datapath/Lectures/TimersLab/T18_Timer.vhd ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++-----------------------------------------------+-------+
+; Resource                                      ; Usage ;
++-----------------------------------------------+-------+
+; Estimated ALUTs Used                          ; 81    ;
+; Dedicated logic registers                     ; 64    ;
+;                                               ;       ;
+; Estimated ALUTs Unavailable                   ; 11    ;
+;                                               ;       ;
+; Total combinational functions                 ; 81    ;
+; Combinational ALUT usage by number of inputs  ;       ;
+;     -- 7 input functions                      ; 0     ;
+;     -- 6 input functions                      ; 11    ;
+;     -- 5 input functions                      ; 2     ;
+;     -- 4 input functions                      ; 0     ;
+;     -- <=3 input functions                    ; 68    ;
+;                                               ;       ;
+; Combinational ALUTs by mode                   ;       ;
+;     -- normal mode                            ; 17    ;
+;     -- extended LUT mode                      ; 0     ;
+;     -- arithmetic mode                        ; 64    ;
+;     -- shared arithmetic mode                 ; 0     ;
+;                                               ;       ;
+; Estimated ALUT/register pairs used            ; 92    ;
+;                                               ;       ;
+; Total registers                               ; 64    ;
+;     -- Dedicated logic registers              ; 64    ;
+;     -- I/O registers                          ; 0     ;
+;                                               ;       ;
+; Estimated ALMs:  partially or completely used ; 46    ;
+;                                               ;       ;
+; I/O pins                                      ; 66    ;
+; Maximum fan-out node                          ; Clk   ;
+; Maximum fan-out                               ; 64    ;
+; Total fan-out                                 ; 530   ;
+; Average fan-out                               ; 2.51  ;
++-----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                           ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+; |T18_Timer                 ; 81 (81)           ; 64 (64)      ; 0                 ; 0            ; 0       ; 0         ; 0         ; 66   ; 0            ; |T18_Timer          ; work         ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 64    ;
+; Number of registers using Synchronous Clear  ; 62    ;
+; Number of registers using Synchronous Load   ; 32    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; Ticks[0]                               ; 3       ;
+; Ticks[31]                              ; 3       ;
+; Total number of inverted registers = 2 ;         ;
++----------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+; 3:1                ; 30 bits   ; 60 ALUTs      ; 0 ALUTs              ; 60 ALUTs               ; Yes        ; |T18_Timer|Ticks[23]        ;
+; 4:1                ; 32 bits   ; 64 ALUTs      ; 0 ALUTs              ; 64 ALUTs               ; Yes        ; |T18_Timer|Seconds[30]~reg0 ;
+; 3:1                ; 2 bits    ; 4 ALUTs       ; 4 ALUTs              ; 0 ALUTs                ; Yes        ; |T18_Timer|Ticks[0]         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |T18_Timer ;
++------------------+-------+------------------------------------------------+
+; Parameter Name   ; Value ; Type                                           ;
++------------------+-------+------------------------------------------------+
+; ClockFrequencyHz ; 10    ; Signed Integer                                 ;
++------------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sat Oct 26 02:27:17 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Timer -c Timer
+Info: Found 2 design units, including 1 entities, in source file t18_timer.vhd
+    Info: Found design unit 1: T18_Timer-rtl
+    Info: Found entity 1: T18_Timer
+Info: Found 2 design units, including 1 entities, in source file t18_timertb.vhd
+    Info: Found design unit 1: T18_TimerTb-sim
+    Info: Found entity 1: T18_TimerTb
+Info: Elaborating entity "T18_Timer" for the top level hierarchy
+Warning: The following nodes have both tri-state and non-tri-state drivers
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[0]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[1]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[2]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[3]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[4]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[5]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[6]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[7]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[8]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[9]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[10]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[11]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[12]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[13]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[14]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[15]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[16]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[17]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[18]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[19]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[20]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[21]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[22]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[23]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[24]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[25]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[26]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[27]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[28]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[29]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[30]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "Seconds[31]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[0]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[1]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[2]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[3]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[4]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[5]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[6]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[7]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[8]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[9]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[10]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[11]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[12]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[13]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[14]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[15]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[16]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[17]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[18]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[19]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[20]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[21]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[22]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[23]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[24]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[25]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[26]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[27]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[28]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[29]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[30]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "o_Ticks[31]" and its non-tri-state driver.
+Info: One or more bidirs are fed by always enabled tri-state buffers
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[0]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[1]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[2]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[3]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[4]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[5]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[6]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[7]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[8]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[9]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[10]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[11]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[12]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[13]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[14]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[15]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[16]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[17]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[18]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[19]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[20]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[21]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[22]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[23]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[24]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[25]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[26]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[27]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[28]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[29]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[30]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "Seconds[31]" is moved to its source
+Warning: TRI or OPNDRN buffers permanently enabled
+    Warning: Node "Seconds[0]~synth"
+    Warning: Node "Seconds[1]~synth"
+    Warning: Node "Seconds[2]~synth"
+    Warning: Node "Seconds[3]~synth"
+    Warning: Node "Seconds[4]~synth"
+    Warning: Node "Seconds[5]~synth"
+    Warning: Node "Seconds[6]~synth"
+    Warning: Node "Seconds[7]~synth"
+    Warning: Node "Seconds[8]~synth"
+    Warning: Node "Seconds[9]~synth"
+    Warning: Node "Seconds[10]~synth"
+    Warning: Node "Seconds[11]~synth"
+    Warning: Node "Seconds[12]~synth"
+    Warning: Node "Seconds[13]~synth"
+    Warning: Node "Seconds[14]~synth"
+    Warning: Node "Seconds[15]~synth"
+    Warning: Node "Seconds[16]~synth"
+    Warning: Node "Seconds[17]~synth"
+    Warning: Node "Seconds[18]~synth"
+    Warning: Node "Seconds[19]~synth"
+    Warning: Node "Seconds[20]~synth"
+    Warning: Node "Seconds[21]~synth"
+    Warning: Node "Seconds[22]~synth"
+    Warning: Node "Seconds[23]~synth"
+    Warning: Node "Seconds[24]~synth"
+    Warning: Node "Seconds[25]~synth"
+    Warning: Node "Seconds[26]~synth"
+    Warning: Node "Seconds[27]~synth"
+    Warning: Node "Seconds[28]~synth"
+    Warning: Node "Seconds[29]~synth"
+    Warning: Node "Seconds[30]~synth"
+    Warning: Node "Seconds[31]~synth"
+    Warning: Node "o_Ticks[0]~synth"
+    Warning: Node "o_Ticks[1]~synth"
+    Warning: Node "o_Ticks[2]~synth"
+    Warning: Node "o_Ticks[3]~synth"
+    Warning: Node "o_Ticks[4]~synth"
+    Warning: Node "o_Ticks[5]~synth"
+    Warning: Node "o_Ticks[6]~synth"
+    Warning: Node "o_Ticks[7]~synth"
+    Warning: Node "o_Ticks[8]~synth"
+    Warning: Node "o_Ticks[9]~synth"
+    Warning: Node "o_Ticks[10]~synth"
+    Warning: Node "o_Ticks[11]~synth"
+    Warning: Node "o_Ticks[12]~synth"
+    Warning: Node "o_Ticks[13]~synth"
+    Warning: Node "o_Ticks[14]~synth"
+    Warning: Node "o_Ticks[15]~synth"
+    Warning: Node "o_Ticks[16]~synth"
+    Warning: Node "o_Ticks[17]~synth"
+    Warning: Node "o_Ticks[18]~synth"
+    Warning: Node "o_Ticks[19]~synth"
+    Warning: Node "o_Ticks[20]~synth"
+    Warning: Node "o_Ticks[21]~synth"
+    Warning: Node "o_Ticks[22]~synth"
+    Warning: Node "o_Ticks[23]~synth"
+    Warning: Node "o_Ticks[24]~synth"
+    Warning: Node "o_Ticks[25]~synth"
+    Warning: Node "o_Ticks[26]~synth"
+    Warning: Node "o_Ticks[27]~synth"
+    Warning: Node "o_Ticks[28]~synth"
+    Warning: Node "o_Ticks[29]~synth"
+    Warning: Node "o_Ticks[30]~synth"
+    Warning: Node "o_Ticks[31]~synth"
+Warning: Ignored assignments for entity "Timer" -- entity does not exist in design
+    Warning: Assignment for entity set_global_assignment -name LL_ROOT_REGION ON -entity Timer -section_id "Root Region" was ignored
+    Warning: Assignment for entity set_global_assignment -name LL_MEMBER_STATE LOCKED -entity Timer -section_id "Root Region" was ignored
+Info: Implemented 147 device resources after synthesis - the final resource count might be different
+    Info: Implemented 2 input pins
+    Info: Implemented 0 output pins
+    Info: Implemented 64 bidirectional pins
+    Info: Implemented 81 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 133 warnings
+    Info: Peak virtual memory: 247 megabytes
+    Info: Processing ended: Sat Oct 26 02:27:18 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
+
+

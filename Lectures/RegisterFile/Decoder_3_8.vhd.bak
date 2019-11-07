@@ -1,0 +1,37 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity Decoder_3_8 is 
+port
+(SEL : in std_logic_vector(2 downto 0) ;
+ DecoderEN : in std_logic;
+ OutputDecode :out std_logic_vector(7 downto 0)
+);
+
+end Decoder_3_8 ;
+
+architecture behavioral of Decoder_3_8 is 
+begin
+process (SEL , DecoderEN)
+begin
+if (DecoderEN='1') THEN
+case SEL is
+
+
+when "000" => OutputDecode <= "00000001";
+when "001" => OutputDecode <= "00000010";  
+when "010" => OutputDecode <= "00000100";
+when "011" => OutputDecode <= "00001000";
+when "100" => OutputDecode <= "00010000";
+when "101" => OutputDecode <= "00100000";
+when "110" => OutputDecode <= "01000000";
+when "111" => OutputDecode <= "10000000";
+when others =>OutputDecode <= "00000000";
+
+end case;
+else
+OutputDecode <= "00000000"
+End if;
+end process;
+end behavioral ;
+

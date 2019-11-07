@@ -1,0 +1,89 @@
+WED
+
+	Undo Commands
+	     1.	Edit Waveform
+	     2.	Edit Waveform
+	     3.	Edit Waveform
+	     4.	Edit Waveform
+	     5.	Insert Node or Bus
+
+
+RPW
+
+	Undo Commands
+	     1.	||Simulation Report||Simulator||Simulation Waveforms
+
+
+RPW
+
+	Undo Commands
+	     1.	||Compilation Report||Flow Summary
+
+
+WED
+
+	Undo Commands
+	     1.	Node or Bus Properties
+			 *** 
+	     2.	Node or Bus Properties
+			 *** 
+	     3.	Edit Waveform
+	     4.	Arbitrary Value
+			 *** 
+	     5.	Arbitrary Value
+			 *** 
+	     6.	Node or Bus Properties
+			 *** 
+	     7.	Drop Node
+			 *** 
+	     8.	Drop Node
+			 *** 
+	     9.	Drop Node
+			 *** 
+	    10.	Arbitrary Value
+			 *** 
+	    11.	Edit Waveform
+	    12.	Arbitrary Value
+			 *** 
+	    13.	Arbitrary Value
+			 *** 
+	    14.	Arbitrary Value
+			 *** 
+	    15.	Arbitrary Value
+			 *** 
+	    16.	Node or Bus Properties
+			 *** 
+	    17.	Drop Node
+			 *** 
+	    18.	Insert Node or Bus
+	    19.	Delete Node, Bus or Waveform Divider
+	    20.	Node or Bus Properties
+			 *** 
+	    21.	Insert Node or Bus
+
+
+WED
+
+	Undo Commands
+	     1.	Arbitrary Value
+			 *** 
+	     2.	Edit Waveform
+	     3.	Arbitrary Value
+			 *** 
+	     4.	Arbitrary Value
+			 *** 
+	     5.	Arbitrary Value
+			 *** 
+	     6.	Node or Bus Properties
+			 *** 
+	     7.	Drop Node
+			 *** 
+	     8.	Drop Node
+			 *** 
+	     9.	Drop Node
+			 *** 
+	    10.	Drop Node
+			 *** 
+	    11.	Insert Node or Bus
+
+

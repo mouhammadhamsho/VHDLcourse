@@ -1,0 +1,30 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity SR_Latch is
+
+generic(
+N : Integer := 8);
+
+
+port(
+S , R : in std_logic;
+Q, QN : out std_logic
+
+);
+end  SR_Latch;
+
+architecture behavioral of SR_Latch is 
+
+
+signal Q_temp , QN_temp : std_logic;
+
+begin
+
+Q_temp<=R NOR QN_temp;
+QN_temp<= S NOR Q_temp;
+Q<=Q_temp;
+QN<=QN_temp;
+
+end;
+ 

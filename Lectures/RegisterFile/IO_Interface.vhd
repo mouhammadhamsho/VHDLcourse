@@ -1,0 +1,23 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+package IO_Interface is
+
+type I_RF is record 
+
+
+
+	RegA_ADR , RegB_ADR , DestReg_ADR : std_logic_vector( 2 downto 0);
+	RegisterData_IN : std_logic_vector(7 downto 0);
+
+end record I_RF;
+
+
+
+type O_RF is record
+	RegA_Data , RegB_Data : std_logic_vector(7 downto 0);
+
+end record O_RF;
+
+
+end IO_Interface;

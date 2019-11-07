@@ -1,0 +1,25 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity FullAdder_1bit is
+
+generic(
+INPUT_WIDTH : Integer := 4);
+
+
+port(
+
+A,B : in  std_logic ;
+CIN : in  std_logic ;
+SUM : out std_logic;
+COUT : out std_logic
+
+);
+end FullAdder_1bit;
+
+architecture behavioral of FullAdder_1bit is 
+begin
+SUM<= (A XOR B) XOR CIN;
+COUT <=  (A AND B) OR ((A XOR B) AND CIN) ;
+end;
+ 

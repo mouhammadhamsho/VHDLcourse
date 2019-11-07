@@ -1,0 +1,9 @@
+|SR_Latch_EN_Behavioral
+S => Q.IN0
+S => Q$latch.DATAIN
+R => Q.IN1
+EN => Q.IN1
+Q <= Q$latch.DB_MAX_OUTPUT_PORT_TYPE
+QN <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+

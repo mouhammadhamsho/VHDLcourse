@@ -1,0 +1,688 @@
+Simulator report for Timer
+Sat Oct 26 02:28:24 2019
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 276 nodes    ;
+; Simulation Coverage         ;      14.05 % ;
+; Total Number of Transitions ; 1925         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Stratix II   ;
+; Device                      ; EP2S15F484C3 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Vector input source                                                                        ; Timer.vwf  ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      14.05 % ;
+; Total nodes checked                                 ; 276          ;
+; Total output ports checked                          ; 242          ;
+; Total output ports with complete 1/0-value coverage ; 34           ;
+; Total output ports with no 1/0-value coverage       ; 201          ;
+; Total output ports with no 1-value coverage         ; 204          ;
+; Total output ports with no 0-value coverage         ; 205          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-----------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                 ;
++---------------------------+------------------------------+------------------+
+; Node Name                 ; Output Port Name             ; Output Port Type ;
++---------------------------+------------------------------+------------------+
+; |T18_Timer|Ticks[1]       ; |T18_Timer|Ticks[1]          ; regout           ;
+; |T18_Timer|Ticks[2]       ; |T18_Timer|Ticks[2]          ; regout           ;
+; |T18_Timer|Ticks[3]       ; |T18_Timer|Ticks[3]          ; regout           ;
+; |T18_Timer|Add0~1         ; |T18_Timer|Add0~1            ; sumout           ;
+; |T18_Timer|Add0~1         ; |T18_Timer|Add0~2            ; cout             ;
+; |T18_Timer|Add0~5         ; |T18_Timer|Add0~5            ; sumout           ;
+; |T18_Timer|Add0~5         ; |T18_Timer|Add0~6            ; cout             ;
+; |T18_Timer|Add0~9         ; |T18_Timer|Add0~9            ; sumout           ;
+; |T18_Timer|Add0~9         ; |T18_Timer|Add0~10           ; cout             ;
+; |T18_Timer|Add0~13        ; |T18_Timer|Add0~14           ; cout             ;
+; |T18_Timer|Add1~1         ; |T18_Timer|Add1~1            ; sumout           ;
+; |T18_Timer|Add1~1         ; |T18_Timer|Add1~2            ; cout             ;
+; |T18_Timer|Add1~5         ; |T18_Timer|Add1~5            ; sumout           ;
+; |T18_Timer|Add1~5         ; |T18_Timer|Add1~6            ; cout             ;
+; |T18_Timer|Add1~9         ; |T18_Timer|Add1~9            ; sumout           ;
+; |T18_Timer|Add1~9         ; |T18_Timer|Add1~10           ; cout             ;
+; |T18_Timer|Add1~13        ; |T18_Timer|Add1~13           ; sumout           ;
+; |T18_Timer|Add1~13        ; |T18_Timer|Add1~14           ; cout             ;
+; |T18_Timer|Ticks[0]       ; |T18_Timer|Ticks[0]          ; regout           ;
+; |T18_Timer|Equal0~4       ; |T18_Timer|Equal0~4          ; combout          ;
+; |T18_Timer|Equal0~5       ; |T18_Timer|Equal0~5          ; combout          ;
+; |T18_Timer|Equal0~6       ; |T18_Timer|Equal0~6          ; combout          ;
+; |T18_Timer|Seconds[30]~67 ; |T18_Timer|Seconds[30]~67    ; combout          ;
+; |T18_Timer|Ticks~0        ; |T18_Timer|Ticks~0           ; combout          ;
+; |T18_Timer|Ticks[0]~1     ; |T18_Timer|Ticks[0]~1        ; combout          ;
+; |T18_Timer|Seconds[0]     ; |T18_Timer|Seconds[0]~output ; padio            ;
+; |T18_Timer|Seconds[1]     ; |T18_Timer|Seconds[1]~output ; padio            ;
+; |T18_Timer|Seconds[2]     ; |T18_Timer|Seconds[2]~output ; padio            ;
+; |T18_Timer|o_Ticks[0]     ; |T18_Timer|o_Ticks[0]~output ; padio            ;
+; |T18_Timer|o_Ticks[1]     ; |T18_Timer|o_Ticks[1]~output ; padio            ;
+; |T18_Timer|o_Ticks[2]     ; |T18_Timer|o_Ticks[2]~output ; padio            ;
+; |T18_Timer|o_Ticks[3]     ; |T18_Timer|o_Ticks[3]~output ; padio            ;
+; |T18_Timer|Clk            ; |T18_Timer|Clk~corein        ; combout          ;
+; |T18_Timer|Clk~clkctrl    ; |T18_Timer|Clk~clkctrl       ; outclk           ;
++---------------------------+------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                     ;
++---------------------------+-------------------------------+------------------+
+; Node Name                 ; Output Port Name              ; Output Port Type ;
++---------------------------+-------------------------------+------------------+
+; |T18_Timer|Ticks[4]       ; |T18_Timer|Ticks[4]           ; regout           ;
+; |T18_Timer|Ticks[5]       ; |T18_Timer|Ticks[5]           ; regout           ;
+; |T18_Timer|Ticks[6]       ; |T18_Timer|Ticks[6]           ; regout           ;
+; |T18_Timer|Ticks[7]       ; |T18_Timer|Ticks[7]           ; regout           ;
+; |T18_Timer|Ticks[8]       ; |T18_Timer|Ticks[8]           ; regout           ;
+; |T18_Timer|Ticks[9]       ; |T18_Timer|Ticks[9]           ; regout           ;
+; |T18_Timer|Ticks[10]      ; |T18_Timer|Ticks[10]          ; regout           ;
+; |T18_Timer|Ticks[11]      ; |T18_Timer|Ticks[11]          ; regout           ;
+; |T18_Timer|Ticks[12]      ; |T18_Timer|Ticks[12]          ; regout           ;
+; |T18_Timer|Ticks[13]      ; |T18_Timer|Ticks[13]          ; regout           ;
+; |T18_Timer|Ticks[14]      ; |T18_Timer|Ticks[14]          ; regout           ;
+; |T18_Timer|Ticks[15]      ; |T18_Timer|Ticks[15]          ; regout           ;
+; |T18_Timer|Ticks[16]      ; |T18_Timer|Ticks[16]          ; regout           ;
+; |T18_Timer|Ticks[17]      ; |T18_Timer|Ticks[17]          ; regout           ;
+; |T18_Timer|Ticks[18]      ; |T18_Timer|Ticks[18]          ; regout           ;
+; |T18_Timer|Ticks[19]      ; |T18_Timer|Ticks[19]          ; regout           ;
+; |T18_Timer|Ticks[20]      ; |T18_Timer|Ticks[20]          ; regout           ;
+; |T18_Timer|Ticks[21]      ; |T18_Timer|Ticks[21]          ; regout           ;
+; |T18_Timer|Ticks[22]      ; |T18_Timer|Ticks[22]          ; regout           ;
+; |T18_Timer|Ticks[23]      ; |T18_Timer|Ticks[23]          ; regout           ;
+; |T18_Timer|Ticks[24]      ; |T18_Timer|Ticks[24]          ; regout           ;
+; |T18_Timer|Ticks[25]      ; |T18_Timer|Ticks[25]          ; regout           ;
+; |T18_Timer|Ticks[26]      ; |T18_Timer|Ticks[26]          ; regout           ;
+; |T18_Timer|Ticks[27]      ; |T18_Timer|Ticks[27]          ; regout           ;
+; |T18_Timer|Ticks[28]      ; |T18_Timer|Ticks[28]          ; regout           ;
+; |T18_Timer|Ticks[29]      ; |T18_Timer|Ticks[29]          ; regout           ;
+; |T18_Timer|Ticks[30]      ; |T18_Timer|Ticks[30]          ; regout           ;
+; |T18_Timer|Add0~17        ; |T18_Timer|Add0~17            ; sumout           ;
+; |T18_Timer|Add0~17        ; |T18_Timer|Add0~18            ; cout             ;
+; |T18_Timer|Add0~21        ; |T18_Timer|Add0~21            ; sumout           ;
+; |T18_Timer|Add0~21        ; |T18_Timer|Add0~22            ; cout             ;
+; |T18_Timer|Add0~25        ; |T18_Timer|Add0~25            ; sumout           ;
+; |T18_Timer|Add0~25        ; |T18_Timer|Add0~26            ; cout             ;
+; |T18_Timer|Add0~29        ; |T18_Timer|Add0~29            ; sumout           ;
+; |T18_Timer|Add0~29        ; |T18_Timer|Add0~30            ; cout             ;
+; |T18_Timer|Add0~33        ; |T18_Timer|Add0~33            ; sumout           ;
+; |T18_Timer|Add0~33        ; |T18_Timer|Add0~34            ; cout             ;
+; |T18_Timer|Add0~37        ; |T18_Timer|Add0~37            ; sumout           ;
+; |T18_Timer|Add0~37        ; |T18_Timer|Add0~38            ; cout             ;
+; |T18_Timer|Add0~41        ; |T18_Timer|Add0~41            ; sumout           ;
+; |T18_Timer|Add0~41        ; |T18_Timer|Add0~42            ; cout             ;
+; |T18_Timer|Add0~45        ; |T18_Timer|Add0~45            ; sumout           ;
+; |T18_Timer|Add0~45        ; |T18_Timer|Add0~46            ; cout             ;
+; |T18_Timer|Add0~49        ; |T18_Timer|Add0~49            ; sumout           ;
+; |T18_Timer|Add0~49        ; |T18_Timer|Add0~50            ; cout             ;
+; |T18_Timer|Add0~53        ; |T18_Timer|Add0~53            ; sumout           ;
+; |T18_Timer|Add0~53        ; |T18_Timer|Add0~54            ; cout             ;
+; |T18_Timer|Add0~57        ; |T18_Timer|Add0~57            ; sumout           ;
+; |T18_Timer|Add0~57        ; |T18_Timer|Add0~58            ; cout             ;
+; |T18_Timer|Add0~61        ; |T18_Timer|Add0~61            ; sumout           ;
+; |T18_Timer|Add0~61        ; |T18_Timer|Add0~62            ; cout             ;
+; |T18_Timer|Add0~65        ; |T18_Timer|Add0~65            ; sumout           ;
+; |T18_Timer|Add0~65        ; |T18_Timer|Add0~66            ; cout             ;
+; |T18_Timer|Add0~69        ; |T18_Timer|Add0~69            ; sumout           ;
+; |T18_Timer|Add0~69        ; |T18_Timer|Add0~70            ; cout             ;
+; |T18_Timer|Add0~73        ; |T18_Timer|Add0~73            ; sumout           ;
+; |T18_Timer|Add0~73        ; |T18_Timer|Add0~74            ; cout             ;
+; |T18_Timer|Add0~77        ; |T18_Timer|Add0~77            ; sumout           ;
+; |T18_Timer|Add0~77        ; |T18_Timer|Add0~78            ; cout             ;
+; |T18_Timer|Add0~81        ; |T18_Timer|Add0~81            ; sumout           ;
+; |T18_Timer|Add0~81        ; |T18_Timer|Add0~82            ; cout             ;
+; |T18_Timer|Add0~85        ; |T18_Timer|Add0~85            ; sumout           ;
+; |T18_Timer|Add0~85        ; |T18_Timer|Add0~86            ; cout             ;
+; |T18_Timer|Add0~89        ; |T18_Timer|Add0~89            ; sumout           ;
+; |T18_Timer|Add0~89        ; |T18_Timer|Add0~90            ; cout             ;
+; |T18_Timer|Add0~93        ; |T18_Timer|Add0~93            ; sumout           ;
+; |T18_Timer|Add0~93        ; |T18_Timer|Add0~94            ; cout             ;
+; |T18_Timer|Add0~97        ; |T18_Timer|Add0~97            ; sumout           ;
+; |T18_Timer|Add0~97        ; |T18_Timer|Add0~98            ; cout             ;
+; |T18_Timer|Add0~101       ; |T18_Timer|Add0~101           ; sumout           ;
+; |T18_Timer|Add0~101       ; |T18_Timer|Add0~102           ; cout             ;
+; |T18_Timer|Add0~105       ; |T18_Timer|Add0~105           ; sumout           ;
+; |T18_Timer|Add0~105       ; |T18_Timer|Add0~106           ; cout             ;
+; |T18_Timer|Add0~109       ; |T18_Timer|Add0~109           ; sumout           ;
+; |T18_Timer|Add0~109       ; |T18_Timer|Add0~110           ; cout             ;
+; |T18_Timer|Add0~113       ; |T18_Timer|Add0~113           ; sumout           ;
+; |T18_Timer|Add0~113       ; |T18_Timer|Add0~114           ; cout             ;
+; |T18_Timer|Add0~117       ; |T18_Timer|Add0~117           ; sumout           ;
+; |T18_Timer|Add0~117       ; |T18_Timer|Add0~118           ; cout             ;
+; |T18_Timer|Add0~121       ; |T18_Timer|Add0~121           ; sumout           ;
+; |T18_Timer|Add0~121       ; |T18_Timer|Add0~122           ; cout             ;
+; |T18_Timer|Add0~125       ; |T18_Timer|Add0~125           ; sumout           ;
+; |T18_Timer|Add1~17        ; |T18_Timer|Add1~17            ; sumout           ;
+; |T18_Timer|Add1~17        ; |T18_Timer|Add1~18            ; cout             ;
+; |T18_Timer|Add1~21        ; |T18_Timer|Add1~21            ; sumout           ;
+; |T18_Timer|Add1~21        ; |T18_Timer|Add1~22            ; cout             ;
+; |T18_Timer|Add1~25        ; |T18_Timer|Add1~25            ; sumout           ;
+; |T18_Timer|Add1~25        ; |T18_Timer|Add1~26            ; cout             ;
+; |T18_Timer|Add1~29        ; |T18_Timer|Add1~29            ; sumout           ;
+; |T18_Timer|Add1~29        ; |T18_Timer|Add1~30            ; cout             ;
+; |T18_Timer|Add1~33        ; |T18_Timer|Add1~33            ; sumout           ;
+; |T18_Timer|Add1~33        ; |T18_Timer|Add1~34            ; cout             ;
+; |T18_Timer|Add1~37        ; |T18_Timer|Add1~37            ; sumout           ;
+; |T18_Timer|Add1~37        ; |T18_Timer|Add1~38            ; cout             ;
+; |T18_Timer|Add1~41        ; |T18_Timer|Add1~41            ; sumout           ;
+; |T18_Timer|Add1~41        ; |T18_Timer|Add1~42            ; cout             ;
+; |T18_Timer|Add1~45        ; |T18_Timer|Add1~45            ; sumout           ;
+; |T18_Timer|Add1~45        ; |T18_Timer|Add1~46            ; cout             ;
+; |T18_Timer|Add1~49        ; |T18_Timer|Add1~49            ; sumout           ;
+; |T18_Timer|Add1~49        ; |T18_Timer|Add1~50            ; cout             ;
+; |T18_Timer|Add1~53        ; |T18_Timer|Add1~53            ; sumout           ;
+; |T18_Timer|Add1~53        ; |T18_Timer|Add1~54            ; cout             ;
+; |T18_Timer|Add1~57        ; |T18_Timer|Add1~57            ; sumout           ;
+; |T18_Timer|Add1~57        ; |T18_Timer|Add1~58            ; cout             ;
+; |T18_Timer|Add1~61        ; |T18_Timer|Add1~61            ; sumout           ;
+; |T18_Timer|Add1~61        ; |T18_Timer|Add1~62            ; cout             ;
+; |T18_Timer|Add1~65        ; |T18_Timer|Add1~65            ; sumout           ;
+; |T18_Timer|Add1~65        ; |T18_Timer|Add1~66            ; cout             ;
+; |T18_Timer|Add1~69        ; |T18_Timer|Add1~69            ; sumout           ;
+; |T18_Timer|Add1~69        ; |T18_Timer|Add1~70            ; cout             ;
+; |T18_Timer|Add1~73        ; |T18_Timer|Add1~73            ; sumout           ;
+; |T18_Timer|Add1~73        ; |T18_Timer|Add1~74            ; cout             ;
+; |T18_Timer|Add1~77        ; |T18_Timer|Add1~77            ; sumout           ;
+; |T18_Timer|Add1~77        ; |T18_Timer|Add1~78            ; cout             ;
+; |T18_Timer|Add1~81        ; |T18_Timer|Add1~81            ; sumout           ;
+; |T18_Timer|Add1~81        ; |T18_Timer|Add1~82            ; cout             ;
+; |T18_Timer|Add1~85        ; |T18_Timer|Add1~85            ; sumout           ;
+; |T18_Timer|Add1~85        ; |T18_Timer|Add1~86            ; cout             ;
+; |T18_Timer|Add1~89        ; |T18_Timer|Add1~89            ; sumout           ;
+; |T18_Timer|Add1~89        ; |T18_Timer|Add1~90            ; cout             ;
+; |T18_Timer|Add1~93        ; |T18_Timer|Add1~93            ; sumout           ;
+; |T18_Timer|Add1~93        ; |T18_Timer|Add1~94            ; cout             ;
+; |T18_Timer|Add1~97        ; |T18_Timer|Add1~97            ; sumout           ;
+; |T18_Timer|Add1~97        ; |T18_Timer|Add1~98            ; cout             ;
+; |T18_Timer|Add1~101       ; |T18_Timer|Add1~101           ; sumout           ;
+; |T18_Timer|Add1~101       ; |T18_Timer|Add1~102           ; cout             ;
+; |T18_Timer|Add1~105       ; |T18_Timer|Add1~105           ; sumout           ;
+; |T18_Timer|Add1~105       ; |T18_Timer|Add1~106           ; cout             ;
+; |T18_Timer|Add1~109       ; |T18_Timer|Add1~109           ; sumout           ;
+; |T18_Timer|Add1~109       ; |T18_Timer|Add1~110           ; cout             ;
+; |T18_Timer|Add1~113       ; |T18_Timer|Add1~113           ; sumout           ;
+; |T18_Timer|Add1~113       ; |T18_Timer|Add1~114           ; cout             ;
+; |T18_Timer|Add1~117       ; |T18_Timer|Add1~117           ; sumout           ;
+; |T18_Timer|Add1~117       ; |T18_Timer|Add1~118           ; cout             ;
+; |T18_Timer|Add1~121       ; |T18_Timer|Add1~121           ; sumout           ;
+; |T18_Timer|Add1~121       ; |T18_Timer|Add1~122           ; cout             ;
+; |T18_Timer|Add1~125       ; |T18_Timer|Add1~125           ; sumout           ;
+; |T18_Timer|Equal0~0       ; |T18_Timer|Equal0~0           ; combout          ;
+; |T18_Timer|Equal0~1       ; |T18_Timer|Equal0~1           ; combout          ;
+; |T18_Timer|Equal0~2       ; |T18_Timer|Equal0~2           ; combout          ;
+; |T18_Timer|Equal0~3       ; |T18_Timer|Equal0~3           ; combout          ;
+; |T18_Timer|Seconds[30]~64 ; |T18_Timer|Seconds[30]~64     ; combout          ;
+; |T18_Timer|Seconds[30]~65 ; |T18_Timer|Seconds[30]~65     ; combout          ;
+; |T18_Timer|Seconds[30]~66 ; |T18_Timer|Seconds[30]~66     ; combout          ;
+; |T18_Timer|Seconds[30]~68 ; |T18_Timer|Seconds[30]~68     ; combout          ;
+; |T18_Timer|Seconds[30]~69 ; |T18_Timer|Seconds[30]~69     ; combout          ;
+; |T18_Timer|Seconds[30]~70 ; |T18_Timer|Seconds[30]~70     ; combout          ;
+; |T18_Timer|Ticks~2        ; |T18_Timer|Ticks~2            ; combout          ;
+; |T18_Timer|Seconds[4]     ; |T18_Timer|Seconds[4]~output  ; padio            ;
+; |T18_Timer|Seconds[5]     ; |T18_Timer|Seconds[5]~output  ; padio            ;
+; |T18_Timer|Seconds[6]     ; |T18_Timer|Seconds[6]~output  ; padio            ;
+; |T18_Timer|Seconds[7]     ; |T18_Timer|Seconds[7]~output  ; padio            ;
+; |T18_Timer|Seconds[8]     ; |T18_Timer|Seconds[8]~output  ; padio            ;
+; |T18_Timer|Seconds[9]     ; |T18_Timer|Seconds[9]~output  ; padio            ;
+; |T18_Timer|Seconds[10]    ; |T18_Timer|Seconds[10]~output ; padio            ;
+; |T18_Timer|Seconds[11]    ; |T18_Timer|Seconds[11]~output ; padio            ;
+; |T18_Timer|Seconds[12]    ; |T18_Timer|Seconds[12]~output ; padio            ;
+; |T18_Timer|Seconds[13]    ; |T18_Timer|Seconds[13]~output ; padio            ;
+; |T18_Timer|Seconds[14]    ; |T18_Timer|Seconds[14]~output ; padio            ;
+; |T18_Timer|Seconds[15]    ; |T18_Timer|Seconds[15]~output ; padio            ;
+; |T18_Timer|Seconds[16]    ; |T18_Timer|Seconds[16]~output ; padio            ;
+; |T18_Timer|Seconds[17]    ; |T18_Timer|Seconds[17]~output ; padio            ;
+; |T18_Timer|Seconds[18]    ; |T18_Timer|Seconds[18]~output ; padio            ;
+; |T18_Timer|Seconds[19]    ; |T18_Timer|Seconds[19]~output ; padio            ;
+; |T18_Timer|Seconds[20]    ; |T18_Timer|Seconds[20]~output ; padio            ;
+; |T18_Timer|Seconds[21]    ; |T18_Timer|Seconds[21]~output ; padio            ;
+; |T18_Timer|Seconds[22]    ; |T18_Timer|Seconds[22]~output ; padio            ;
+; |T18_Timer|Seconds[23]    ; |T18_Timer|Seconds[23]~output ; padio            ;
+; |T18_Timer|Seconds[24]    ; |T18_Timer|Seconds[24]~output ; padio            ;
+; |T18_Timer|Seconds[25]    ; |T18_Timer|Seconds[25]~output ; padio            ;
+; |T18_Timer|Seconds[26]    ; |T18_Timer|Seconds[26]~output ; padio            ;
+; |T18_Timer|Seconds[27]    ; |T18_Timer|Seconds[27]~output ; padio            ;
+; |T18_Timer|Seconds[28]    ; |T18_Timer|Seconds[28]~output ; padio            ;
+; |T18_Timer|Seconds[29]    ; |T18_Timer|Seconds[29]~output ; padio            ;
+; |T18_Timer|Seconds[30]    ; |T18_Timer|Seconds[30]~output ; padio            ;
+; |T18_Timer|Seconds[31]    ; |T18_Timer|Seconds[31]~output ; padio            ;
+; |T18_Timer|o_Ticks[4]     ; |T18_Timer|o_Ticks[4]~output  ; padio            ;
+; |T18_Timer|o_Ticks[5]     ; |T18_Timer|o_Ticks[5]~output  ; padio            ;
+; |T18_Timer|o_Ticks[6]     ; |T18_Timer|o_Ticks[6]~output  ; padio            ;
+; |T18_Timer|o_Ticks[7]     ; |T18_Timer|o_Ticks[7]~output  ; padio            ;
+; |T18_Timer|o_Ticks[8]     ; |T18_Timer|o_Ticks[8]~output  ; padio            ;
+; |T18_Timer|o_Ticks[9]     ; |T18_Timer|o_Ticks[9]~output  ; padio            ;
+; |T18_Timer|o_Ticks[10]    ; |T18_Timer|o_Ticks[10]~output ; padio            ;
+; |T18_Timer|o_Ticks[11]    ; |T18_Timer|o_Ticks[11]~output ; padio            ;
+; |T18_Timer|o_Ticks[12]    ; |T18_Timer|o_Ticks[12]~output ; padio            ;
+; |T18_Timer|o_Ticks[13]    ; |T18_Timer|o_Ticks[13]~output ; padio            ;
+; |T18_Timer|o_Ticks[14]    ; |T18_Timer|o_Ticks[14]~output ; padio            ;
+; |T18_Timer|o_Ticks[15]    ; |T18_Timer|o_Ticks[15]~output ; padio            ;
+; |T18_Timer|o_Ticks[16]    ; |T18_Timer|o_Ticks[16]~output ; padio            ;
+; |T18_Timer|o_Ticks[17]    ; |T18_Timer|o_Ticks[17]~output ; padio            ;
+; |T18_Timer|o_Ticks[18]    ; |T18_Timer|o_Ticks[18]~output ; padio            ;
+; |T18_Timer|o_Ticks[19]    ; |T18_Timer|o_Ticks[19]~output ; padio            ;
+; |T18_Timer|o_Ticks[20]    ; |T18_Timer|o_Ticks[20]~output ; padio            ;
+; |T18_Timer|o_Ticks[21]    ; |T18_Timer|o_Ticks[21]~output ; padio            ;
+; |T18_Timer|o_Ticks[22]    ; |T18_Timer|o_Ticks[22]~output ; padio            ;
+; |T18_Timer|o_Ticks[23]    ; |T18_Timer|o_Ticks[23]~output ; padio            ;
+; |T18_Timer|o_Ticks[24]    ; |T18_Timer|o_Ticks[24]~output ; padio            ;
+; |T18_Timer|o_Ticks[25]    ; |T18_Timer|o_Ticks[25]~output ; padio            ;
+; |T18_Timer|o_Ticks[26]    ; |T18_Timer|o_Ticks[26]~output ; padio            ;
+; |T18_Timer|o_Ticks[27]    ; |T18_Timer|o_Ticks[27]~output ; padio            ;
+; |T18_Timer|o_Ticks[28]    ; |T18_Timer|o_Ticks[28]~output ; padio            ;
+; |T18_Timer|o_Ticks[29]    ; |T18_Timer|o_Ticks[29]~output ; padio            ;
+; |T18_Timer|o_Ticks[30]    ; |T18_Timer|o_Ticks[30]~output ; padio            ;
+; |T18_Timer|o_Ticks[31]    ; |T18_Timer|o_Ticks[31]~output ; padio            ;
++---------------------------+-------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                     ;
++---------------------------+-------------------------------+------------------+
+; Node Name                 ; Output Port Name              ; Output Port Type ;
++---------------------------+-------------------------------+------------------+
+; |T18_Timer|Ticks[4]       ; |T18_Timer|Ticks[4]           ; regout           ;
+; |T18_Timer|Ticks[5]       ; |T18_Timer|Ticks[5]           ; regout           ;
+; |T18_Timer|Ticks[6]       ; |T18_Timer|Ticks[6]           ; regout           ;
+; |T18_Timer|Ticks[7]       ; |T18_Timer|Ticks[7]           ; regout           ;
+; |T18_Timer|Ticks[8]       ; |T18_Timer|Ticks[8]           ; regout           ;
+; |T18_Timer|Ticks[9]       ; |T18_Timer|Ticks[9]           ; regout           ;
+; |T18_Timer|Ticks[10]      ; |T18_Timer|Ticks[10]          ; regout           ;
+; |T18_Timer|Ticks[11]      ; |T18_Timer|Ticks[11]          ; regout           ;
+; |T18_Timer|Ticks[12]      ; |T18_Timer|Ticks[12]          ; regout           ;
+; |T18_Timer|Ticks[13]      ; |T18_Timer|Ticks[13]          ; regout           ;
+; |T18_Timer|Ticks[14]      ; |T18_Timer|Ticks[14]          ; regout           ;
+; |T18_Timer|Ticks[15]      ; |T18_Timer|Ticks[15]          ; regout           ;
+; |T18_Timer|Ticks[16]      ; |T18_Timer|Ticks[16]          ; regout           ;
+; |T18_Timer|Ticks[17]      ; |T18_Timer|Ticks[17]          ; regout           ;
+; |T18_Timer|Ticks[18]      ; |T18_Timer|Ticks[18]          ; regout           ;
+; |T18_Timer|Ticks[19]      ; |T18_Timer|Ticks[19]          ; regout           ;
+; |T18_Timer|Ticks[20]      ; |T18_Timer|Ticks[20]          ; regout           ;
+; |T18_Timer|Ticks[21]      ; |T18_Timer|Ticks[21]          ; regout           ;
+; |T18_Timer|Ticks[22]      ; |T18_Timer|Ticks[22]          ; regout           ;
+; |T18_Timer|Ticks[23]      ; |T18_Timer|Ticks[23]          ; regout           ;
+; |T18_Timer|Ticks[24]      ; |T18_Timer|Ticks[24]          ; regout           ;
+; |T18_Timer|Ticks[25]      ; |T18_Timer|Ticks[25]          ; regout           ;
+; |T18_Timer|Ticks[26]      ; |T18_Timer|Ticks[26]          ; regout           ;
+; |T18_Timer|Ticks[27]      ; |T18_Timer|Ticks[27]          ; regout           ;
+; |T18_Timer|Ticks[28]      ; |T18_Timer|Ticks[28]          ; regout           ;
+; |T18_Timer|Ticks[29]      ; |T18_Timer|Ticks[29]          ; regout           ;
+; |T18_Timer|Ticks[30]      ; |T18_Timer|Ticks[30]          ; regout           ;
+; |T18_Timer|Add0~13        ; |T18_Timer|Add0~13            ; sumout           ;
+; |T18_Timer|Add0~17        ; |T18_Timer|Add0~17            ; sumout           ;
+; |T18_Timer|Add0~17        ; |T18_Timer|Add0~18            ; cout             ;
+; |T18_Timer|Add0~21        ; |T18_Timer|Add0~21            ; sumout           ;
+; |T18_Timer|Add0~21        ; |T18_Timer|Add0~22            ; cout             ;
+; |T18_Timer|Add0~25        ; |T18_Timer|Add0~25            ; sumout           ;
+; |T18_Timer|Add0~25        ; |T18_Timer|Add0~26            ; cout             ;
+; |T18_Timer|Add0~29        ; |T18_Timer|Add0~29            ; sumout           ;
+; |T18_Timer|Add0~29        ; |T18_Timer|Add0~30            ; cout             ;
+; |T18_Timer|Add0~33        ; |T18_Timer|Add0~33            ; sumout           ;
+; |T18_Timer|Add0~33        ; |T18_Timer|Add0~34            ; cout             ;
+; |T18_Timer|Add0~37        ; |T18_Timer|Add0~37            ; sumout           ;
+; |T18_Timer|Add0~37        ; |T18_Timer|Add0~38            ; cout             ;
+; |T18_Timer|Add0~41        ; |T18_Timer|Add0~41            ; sumout           ;
+; |T18_Timer|Add0~41        ; |T18_Timer|Add0~42            ; cout             ;
+; |T18_Timer|Add0~45        ; |T18_Timer|Add0~45            ; sumout           ;
+; |T18_Timer|Add0~45        ; |T18_Timer|Add0~46            ; cout             ;
+; |T18_Timer|Add0~49        ; |T18_Timer|Add0~49            ; sumout           ;
+; |T18_Timer|Add0~49        ; |T18_Timer|Add0~50            ; cout             ;
+; |T18_Timer|Add0~53        ; |T18_Timer|Add0~53            ; sumout           ;
+; |T18_Timer|Add0~53        ; |T18_Timer|Add0~54            ; cout             ;
+; |T18_Timer|Add0~57        ; |T18_Timer|Add0~57            ; sumout           ;
+; |T18_Timer|Add0~57        ; |T18_Timer|Add0~58            ; cout             ;
+; |T18_Timer|Add0~61        ; |T18_Timer|Add0~61            ; sumout           ;
+; |T18_Timer|Add0~61        ; |T18_Timer|Add0~62            ; cout             ;
+; |T18_Timer|Add0~65        ; |T18_Timer|Add0~65            ; sumout           ;
+; |T18_Timer|Add0~65        ; |T18_Timer|Add0~66            ; cout             ;
+; |T18_Timer|Add0~69        ; |T18_Timer|Add0~69            ; sumout           ;
+; |T18_Timer|Add0~69        ; |T18_Timer|Add0~70            ; cout             ;
+; |T18_Timer|Add0~73        ; |T18_Timer|Add0~73            ; sumout           ;
+; |T18_Timer|Add0~73        ; |T18_Timer|Add0~74            ; cout             ;
+; |T18_Timer|Add0~77        ; |T18_Timer|Add0~77            ; sumout           ;
+; |T18_Timer|Add0~77        ; |T18_Timer|Add0~78            ; cout             ;
+; |T18_Timer|Add0~81        ; |T18_Timer|Add0~81            ; sumout           ;
+; |T18_Timer|Add0~81        ; |T18_Timer|Add0~82            ; cout             ;
+; |T18_Timer|Add0~85        ; |T18_Timer|Add0~85            ; sumout           ;
+; |T18_Timer|Add0~85        ; |T18_Timer|Add0~86            ; cout             ;
+; |T18_Timer|Add0~89        ; |T18_Timer|Add0~89            ; sumout           ;
+; |T18_Timer|Add0~89        ; |T18_Timer|Add0~90            ; cout             ;
+; |T18_Timer|Add0~93        ; |T18_Timer|Add0~93            ; sumout           ;
+; |T18_Timer|Add0~93        ; |T18_Timer|Add0~94            ; cout             ;
+; |T18_Timer|Add0~97        ; |T18_Timer|Add0~97            ; sumout           ;
+; |T18_Timer|Add0~97        ; |T18_Timer|Add0~98            ; cout             ;
+; |T18_Timer|Add0~101       ; |T18_Timer|Add0~101           ; sumout           ;
+; |T18_Timer|Add0~101       ; |T18_Timer|Add0~102           ; cout             ;
+; |T18_Timer|Add0~105       ; |T18_Timer|Add0~105           ; sumout           ;
+; |T18_Timer|Add0~105       ; |T18_Timer|Add0~106           ; cout             ;
+; |T18_Timer|Add0~109       ; |T18_Timer|Add0~109           ; sumout           ;
+; |T18_Timer|Add0~109       ; |T18_Timer|Add0~110           ; cout             ;
+; |T18_Timer|Add0~113       ; |T18_Timer|Add0~113           ; sumout           ;
+; |T18_Timer|Add0~113       ; |T18_Timer|Add0~114           ; cout             ;
+; |T18_Timer|Add0~117       ; |T18_Timer|Add0~117           ; sumout           ;
+; |T18_Timer|Add0~117       ; |T18_Timer|Add0~118           ; cout             ;
+; |T18_Timer|Add0~121       ; |T18_Timer|Add0~121           ; sumout           ;
+; |T18_Timer|Add0~121       ; |T18_Timer|Add0~122           ; cout             ;
+; |T18_Timer|Add0~125       ; |T18_Timer|Add0~125           ; sumout           ;
+; |T18_Timer|Add1~17        ; |T18_Timer|Add1~17            ; sumout           ;
+; |T18_Timer|Add1~17        ; |T18_Timer|Add1~18            ; cout             ;
+; |T18_Timer|Add1~21        ; |T18_Timer|Add1~21            ; sumout           ;
+; |T18_Timer|Add1~21        ; |T18_Timer|Add1~22            ; cout             ;
+; |T18_Timer|Add1~25        ; |T18_Timer|Add1~25            ; sumout           ;
+; |T18_Timer|Add1~25        ; |T18_Timer|Add1~26            ; cout             ;
+; |T18_Timer|Add1~29        ; |T18_Timer|Add1~29            ; sumout           ;
+; |T18_Timer|Add1~29        ; |T18_Timer|Add1~30            ; cout             ;
+; |T18_Timer|Add1~33        ; |T18_Timer|Add1~33            ; sumout           ;
+; |T18_Timer|Add1~33        ; |T18_Timer|Add1~34            ; cout             ;
+; |T18_Timer|Add1~37        ; |T18_Timer|Add1~37            ; sumout           ;
+; |T18_Timer|Add1~37        ; |T18_Timer|Add1~38            ; cout             ;
+; |T18_Timer|Add1~41        ; |T18_Timer|Add1~41            ; sumout           ;
+; |T18_Timer|Add1~41        ; |T18_Timer|Add1~42            ; cout             ;
+; |T18_Timer|Add1~45        ; |T18_Timer|Add1~45            ; sumout           ;
+; |T18_Timer|Add1~45        ; |T18_Timer|Add1~46            ; cout             ;
+; |T18_Timer|Add1~49        ; |T18_Timer|Add1~49            ; sumout           ;
+; |T18_Timer|Add1~49        ; |T18_Timer|Add1~50            ; cout             ;
+; |T18_Timer|Add1~53        ; |T18_Timer|Add1~53            ; sumout           ;
+; |T18_Timer|Add1~53        ; |T18_Timer|Add1~54            ; cout             ;
+; |T18_Timer|Add1~57        ; |T18_Timer|Add1~57            ; sumout           ;
+; |T18_Timer|Add1~57        ; |T18_Timer|Add1~58            ; cout             ;
+; |T18_Timer|Add1~61        ; |T18_Timer|Add1~61            ; sumout           ;
+; |T18_Timer|Add1~61        ; |T18_Timer|Add1~62            ; cout             ;
+; |T18_Timer|Add1~65        ; |T18_Timer|Add1~65            ; sumout           ;
+; |T18_Timer|Add1~65        ; |T18_Timer|Add1~66            ; cout             ;
+; |T18_Timer|Add1~69        ; |T18_Timer|Add1~69            ; sumout           ;
+; |T18_Timer|Add1~69        ; |T18_Timer|Add1~70            ; cout             ;
+; |T18_Timer|Add1~73        ; |T18_Timer|Add1~73            ; sumout           ;
+; |T18_Timer|Add1~73        ; |T18_Timer|Add1~74            ; cout             ;
+; |T18_Timer|Add1~77        ; |T18_Timer|Add1~77            ; sumout           ;
+; |T18_Timer|Add1~77        ; |T18_Timer|Add1~78            ; cout             ;
+; |T18_Timer|Add1~81        ; |T18_Timer|Add1~81            ; sumout           ;
+; |T18_Timer|Add1~81        ; |T18_Timer|Add1~82            ; cout             ;
+; |T18_Timer|Add1~85        ; |T18_Timer|Add1~85            ; sumout           ;
+; |T18_Timer|Add1~85        ; |T18_Timer|Add1~86            ; cout             ;
+; |T18_Timer|Add1~89        ; |T18_Timer|Add1~89            ; sumout           ;
+; |T18_Timer|Add1~89        ; |T18_Timer|Add1~90            ; cout             ;
+; |T18_Timer|Add1~93        ; |T18_Timer|Add1~93            ; sumout           ;
+; |T18_Timer|Add1~93        ; |T18_Timer|Add1~94            ; cout             ;
+; |T18_Timer|Add1~97        ; |T18_Timer|Add1~97            ; sumout           ;
+; |T18_Timer|Add1~97        ; |T18_Timer|Add1~98            ; cout             ;
+; |T18_Timer|Add1~101       ; |T18_Timer|Add1~101           ; sumout           ;
+; |T18_Timer|Add1~101       ; |T18_Timer|Add1~102           ; cout             ;
+; |T18_Timer|Add1~105       ; |T18_Timer|Add1~105           ; sumout           ;
+; |T18_Timer|Add1~105       ; |T18_Timer|Add1~106           ; cout             ;
+; |T18_Timer|Add1~109       ; |T18_Timer|Add1~109           ; sumout           ;
+; |T18_Timer|Add1~109       ; |T18_Timer|Add1~110           ; cout             ;
+; |T18_Timer|Add1~113       ; |T18_Timer|Add1~113           ; sumout           ;
+; |T18_Timer|Add1~113       ; |T18_Timer|Add1~114           ; cout             ;
+; |T18_Timer|Add1~117       ; |T18_Timer|Add1~117           ; sumout           ;
+; |T18_Timer|Add1~117       ; |T18_Timer|Add1~118           ; cout             ;
+; |T18_Timer|Add1~121       ; |T18_Timer|Add1~121           ; sumout           ;
+; |T18_Timer|Add1~121       ; |T18_Timer|Add1~122           ; cout             ;
+; |T18_Timer|Ticks[31]      ; |T18_Timer|Ticks[31]          ; regout           ;
+; |T18_Timer|Equal0~0       ; |T18_Timer|Equal0~0           ; combout          ;
+; |T18_Timer|Equal0~1       ; |T18_Timer|Equal0~1           ; combout          ;
+; |T18_Timer|Equal0~2       ; |T18_Timer|Equal0~2           ; combout          ;
+; |T18_Timer|Equal0~3       ; |T18_Timer|Equal0~3           ; combout          ;
+; |T18_Timer|Seconds[30]~64 ; |T18_Timer|Seconds[30]~64     ; combout          ;
+; |T18_Timer|Seconds[30]~65 ; |T18_Timer|Seconds[30]~65     ; combout          ;
+; |T18_Timer|Seconds[30]~66 ; |T18_Timer|Seconds[30]~66     ; combout          ;
+; |T18_Timer|Seconds[30]~68 ; |T18_Timer|Seconds[30]~68     ; combout          ;
+; |T18_Timer|Seconds[30]~69 ; |T18_Timer|Seconds[30]~69     ; combout          ;
+; |T18_Timer|Ticks~2        ; |T18_Timer|Ticks~2            ; combout          ;
+; |T18_Timer|Seconds[3]     ; |T18_Timer|Seconds[3]~output  ; padio            ;
+; |T18_Timer|Seconds[4]     ; |T18_Timer|Seconds[4]~output  ; padio            ;
+; |T18_Timer|Seconds[5]     ; |T18_Timer|Seconds[5]~output  ; padio            ;
+; |T18_Timer|Seconds[6]     ; |T18_Timer|Seconds[6]~output  ; padio            ;
+; |T18_Timer|Seconds[7]     ; |T18_Timer|Seconds[7]~output  ; padio            ;
+; |T18_Timer|Seconds[8]     ; |T18_Timer|Seconds[8]~output  ; padio            ;
+; |T18_Timer|Seconds[9]     ; |T18_Timer|Seconds[9]~output  ; padio            ;
+; |T18_Timer|Seconds[10]    ; |T18_Timer|Seconds[10]~output ; padio            ;
+; |T18_Timer|Seconds[11]    ; |T18_Timer|Seconds[11]~output ; padio            ;
+; |T18_Timer|Seconds[12]    ; |T18_Timer|Seconds[12]~output ; padio            ;
+; |T18_Timer|Seconds[13]    ; |T18_Timer|Seconds[13]~output ; padio            ;
+; |T18_Timer|Seconds[14]    ; |T18_Timer|Seconds[14]~output ; padio            ;
+; |T18_Timer|Seconds[15]    ; |T18_Timer|Seconds[15]~output ; padio            ;
+; |T18_Timer|Seconds[16]    ; |T18_Timer|Seconds[16]~output ; padio            ;
+; |T18_Timer|Seconds[17]    ; |T18_Timer|Seconds[17]~output ; padio            ;
+; |T18_Timer|Seconds[18]    ; |T18_Timer|Seconds[18]~output ; padio            ;
+; |T18_Timer|Seconds[19]    ; |T18_Timer|Seconds[19]~output ; padio            ;
+; |T18_Timer|Seconds[20]    ; |T18_Timer|Seconds[20]~output ; padio            ;
+; |T18_Timer|Seconds[21]    ; |T18_Timer|Seconds[21]~output ; padio            ;
+; |T18_Timer|Seconds[22]    ; |T18_Timer|Seconds[22]~output ; padio            ;
+; |T18_Timer|Seconds[23]    ; |T18_Timer|Seconds[23]~output ; padio            ;
+; |T18_Timer|Seconds[24]    ; |T18_Timer|Seconds[24]~output ; padio            ;
+; |T18_Timer|Seconds[25]    ; |T18_Timer|Seconds[25]~output ; padio            ;
+; |T18_Timer|Seconds[26]    ; |T18_Timer|Seconds[26]~output ; padio            ;
+; |T18_Timer|Seconds[27]    ; |T18_Timer|Seconds[27]~output ; padio            ;
+; |T18_Timer|Seconds[28]    ; |T18_Timer|Seconds[28]~output ; padio            ;
+; |T18_Timer|Seconds[29]    ; |T18_Timer|Seconds[29]~output ; padio            ;
+; |T18_Timer|Seconds[30]    ; |T18_Timer|Seconds[30]~output ; padio            ;
+; |T18_Timer|Seconds[31]    ; |T18_Timer|Seconds[31]~output ; padio            ;
+; |T18_Timer|o_Ticks[4]     ; |T18_Timer|o_Ticks[4]~output  ; padio            ;
+; |T18_Timer|o_Ticks[5]     ; |T18_Timer|o_Ticks[5]~output  ; padio            ;
+; |T18_Timer|o_Ticks[6]     ; |T18_Timer|o_Ticks[6]~output  ; padio            ;
+; |T18_Timer|o_Ticks[7]     ; |T18_Timer|o_Ticks[7]~output  ; padio            ;
+; |T18_Timer|o_Ticks[8]     ; |T18_Timer|o_Ticks[8]~output  ; padio            ;
+; |T18_Timer|o_Ticks[9]     ; |T18_Timer|o_Ticks[9]~output  ; padio            ;
+; |T18_Timer|o_Ticks[10]    ; |T18_Timer|o_Ticks[10]~output ; padio            ;
+; |T18_Timer|o_Ticks[11]    ; |T18_Timer|o_Ticks[11]~output ; padio            ;
+; |T18_Timer|o_Ticks[12]    ; |T18_Timer|o_Ticks[12]~output ; padio            ;
+; |T18_Timer|o_Ticks[13]    ; |T18_Timer|o_Ticks[13]~output ; padio            ;
+; |T18_Timer|o_Ticks[14]    ; |T18_Timer|o_Ticks[14]~output ; padio            ;
+; |T18_Timer|o_Ticks[15]    ; |T18_Timer|o_Ticks[15]~output ; padio            ;
+; |T18_Timer|o_Ticks[16]    ; |T18_Timer|o_Ticks[16]~output ; padio            ;
+; |T18_Timer|o_Ticks[17]    ; |T18_Timer|o_Ticks[17]~output ; padio            ;
+; |T18_Timer|o_Ticks[18]    ; |T18_Timer|o_Ticks[18]~output ; padio            ;
+; |T18_Timer|o_Ticks[19]    ; |T18_Timer|o_Ticks[19]~output ; padio            ;
+; |T18_Timer|o_Ticks[20]    ; |T18_Timer|o_Ticks[20]~output ; padio            ;
+; |T18_Timer|o_Ticks[21]    ; |T18_Timer|o_Ticks[21]~output ; padio            ;
+; |T18_Timer|o_Ticks[22]    ; |T18_Timer|o_Ticks[22]~output ; padio            ;
+; |T18_Timer|o_Ticks[23]    ; |T18_Timer|o_Ticks[23]~output ; padio            ;
+; |T18_Timer|o_Ticks[24]    ; |T18_Timer|o_Ticks[24]~output ; padio            ;
+; |T18_Timer|o_Ticks[25]    ; |T18_Timer|o_Ticks[25]~output ; padio            ;
+; |T18_Timer|o_Ticks[26]    ; |T18_Timer|o_Ticks[26]~output ; padio            ;
+; |T18_Timer|o_Ticks[27]    ; |T18_Timer|o_Ticks[27]~output ; padio            ;
+; |T18_Timer|o_Ticks[28]    ; |T18_Timer|o_Ticks[28]~output ; padio            ;
+; |T18_Timer|o_Ticks[29]    ; |T18_Timer|o_Ticks[29]~output ; padio            ;
+; |T18_Timer|o_Ticks[30]    ; |T18_Timer|o_Ticks[30]~output ; padio            ;
+; |T18_Timer|nRst           ; |T18_Timer|nRst~corein        ; combout          ;
++---------------------------+-------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sat Oct 26 02:28:24 2019
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Timer -c Timer
+Info: Using vector source file "E:/MyFiles/Courses/VHDL fromwire to datapath/Lectures/TimersLab/Timer.vwf"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[0]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[1]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[2]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[3]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[4]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[5]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[6]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[7]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[8]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[9]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[10]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[11]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[12]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[13]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[14]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[15]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[16]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[17]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[18]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[19]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[20]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[21]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[22]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[23]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[24]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[25]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[26]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[27]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[28]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[29]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[30]"
+Warning: Can't find signal in vector source file for input pin "|T18_Timer|Seconds[31]"
+Info: Inverted registers were found during simulation
+    Info: Register: |T18_Timer|Ticks[0]
+    Info: Register: |T18_Timer|Ticks[31]
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Warning: Found logic contention at time 121.24 ns on bus node "|T18_Timer|Seconds[0]~result"
+    Info: Node "Seconds[0]~output" has logic level of 1
+    Info: Node "Seconds[0]" has logic level of X
+Warning: Found logic contention at time 221.24 ns on bus node "|T18_Timer|Seconds[0]~result"
+    Info: Node "Seconds[0]~output" has logic level of 0
+    Info: Node "Seconds[0]" has logic level of X
+Warning: Found logic contention at time 221.75 ns on bus node "|T18_Timer|Seconds[1]~result"
+    Info: Node "Seconds[1]~output" has logic level of 1
+    Info: Node "Seconds[1]" has logic level of X
+Warning: Found logic contention at time 321.24 ns on bus node "|T18_Timer|Seconds[0]~result"
+    Info: Node "Seconds[0]~output" has logic level of 1
+    Info: Node "Seconds[0]" has logic level of X
+Warning: Found logic contention at time 421.24 ns on bus node "|T18_Timer|Seconds[0]~result"
+    Info: Node "Seconds[0]~output" has logic level of 0
+    Info: Node "Seconds[0]" has logic level of X
+Warning: Found logic contention at time 421.75 ns on bus node "|T18_Timer|Seconds[1]~result"
+    Info: Node "Seconds[1]~output" has logic level of 0
+    Info: Node "Seconds[1]" has logic level of X
+Warning: Found logic contention at time 421.85 ns on bus node "|T18_Timer|Seconds[2]~result"
+    Info: Node "Seconds[2]~output" has logic level of 1
+    Info: Node "Seconds[2]" has logic level of X
+Warning: Found logic contention at time 521.24 ns on bus node "|T18_Timer|Seconds[0]~result"
+    Info: Node "Seconds[0]~output" has logic level of 1
+    Info: Node "Seconds[0]" has logic level of X
+Warning: Found logic contention at time 621.24 ns on bus node "|T18_Timer|Seconds[0]~result"
+    Info: Node "Seconds[0]~output" has logic level of 0
+    Info: Node "Seconds[0]" has logic level of X
+Warning: Found logic contention at time 621.75 ns on bus node "|T18_Timer|Seconds[1]~result"
+    Info: Node "Seconds[1]~output" has logic level of 1
+    Info: Node "Seconds[1]" has logic level of X
+Warning: Found logic contention at time 721.24 ns on bus node "|T18_Timer|Seconds[0]~result"
+    Info: Node "Seconds[0]~output" has logic level of 1
+    Info: Node "Seconds[0]" has logic level of X
+Warning: Found logic contention at time 820.62 ns on bus node "|T18_Timer|Seconds[3]~result"
+    Info: Node "Seconds[3]~output" has logic level of 1
+    Info: Node "Seconds[3]" has logic level of X
+Warning: Found logic contention at time 821.24 ns on bus node "|T18_Timer|Seconds[0]~result"
+    Info: Node "Seconds[0]~output" has logic level of 0
+    Info: Node "Seconds[0]" has logic level of X
+Warning: Found logic contention at time 821.75 ns on bus node "|T18_Timer|Seconds[1]~result"
+    Info: Node "Seconds[1]~output" has logic level of 0
+    Info: Node "Seconds[1]" has logic level of X
+Warning: Found logic contention at time 821.85 ns on bus node "|T18_Timer|Seconds[2]~result"
+    Info: Node "Seconds[2]~output" has logic level of 0
+    Info: Node "Seconds[2]" has logic level of X
+Warning: Found logic contention at time 921.24 ns on bus node "|T18_Timer|Seconds[0]~result"
+    Info: Node "Seconds[0]~output" has logic level of 1
+    Info: Node "Seconds[0]" has logic level of X
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      14.05 %
+Info: Number of transitions in simulation is 1925
+Info: Quartus II Simulator was successful. 0 errors, 48 warnings
+    Info: Peak virtual memory: 164 megabytes
+    Info: Processing ended: Sat Oct 26 02:28:24 2019
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

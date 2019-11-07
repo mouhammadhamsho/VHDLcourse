@@ -1,0 +1,46 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity AddSub_nbit is
+
+generic(
+N : Integer := 4);
+
+
+port(
+
+A,B : in  std_logic_vector(N-1 downto 0) ;
+AddSub : in std_logic;
+SUM : out std_logic_vector(N-1 downto 0);
+COUT : out std_logic
+
+);
+end  AddSub_nbit;
+
+
+architecture behavioral of AddSub_nbit is 
+
+signal COUT_temp : std_logic_vector(N-1 downto 0);
+
+
+Component FullAdder_1bit is
+port(
+A,B : in  std_logic ;
+CIN : in  std_logic ;
+SUM : out std_logic;
+COUT : out std_logic
+);
+end component;
+begin
+
+AS0: FullAdder_1bit port map (A(0) , B(0) XOR AddSub , AddSub ,SUM(0), COUT_temp(0));
+
+AS1: FullAdder_1bit port map (A(1) , B(1) XOR AddSub , Cout_Temp(0) ,SUM(1), COUT_temp(1));
+
+AS2: FullAdder_1bit port map (A(2) , B(2) XOR AddSub , Cout_Temp(1) ,SUM(2), COUT_temp(2));
+
+AS3: FullAdder_1bit port map (A(3) , B(3) XOR AddSub , Cout_Temp(2) ,SUM(3), COUT_temp(3));
+COUT<= COUT_temp(3);
+
+end;
+ 

@@ -1,0 +1,432 @@
+Simulator report for RegisterFile
+Sat Nov 02 22:37:01 2019
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 172 nodes    ;
+; Simulation Coverage         ;      13.95 % ;
+; Total Number of Transitions ; 104          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Stratix II   ;
+; Device                      ; EP2S15F484C3 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                            ;
++--------------------------------------------------------------------------------------------+------------------+---------------+
+; Option                                                                                     ; Setting          ; Default Value ;
++--------------------------------------------------------------------------------------------+------------------+---------------+
+; Simulation mode                                                                            ; Timing           ; Timing        ;
+; Start time                                                                                 ; 0 ns             ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF             ;               ;
+; Vector input source                                                                        ; RegisterFile.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On               ; On            ;
+; Check outputs                                                                              ; Off              ; Off           ;
+; Report simulation coverage                                                                 ; On               ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On               ; On            ;
+; Display missing 1-value coverage report                                                    ; On               ; On            ;
+; Display missing 0-value coverage report                                                    ; On               ; On            ;
+; Detect setup and hold time violations                                                      ; Off              ; Off           ;
+; Detect glitches                                                                            ; Off              ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off              ; Off           ;
+; Generate Signal Activity File                                                              ; Off              ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off              ; Off           ;
+; Group bus channels in simulation results                                                   ; Off              ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On               ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE       ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off              ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off              ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto             ; Auto          ;
++--------------------------------------------------------------------------------------------+------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      13.95 % ;
+; Total nodes checked                                 ; 172          ;
+; Total output ports checked                          ; 172          ;
+; Total output ports with complete 1/0-value coverage ; 24           ;
+; Total output ports with no 1/0-value coverage       ; 98           ;
+; Total output ports with no 1-value coverage         ; 100          ;
+; Total output ports with no 0-value coverage         ; 146          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                              ;
++-------------------------------------------------------------------+-------------------------------------------------------------------+------------------+
+; Node Name                                                         ; Output Port Name                                                  ; Output Port Type ;
++-------------------------------------------------------------------+-------------------------------------------------------------------+------------------+
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux7~0                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux7~0                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux4~0                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux4~0                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux3~0                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux3~0                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux2~0                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux2~0                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux1~0                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux1~0                   ; combout          ;
+; |RegisterFileTopLevel|DEMUX_8_8:InputDemux|Equal0~0               ; |RegisterFileTopLevel|DEMUX_8_8:InputDemux|Equal0~0               ; combout          ;
+; |RegisterFileTopLevel|DEMUX_8_8:InputDemux|Equal0~4               ; |RegisterFileTopLevel|DEMUX_8_8:InputDemux|Equal0~4               ; combout          ;
+; |RegisterFileTopLevel|DEMUX_8_8:InputDemux|Equal0~6               ; |RegisterFileTopLevel|DEMUX_8_8:InputDemux|Equal0~6               ; combout          ;
+; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[1]         ; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[1]         ; combout          ;
+; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[0]         ; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[0]         ; combout          ;
+; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[2]         ; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[2]         ; combout          ;
+; |RegisterFileTopLevel|DataIN[0]                                   ; |RegisterFileTopLevel|DataIN[0]~corein                            ; combout          ;
+; |RegisterFileTopLevel|DesReg_ADR[0]                               ; |RegisterFileTopLevel|DesReg_ADR[0]~corein                        ; combout          ;
+; |RegisterFileTopLevel|DesReg_ADR[1]                               ; |RegisterFileTopLevel|DesReg_ADR[1]~corein                        ; combout          ;
+; |RegisterFileTopLevel|DataIN[1]                                   ; |RegisterFileTopLevel|DataIN[1]~corein                            ; combout          ;
+; |RegisterFileTopLevel|DataIN[2]                                   ; |RegisterFileTopLevel|DataIN[2]~corein                            ; combout          ;
+; |RegisterFileTopLevel|DataIN[3]                                   ; |RegisterFileTopLevel|DataIN[3]~corein                            ; combout          ;
+; |RegisterFileTopLevel|DataIN[4]                                   ; |RegisterFileTopLevel|DataIN[4]~corein                            ; combout          ;
+; |RegisterFileTopLevel|DataIN[5]                                   ; |RegisterFileTopLevel|DataIN[5]~corein                            ; combout          ;
+; |RegisterFileTopLevel|DataIN[6]                                   ; |RegisterFileTopLevel|DataIN[6]~corein                            ; combout          ;
+; |RegisterFileTopLevel|WR_Data                                     ; |RegisterFileTopLevel|WR_Data~corein                              ; combout          ;
+; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[0]~clkctrl ; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[0]~clkctrl ; outclk           ;
+; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[1]~clkctrl ; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[1]~clkctrl ; outclk           ;
+; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[2]~clkctrl ; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[2]~clkctrl ; outclk           ;
++-------------------------------------------------------------------+-------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                 ;
++-------------------------------------------------------------------+-------------------------------------------------------------------+------------------+
+; Node Name                                                         ; Output Port Name                                                  ; Output Port Type ;
++-------------------------------------------------------------------+-------------------------------------------------------------------+------------------+
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[0]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[0]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[0]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[0]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[0]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[0]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn|Q[0]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn|Q[0]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[0]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[0]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[0]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[0]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:1:REGn|Q[1]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:1:REGn|Q[1]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[1]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[1]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[1]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[1]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[1]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[1]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn|Q[1]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn|Q[1]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[1]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[1]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:2:REGn|Q[1]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:2:REGn|Q[1]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[1]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[1]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:1:REGn|Q[2]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:1:REGn|Q[2]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[2]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[2]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[2]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[2]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[2]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[2]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn|Q[2]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn|Q[2]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[2]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[2]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[2]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[2]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[3]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[3]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[3]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[3]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[3]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[3]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[3]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[3]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[3]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[3]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[4]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[4]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[4]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[4]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[4]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[4]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn|Q[4]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn|Q[4]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[4]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[4]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[4]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[4]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[5]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[5]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[5]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[5]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[5]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[5]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn|Q[5]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn|Q[5]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[5]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[5]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[5]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[5]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[6]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[6]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[6]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[6]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[6]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[6]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn|Q[6]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn|Q[6]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[6]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[6]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[6]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[6]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:1:REGn|Q[7]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:1:REGn|Q[7]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[7]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[7]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[7]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[7]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[7]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[7]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn|Q[7]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn|Q[7]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[7]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[7]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:2:REGn|Q[7]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:2:REGn|Q[7]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[7]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[7]      ; regout           ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux7~1                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux7~1                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux6~0                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux6~0                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux6~1                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux6~1                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux6~2                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux6~2                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux5~0                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux5~0                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux5~1                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux5~1                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux5~2                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux5~2                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux3~1                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux3~1                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux2~1                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux2~1                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux1~1                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux1~1                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux0~0                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux0~0                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux0~1                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux0~1                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux0~2                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux0~2                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux6~0                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux6~0                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux6~1                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux6~1                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux6~2                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux6~2                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux5~0                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux5~0                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux0~0                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux0~0                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux0~1                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux0~1                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux0~2                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux0~2                   ; combout          ;
+; |RegisterFileTopLevel|DEMUX_8_8:InputDemux|Equal0~1               ; |RegisterFileTopLevel|DEMUX_8_8:InputDemux|Equal0~1               ; combout          ;
+; |RegisterFileTopLevel|DEMUX_8_8:InputDemux|Equal0~2               ; |RegisterFileTopLevel|DEMUX_8_8:InputDemux|Equal0~2               ; combout          ;
+; |RegisterFileTopLevel|DEMUX_8_8:InputDemux|Equal0~3               ; |RegisterFileTopLevel|DEMUX_8_8:InputDemux|Equal0~3               ; combout          ;
+; |RegisterFileTopLevel|DEMUX_8_8:InputDemux|Equal0~5               ; |RegisterFileTopLevel|DEMUX_8_8:InputDemux|Equal0~5               ; combout          ;
+; |RegisterFileTopLevel|DEMUX_8_8:InputDemux|Equal0~7               ; |RegisterFileTopLevel|DEMUX_8_8:InputDemux|Equal0~7               ; combout          ;
+; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[5]         ; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[5]         ; combout          ;
+; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[3]         ; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[3]         ; combout          ;
+; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[7]         ; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[7]         ; combout          ;
+; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[4]         ; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[4]         ; combout          ;
+; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[6]         ; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[6]         ; combout          ;
+; |RegisterFileTopLevel|RA_DATA[1]                                  ; |RegisterFileTopLevel|RA_DATA[1]                                  ; padio            ;
+; |RegisterFileTopLevel|RA_DATA[2]                                  ; |RegisterFileTopLevel|RA_DATA[2]                                  ; padio            ;
+; |RegisterFileTopLevel|RA_DATA[7]                                  ; |RegisterFileTopLevel|RA_DATA[7]                                  ; padio            ;
+; |RegisterFileTopLevel|RB_DATA[1]                                  ; |RegisterFileTopLevel|RB_DATA[1]                                  ; padio            ;
+; |RegisterFileTopLevel|RB_DATA[7]                                  ; |RegisterFileTopLevel|RB_DATA[7]                                  ; padio            ;
+; |RegisterFileTopLevel|RA_ADR[2]                                   ; |RegisterFileTopLevel|RA_ADR[2]~corein                            ; combout          ;
+; |RegisterFileTopLevel|RA_ADR[1]                                   ; |RegisterFileTopLevel|RA_ADR[1]~corein                            ; combout          ;
+; |RegisterFileTopLevel|RB_ADR[0]                                   ; |RegisterFileTopLevel|RB_ADR[0]~corein                            ; combout          ;
+; |RegisterFileTopLevel|RB_ADR[2]                                   ; |RegisterFileTopLevel|RB_ADR[2]~corein                            ; combout          ;
+; |RegisterFileTopLevel|RESET                                       ; |RegisterFileTopLevel|RESET~corein                                ; combout          ;
+; |RegisterFileTopLevel|DesReg_ADR[2]                               ; |RegisterFileTopLevel|DesReg_ADR[2]~corein                        ; combout          ;
+; |RegisterFileTopLevel|DataIN[7]                                   ; |RegisterFileTopLevel|DataIN[7]~corein                            ; combout          ;
+; |RegisterFileTopLevel|RESET~clkctrl                               ; |RegisterFileTopLevel|RESET~clkctrl                               ; outclk           ;
+; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[3]~clkctrl ; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[3]~clkctrl ; outclk           ;
+; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[5]~clkctrl ; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[5]~clkctrl ; outclk           ;
+; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[6]~clkctrl ; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[6]~clkctrl ; outclk           ;
+; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[4]~clkctrl ; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[4]~clkctrl ; outclk           ;
+; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[7]~clkctrl ; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[7]~clkctrl ; outclk           ;
++-------------------------------------------------------------------+-------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                 ;
++-------------------------------------------------------------------+-------------------------------------------------------------------+------------------+
+; Node Name                                                         ; Output Port Name                                                  ; Output Port Type ;
++-------------------------------------------------------------------+-------------------------------------------------------------------+------------------+
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:1:REGn|Q[0]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:1:REGn|Q[0]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[0]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[0]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[0]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[0]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[0]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[0]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn|Q[0]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn|Q[0]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[0]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[0]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:2:REGn|Q[0]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:2:REGn|Q[0]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[0]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[0]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:1:REGn|Q[1]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:1:REGn|Q[1]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[1]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[1]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[1]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[1]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[1]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[1]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn|Q[1]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn|Q[1]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[1]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[1]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:2:REGn|Q[1]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:2:REGn|Q[1]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[1]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[1]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:1:REGn|Q[2]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:1:REGn|Q[2]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[2]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[2]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[2]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[2]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[2]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[2]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn|Q[2]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn|Q[2]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[2]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[2]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:2:REGn|Q[2]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:2:REGn|Q[2]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[2]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[2]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:1:REGn|Q[3]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:1:REGn|Q[3]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[3]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[3]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[3]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[3]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[3]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[3]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn|Q[3]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn|Q[3]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[3]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[3]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:2:REGn|Q[3]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:2:REGn|Q[3]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[3]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[3]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:1:REGn|Q[4]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:1:REGn|Q[4]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[4]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[4]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[4]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[4]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[4]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[4]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn|Q[4]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn|Q[4]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[4]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[4]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:2:REGn|Q[4]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:2:REGn|Q[4]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[4]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[4]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:1:REGn|Q[5]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:1:REGn|Q[5]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[5]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[5]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[5]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[5]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[5]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[5]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn|Q[5]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn|Q[5]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[5]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[5]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:2:REGn|Q[5]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:2:REGn|Q[5]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[5]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[5]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:1:REGn|Q[6]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:1:REGn|Q[6]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[6]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[6]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[6]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[6]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[6]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[6]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn|Q[6]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn|Q[6]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[6]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[6]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:2:REGn|Q[6]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:2:REGn|Q[6]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[6]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[6]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:1:REGn|Q[7]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:1:REGn|Q[7]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[7]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn|Q[7]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[7]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn|Q[7]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[7]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn|Q[7]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn|Q[7]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn|Q[7]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[7]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn|Q[7]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:2:REGn|Q[7]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:2:REGn|Q[7]      ; regout           ;
+; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[7]      ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn|Q[7]      ; regout           ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux7~0                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux7~0                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux7~1                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux7~1                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux7~2                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux7~2                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux6~0                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux6~0                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux6~1                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux6~1                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux6~2                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux6~2                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux5~0                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux5~0                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux5~1                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux5~1                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux5~2                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux5~2                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux4~0                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux4~0                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux4~1                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux4~1                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux4~2                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux4~2                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux3~0                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux3~0                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux3~1                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux3~1                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux3~2                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux3~2                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux2~0                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux2~0                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux2~1                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux2~1                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux2~2                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux2~2                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux1~0                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux1~0                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux1~1                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux1~1                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux1~2                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux1~2                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux0~0                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux0~0                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux0~1                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux0~1                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux0~2                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux1|Mux0~2                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux7~1                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux7~1                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux7~2                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux7~2                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux6~0                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux6~0                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux6~1                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux6~1                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux6~2                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux6~2                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux5~0                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux5~0                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux5~1                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux5~1                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux5~2                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux5~2                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux4~1                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux4~1                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux4~2                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux4~2                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux3~1                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux3~1                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux3~2                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux3~2                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux2~1                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux2~1                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux2~2                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux2~2                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux1~1                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux1~1                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux1~2                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux1~2                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux0~0                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux0~0                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux0~1                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux0~1                   ; combout          ;
+; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux0~2                   ; |RegisterFileTopLevel|MUX_8_8:OutputMux2|Mux0~2                   ; combout          ;
+; |RegisterFileTopLevel|DEMUX_8_8:InputDemux|Equal0~1               ; |RegisterFileTopLevel|DEMUX_8_8:InputDemux|Equal0~1               ; combout          ;
+; |RegisterFileTopLevel|DEMUX_8_8:InputDemux|Equal0~2               ; |RegisterFileTopLevel|DEMUX_8_8:InputDemux|Equal0~2               ; combout          ;
+; |RegisterFileTopLevel|DEMUX_8_8:InputDemux|Equal0~3               ; |RegisterFileTopLevel|DEMUX_8_8:InputDemux|Equal0~3               ; combout          ;
+; |RegisterFileTopLevel|DEMUX_8_8:InputDemux|Equal0~5               ; |RegisterFileTopLevel|DEMUX_8_8:InputDemux|Equal0~5               ; combout          ;
+; |RegisterFileTopLevel|DEMUX_8_8:InputDemux|Equal0~7               ; |RegisterFileTopLevel|DEMUX_8_8:InputDemux|Equal0~7               ; combout          ;
+; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[5]         ; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[5]         ; combout          ;
+; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[3]         ; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[3]         ; combout          ;
+; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[7]         ; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[7]         ; combout          ;
+; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[4]         ; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[4]         ; combout          ;
+; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[6]         ; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[6]         ; combout          ;
+; |RegisterFileTopLevel|RA_DATA[0]                                  ; |RegisterFileTopLevel|RA_DATA[0]                                  ; padio            ;
+; |RegisterFileTopLevel|RA_DATA[1]                                  ; |RegisterFileTopLevel|RA_DATA[1]                                  ; padio            ;
+; |RegisterFileTopLevel|RA_DATA[2]                                  ; |RegisterFileTopLevel|RA_DATA[2]                                  ; padio            ;
+; |RegisterFileTopLevel|RA_DATA[3]                                  ; |RegisterFileTopLevel|RA_DATA[3]                                  ; padio            ;
+; |RegisterFileTopLevel|RA_DATA[4]                                  ; |RegisterFileTopLevel|RA_DATA[4]                                  ; padio            ;
+; |RegisterFileTopLevel|RA_DATA[5]                                  ; |RegisterFileTopLevel|RA_DATA[5]                                  ; padio            ;
+; |RegisterFileTopLevel|RA_DATA[6]                                  ; |RegisterFileTopLevel|RA_DATA[6]                                  ; padio            ;
+; |RegisterFileTopLevel|RA_DATA[7]                                  ; |RegisterFileTopLevel|RA_DATA[7]                                  ; padio            ;
+; |RegisterFileTopLevel|RB_DATA[0]                                  ; |RegisterFileTopLevel|RB_DATA[0]                                  ; padio            ;
+; |RegisterFileTopLevel|RB_DATA[1]                                  ; |RegisterFileTopLevel|RB_DATA[1]                                  ; padio            ;
+; |RegisterFileTopLevel|RB_DATA[2]                                  ; |RegisterFileTopLevel|RB_DATA[2]                                  ; padio            ;
+; |RegisterFileTopLevel|RB_DATA[3]                                  ; |RegisterFileTopLevel|RB_DATA[3]                                  ; padio            ;
+; |RegisterFileTopLevel|RB_DATA[4]                                  ; |RegisterFileTopLevel|RB_DATA[4]                                  ; padio            ;
+; |RegisterFileTopLevel|RB_DATA[5]                                  ; |RegisterFileTopLevel|RB_DATA[5]                                  ; padio            ;
+; |RegisterFileTopLevel|RB_DATA[6]                                  ; |RegisterFileTopLevel|RB_DATA[6]                                  ; padio            ;
+; |RegisterFileTopLevel|RB_DATA[7]                                  ; |RegisterFileTopLevel|RB_DATA[7]                                  ; padio            ;
+; |RegisterFileTopLevel|RA_ADR[0]                                   ; |RegisterFileTopLevel|RA_ADR[0]~corein                            ; combout          ;
+; |RegisterFileTopLevel|RA_ADR[2]                                   ; |RegisterFileTopLevel|RA_ADR[2]~corein                            ; combout          ;
+; |RegisterFileTopLevel|RA_ADR[1]                                   ; |RegisterFileTopLevel|RA_ADR[1]~corein                            ; combout          ;
+; |RegisterFileTopLevel|RB_ADR[0]                                   ; |RegisterFileTopLevel|RB_ADR[0]~corein                            ; combout          ;
+; |RegisterFileTopLevel|RB_ADR[2]                                   ; |RegisterFileTopLevel|RB_ADR[2]~corein                            ; combout          ;
+; |RegisterFileTopLevel|RB_ADR[1]                                   ; |RegisterFileTopLevel|RB_ADR[1]~corein                            ; combout          ;
+; |RegisterFileTopLevel|DesReg_ADR[2]                               ; |RegisterFileTopLevel|DesReg_ADR[2]~corein                        ; combout          ;
+; |RegisterFileTopLevel|DataIN[7]                                   ; |RegisterFileTopLevel|DataIN[7]~corein                            ; combout          ;
+; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[3]~clkctrl ; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[3]~clkctrl ; outclk           ;
+; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[5]~clkctrl ; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[5]~clkctrl ; outclk           ;
+; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[6]~clkctrl ; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[6]~clkctrl ; outclk           ;
+; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[4]~clkctrl ; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[4]~clkctrl ; outclk           ;
+; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[7]~clkctrl ; |RegisterFileTopLevel|Decoder_3_8:Decoder|OutputDecode[7]~clkctrl ; outclk           ;
++-------------------------------------------------------------------+-------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sat Nov 02 22:37:01 2019
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off RegisterFile -c RegisterFile
+Info: Using vector source file "E:/MyFiles/Courses/VHDL fromwire to datapath/Lectures/RegisterFile/RegisterFile.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      13.95 %
+Info: Number of transitions in simulation is 104
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 164 megabytes
+    Info: Processing ended: Sat Nov 02 22:37:01 2019
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+
