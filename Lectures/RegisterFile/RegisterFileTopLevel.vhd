@@ -1,13 +1,12 @@
 Library IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
-
+use work.TopLevelIO_pkg.all;
 entity RegisterFileTopLevel is 
 port
 (
-RA_ADR , RB_ADR , DesReg_ADR : in std_logic_vector(2 downto 0);
-DataIN : in std_logic_vector(7 downto 0);
-WR_Data , RESET : in std_logic;
-RA_DATA , RB_DATA : out std_logic_vector( 7 downto 0)
+
+i_RF					: in r_RF_IN;
+o_RF					: out r_RF_OUT
 );
 
 end RegisterFileTopLevel;
@@ -17,8 +16,8 @@ architecture behavioral of RegisterFileTopLevel is
 TYPE   LINK_WIRES_8BITS IS ARRAY (7 DOWNTO 0) OF   std_logic_vector(7 downto 0);
  
 --------------------------------------------------------------------------------
-signal WIRE_DEMUXO_REGFI 	: LINK_WIRES_8BITS;
-signal WIRE_Decod_REGclk    : LINK_WIRES_8BITS;
+signal WIRE_DEMUXO_REGFI 	:  LINK_WIRES_8BITS;
+signal WIRE_Decod_REGclk   : LINK_WIRES_8BITS;
 signal WIRE_RESET_REG       : LINK_WIRES_8BITS;
 signal WIRE_MUXI_REGFO 		: LINK_WIRES_8BITS;
 signal WIRE_DECODEO_REGCLK  : std_logic_vector(7 downto 0);
@@ -83,21 +82,21 @@ begin
 RegistersGeneration:
 --Generating  Registers 
 for i  in 0 to 7 generate 
-REGn:  DFF_8 port map (WIRE_DEMUXO_REGFI(i) , WIRE_DECODEO_REGCLK(i) , RESET ,WIRE_MUXI_REGFO(i)); 
+
 end generate ;  
 
 --Generating Output multiplexers
 OutputMux1 :  MUX_8_8 port map (WIRE_MUXI_REGFO(0),WIRE_MUXI_REGFO(1),WIRE_MUXI_REGFO(2),WIRE_MUXI_REGFO(3),
-						   WIRE_MUXI_REGFO(4),WIRE_MUXI_REGFO(5),WIRE_MUXI_REGFO(6),WIRE_MUXI_REGFO(7),RA_ADR,RA_DATA); 
+						   WIRE_MUXI_REGFO(4),WIRE_MUXI_REGFO(5),WIRE_MUXI_REGFO(6),WIRE_MUXI_REGFO(7),i_RF.RA_ADR,o_RF.RA_DATA ); 
 
 --Generating Output multiplexers
 OutputMux2:  MUX_8_8 port map (WIRE_MUXI_REGFO(0),WIRE_MUXI_REGFO(1),WIRE_MUXI_REGFO(2),WIRE_MUXI_REGFO(3),
-						   WIRE_MUXI_REGFO(4),WIRE_MUXI_REGFO(5),WIRE_MUXI_REGFO(6),WIRE_MUXI_REGFO(7),RB_ADR,RB_DATA); 
+						   WIRE_MUXI_REGFO(4),WIRE_MUXI_REGFO(5),WIRE_MUXI_REGFO(6),WIRE_MUXI_REGFO(7), I_RF.RB_ADR,o_RF.RB_DATA ); 
 --Generating Decoder
-Decoder : Decoder_3_8 port map (DesReg_ADR ,WR_DATA ,WIRE_DECODEO_REGCLK); 
+Decoder : Decoder_3_8 port map (i_RF.DesReg_ADR ,i_RF.WR_Data ,WIRE_DECODEO_REGCLK); 
 
 --Generating Demux
-InputDemux : DEMUX_8_8 port map (DesReg_ADR , DataIN ,WIRE_DEMUXO_REGFI(0) , WIRE_DEMUXO_REGFI(1) , WIRE_DEMUXO_REGFI(2),
+InputDemux : DEMUX_8_8 port map (i_RF.DesReg_ADR , i_RF.DataIN ,WIRE_DEMUXO_REGFI(0) , WIRE_DEMUXO_REGFI(1) , WIRE_DEMUXO_REGFI(2),
                                  WIRE_DEMUXO_REGFI(3) ,WIRE_DEMUXO_REGFI(4) ,WIRE_DEMUXO_REGFI(5) ,WIRE_DEMUXO_REGFI(6) , WIRE_DEMUXO_REGFI(7));
                                                                 
  

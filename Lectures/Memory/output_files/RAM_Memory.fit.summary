@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sat Nov 09 21:33:48 2019
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Revision Name : RAM_Memory
+Top-level Entity Name : RAM
+Family : Cyclone IV E
+Device : EP4CE40F29I7
+Timing Models : Final
+Total logic elements : 0 / 39,600 ( 0 % )
+    Total combinational functions : 0 / 39,600 ( 0 % )
+    Dedicated logic registers : 0 / 39,600 ( 0 % )
+Total registers : 0
+Total pins : 28 / 533 ( 5 % )
+Total virtual pins : 0
+Total memory bits : 256 / 1,161,216 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 232 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

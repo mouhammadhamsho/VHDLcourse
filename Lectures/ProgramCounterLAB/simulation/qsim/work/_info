@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\MyFiles\Courses\VHDLcourse\Lectures\ProgramCounterLAB\simulation\qsim
+vProgramCounterTopLevel
+Z1 IG5NZP^b=OZ`[_>lGMT^5e1
+Z2 V[`VfKG3GMXgVD;i0WJfYA3
+Z3 dD:\MyFiles\Courses\VHDLcourse\Lectures\ProgramCounterLAB\simulation\qsim
+Z4 w1573241877
+Z5 8ProgramCounter_8Bits.vo
+Z6 FProgramCounter_8Bits.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|ProgramCounter_8Bits.vo|
+Z9 o-work work -O0
+Z10 n@program@counter@top@level
+!i10b 1
+Z11 !s100 Kc9ZMT9i75P[KnQJ>4V9@0
+!s85 0
+Z12 !s108 1573241877.783000
+Z13 !s107 ProgramCounter_8Bits.vo|
+!s101 -O0
+vProgramCounterTopLevel_vlg_check_tst
+!i10b 1
+Z14 !s100 _bUJCbbUCWfQE2^?Vl7G_0
+Z15 IQ9og4=^ii6GYndW1=]@^;3
+Z16 VCld2[J8@a27a79C<C<^Qa3
+R3
+Z17 w1573241876
+Z18 8ProgramCounter_8Bits.vwf.vt
+Z19 FProgramCounter_8Bits.vwf.vt
+L0 65
+R7
+r1
+!s85 0
+31
+Z20 !s108 1573241877.927000
+Z21 !s107 ProgramCounter_8Bits.vwf.vt|
+Z22 !s90 -work|work|ProgramCounter_8Bits.vwf.vt|
+!s101 -O0
+R9
+Z23 n@program@counter@top@level_vlg_check_tst
+vProgramCounterTopLevel_vlg_sample_tst
+!i10b 1
+Z24 !s100 M0^C]=4512zS>Kkgd9`ZC1
+Z25 IjdMzflVoBVbQ[Xd01@MDN3
+Z26 VP6]ge@bR7B3DEWZnE1dRk3
+R3
+R17
+R18
+R19
+L0 29
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z27 n@program@counter@top@level_vlg_sample_tst
+vProgramCounterTopLevel_vlg_vec_tst
+!i10b 1
+Z28 !s100 Th:?el7ARd^Ei<BOQWWAS3
+Z29 IFD4X6XFRl^l8:YW_3?KN83
+Z30 V?KHJ3BiMdY]GegUYOLP6l2
+R3
+R17
+R18
+R19
+Z31 L0 285
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z32 n@program@counter@top@level_vlg_vec_tst

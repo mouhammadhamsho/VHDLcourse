@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 100C Model Setup 'i_PC.Load'
+Slack : -0.416
+TNS   : -3.041
+
+Type  : Slow 1200mV 100C Model Setup 'i_PC.Count'
+Slack : 0.104
+TNS   : 0.000
+
+Type  : Slow 1200mV 100C Model Hold 'i_PC.Load'
+Slack : -0.426
+TNS   : -2.944
+
+Type  : Slow 1200mV 100C Model Hold 'i_PC.Count'
+Slack : -0.394
+TNS   : -0.766
+
+Type  : Slow 1200mV 100C Model Minimum Pulse Width 'i_PC.Load'
+Slack : -3.000
+TNS   : -15.850
+
+Type  : Slow 1200mV 100C Model Minimum Pulse Width 'i_PC.Count'
+Slack : -3.000
+TNS   : -5.570
+
+Type  : Slow 1200mV -40C Model Setup 'i_PC.Load'
+Slack : -0.235
+TNS   : -1.470
+
+Type  : Slow 1200mV -40C Model Setup 'i_PC.Count'
+Slack : 0.231
+TNS   : 0.000
+
+Type  : Slow 1200mV -40C Model Hold 'i_PC.Load'
+Slack : -0.489
+TNS   : -3.007
+
+Type  : Slow 1200mV -40C Model Hold 'i_PC.Count'
+Slack : -0.333
+TNS   : -0.658
+
+Type  : Slow 1200mV -40C Model Minimum Pulse Width 'i_PC.Load'
+Slack : -3.000
+TNS   : -15.850
+
+Type  : Slow 1200mV -40C Model Minimum Pulse Width 'i_PC.Count'
+Slack : -3.000
+TNS   : -5.570
+
+Type  : Fast 1200mV -40C Model Setup 'i_PC.Load'
+Slack : -0.347
+TNS   : -0.772
+
+Type  : Fast 1200mV -40C Model Setup 'i_PC.Count'
+Slack : 0.004
+TNS   : 0.000
+
+Type  : Fast 1200mV -40C Model Hold 'i_PC.Load'
+Slack : -0.224
+TNS   : -1.497
+
+Type  : Fast 1200mV -40C Model Hold 'i_PC.Count'
+Slack : -0.218
+TNS   : -0.422
+
+Type  : Fast 1200mV -40C Model Minimum Pulse Width 'i_PC.Load'
+Slack : -3.000
+TNS   : -14.264
+
+Type  : Fast 1200mV -40C Model Minimum Pulse Width 'i_PC.Count'
+Slack : -3.000
+TNS   : -5.212
+
+------------------------------------------------------------

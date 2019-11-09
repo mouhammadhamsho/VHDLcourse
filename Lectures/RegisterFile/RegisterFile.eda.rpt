@@ -1,5 +1,5 @@
 EDA Netlist Writer report for RegisterFile
-Thu Nov 07 15:51:37 2019
+Sat Nov 09 17:48:03 2019
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu Nov 07 15:51:37 2019 ;
+; EDA Netlist Writer Status ; Successful - Sat Nov 09 17:48:03 2019 ;
 ; Revision Name             ; RegisterFile                          ;
 ; Top-level Entity Name     ; RegisterFileTopLevel                  ;
 ; Family                    ; Cyclone IV E                          ;
@@ -66,20 +66,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                                       ;
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                                                  ;
-+----------------------------------------------------------------------------------------------------------------------------------+
-; D:/MyFiles/Courses/VHDL fromwire to datapath/Lectures/RegisterFile/simulation/modelsim/RegisterFile_7_1200mv_100c_slow.vho       ;
-; D:/MyFiles/Courses/VHDL fromwire to datapath/Lectures/RegisterFile/simulation/modelsim/RegisterFile_7_1200mv_-40c_slow.vho       ;
-; D:/MyFiles/Courses/VHDL fromwire to datapath/Lectures/RegisterFile/simulation/modelsim/RegisterFile_min_1200mv_-40c_fast.vho     ;
-; D:/MyFiles/Courses/VHDL fromwire to datapath/Lectures/RegisterFile/simulation/modelsim/RegisterFile.vho                          ;
-; D:/MyFiles/Courses/VHDL fromwire to datapath/Lectures/RegisterFile/simulation/modelsim/RegisterFile_7_1200mv_100c_vhd_slow.sdo   ;
-; D:/MyFiles/Courses/VHDL fromwire to datapath/Lectures/RegisterFile/simulation/modelsim/RegisterFile_7_1200mv_-40c_vhd_slow.sdo   ;
-; D:/MyFiles/Courses/VHDL fromwire to datapath/Lectures/RegisterFile/simulation/modelsim/RegisterFile_min_1200mv_-40c_vhd_fast.sdo ;
-; D:/MyFiles/Courses/VHDL fromwire to datapath/Lectures/RegisterFile/simulation/modelsim/RegisterFile_vhd.sdo                      ;
-+----------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                        ;
++-------------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                   ;
++-------------------------------------------------------------------------------------------------------------------+
+; D:/MyFiles/Courses/VHDLcourse/Lectures/RegisterFile/simulation/modelsim/RegisterFile_7_1200mv_100c_slow.vho       ;
+; D:/MyFiles/Courses/VHDLcourse/Lectures/RegisterFile/simulation/modelsim/RegisterFile_7_1200mv_-40c_slow.vho       ;
+; D:/MyFiles/Courses/VHDLcourse/Lectures/RegisterFile/simulation/modelsim/RegisterFile_min_1200mv_-40c_fast.vho     ;
+; D:/MyFiles/Courses/VHDLcourse/Lectures/RegisterFile/simulation/modelsim/RegisterFile.vho                          ;
+; D:/MyFiles/Courses/VHDLcourse/Lectures/RegisterFile/simulation/modelsim/RegisterFile_7_1200mv_100c_vhd_slow.sdo   ;
+; D:/MyFiles/Courses/VHDLcourse/Lectures/RegisterFile/simulation/modelsim/RegisterFile_7_1200mv_-40c_vhd_slow.sdo   ;
+; D:/MyFiles/Courses/VHDLcourse/Lectures/RegisterFile/simulation/modelsim/RegisterFile_min_1200mv_-40c_vhd_fast.sdo ;
+; D:/MyFiles/Courses/VHDLcourse/Lectures/RegisterFile/simulation/modelsim/RegisterFile_vhd.sdo                      ;
++-------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -88,19 +88,19 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Thu Nov 07 15:51:36 2019
+    Info: Processing started: Sat Nov 09 17:48:02 2019
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off RegisterFile -c RegisterFile
-Info (204019): Generated file RegisterFile_7_1200mv_100c_slow.vho in folder "D:/MyFiles/Courses/VHDL fromwire to datapath/Lectures/RegisterFile/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file RegisterFile_7_1200mv_-40c_slow.vho in folder "D:/MyFiles/Courses/VHDL fromwire to datapath/Lectures/RegisterFile/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file RegisterFile_min_1200mv_-40c_fast.vho in folder "D:/MyFiles/Courses/VHDL fromwire to datapath/Lectures/RegisterFile/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file RegisterFile.vho in folder "D:/MyFiles/Courses/VHDL fromwire to datapath/Lectures/RegisterFile/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file RegisterFile_7_1200mv_100c_vhd_slow.sdo in folder "D:/MyFiles/Courses/VHDL fromwire to datapath/Lectures/RegisterFile/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file RegisterFile_7_1200mv_-40c_vhd_slow.sdo in folder "D:/MyFiles/Courses/VHDL fromwire to datapath/Lectures/RegisterFile/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file RegisterFile_min_1200mv_-40c_vhd_fast.sdo in folder "D:/MyFiles/Courses/VHDL fromwire to datapath/Lectures/RegisterFile/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file RegisterFile_vhd.sdo in folder "D:/MyFiles/Courses/VHDL fromwire to datapath/Lectures/RegisterFile/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file RegisterFile_7_1200mv_100c_slow.vho in folder "D:/MyFiles/Courses/VHDLcourse/Lectures/RegisterFile/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file RegisterFile_7_1200mv_-40c_slow.vho in folder "D:/MyFiles/Courses/VHDLcourse/Lectures/RegisterFile/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file RegisterFile_min_1200mv_-40c_fast.vho in folder "D:/MyFiles/Courses/VHDLcourse/Lectures/RegisterFile/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file RegisterFile.vho in folder "D:/MyFiles/Courses/VHDLcourse/Lectures/RegisterFile/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file RegisterFile_7_1200mv_100c_vhd_slow.sdo in folder "D:/MyFiles/Courses/VHDLcourse/Lectures/RegisterFile/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file RegisterFile_7_1200mv_-40c_vhd_slow.sdo in folder "D:/MyFiles/Courses/VHDLcourse/Lectures/RegisterFile/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file RegisterFile_min_1200mv_-40c_vhd_fast.sdo in folder "D:/MyFiles/Courses/VHDLcourse/Lectures/RegisterFile/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file RegisterFile_vhd.sdo in folder "D:/MyFiles/Courses/VHDLcourse/Lectures/RegisterFile/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 442 megabytes
-    Info: Processing ended: Thu Nov 07 15:51:37 2019
+    Info: Peak virtual memory: 4570 megabytes
+    Info: Processing ended: Sat Nov 09 17:48:03 2019
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
