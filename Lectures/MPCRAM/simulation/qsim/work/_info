@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\MyFiles\Courses\VHDLcourse\Lectures\MPCRAM\simulation\qsim
+vModulePCRAM
+Z1 !s100 LAma9Y^mW?<8LEcZC2^^n2
+Z2 I;[5E7JYn^d98dn_n_oR<e2
+Z3 V5[flJCAl3VBN@kMR3R:IG1
+Z4 dD:\MyFiles\Courses\VHDLcourse\Lectures\MPCRAM\simulation\qsim
+Z5 w1573389200
+Z6 8MPCRAM.vo
+Z7 FMPCRAM.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|MPCRAM.vo|
+Z10 o-work work -O0
+Z11 n@module@p@c@r@a@m
+!i10b 1
+!s85 0
+Z12 !s108 1573389200.875000
+Z13 !s107 MPCRAM.vo|
+!s101 -O0
+vModulePCRAM_vlg_check_tst
+!i10b 1
+Z14 !s100 >Pm9cb?kW@=>Eb6>I@gz10
+Z15 IJi^5fR_Y]2gBhV_nF3o600
+Z16 V4W@];JOSO7a6mIhR1Y:nE3
+R4
+Z17 w1573389198
+Z18 8MPCRAM.vwf.vt
+Z19 FMPCRAM.vwf.vt
+L0 71
+R8
+r1
+!s85 0
+31
+Z20 !s108 1573389201.002000
+Z21 !s107 MPCRAM.vwf.vt|
+Z22 !s90 -work|work|MPCRAM.vwf.vt|
+!s101 -O0
+R10
+Z23 n@module@p@c@r@a@m_vlg_check_tst
+vModulePCRAM_vlg_sample_tst
+!i10b 1
+Z24 !s100 CojefaBl3E_n69An_^ibo1
+Z25 I5Sh9cZjLI<MTbRDD28F>g1
+Z26 VJgIhH9`KN_M3BaLl1d_5R2
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@module@p@c@r@a@m_vlg_sample_tst
+vModulePCRAM_vlg_vec_tst
+!i10b 1
+!s100 K?>[iCb<PKEX>NfJ?7kza1
+I<5;@7aNL0Ve@NeD68Jf`j3
+Z28 VhPV6Vo2L^;k:CiTb[jQY:0
+R4
+R17
+R18
+R19
+Z29 L0 443
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z30 n@module@p@c@r@a@m_vlg_vec_tst

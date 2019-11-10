@@ -15,9 +15,9 @@ end ProgramCounterTopLevel;
 
 architecture behavioral of ProgramCounterTopLevel is
 
-signal DATA_DMUX_BitFF: std_logic_vector(4 downto 0);
-signal COUNT_CMUX_BitFF : std_logic_vector (4 downto 0);
-signal COUNT_BitFF_CMUX_DMUX : std_logic_vector (5 downto 0);
+signal DATA_DMUX_BitFF: std_logic_vector(7 downto 0);
+signal COUNT_CMUX_BitFF : std_logic_vector (7 downto 0);
+signal COUNT_BitFF_CMUX_DMUX : std_logic_vector (8 downto 0);
 
 component DFF_1 is
 port
@@ -45,12 +45,12 @@ end component;
 
 begin
 GenerateDFFs:
-for i  in 0 to 4 generate 
+for i  in 0 to 7 generate 
 DFFn : DFF_1 port map (DATA_DMUX_BitFF(i),COUNT_CMUX_BitFF(i),i_PC.RESET ,o_PC.PC_COUNT_OUT(i),COUNT_BitFF_CMUX_DMUX(i));
 end generate;
 
 GenerateDMUX:
-for i  in 0 to 4 generate 
+for i  in 0 to 7 generate 
 DMUX : MUX_2_1 port map (COUNT_BitFF_CMUX_DMUX(i) , i_PC.PC_DATA_IN(i) ,i_PC.LOAD , DATA_DMUX_BitFF(i));
 end generate;
 
@@ -59,7 +59,7 @@ CMUX1 : MUX_2_1 port map (i_pc.COUNT , i_pc.WRITE_DATA ,i_pc.LOAD , COUNT_CMUX_B
 
 
 GenerateCMUX:
-for i  in 1 to 4 generate 
+for i  in 1 to 7 generate 
 CMUX : MUX_2_1 port map (COUNT_BitFF_CMUX_DMUX(i-1) , i_pc.WRITE_DATA ,i_pc.LOAD , COUNT_CMUX_BitFF(i));
 end generate;
 

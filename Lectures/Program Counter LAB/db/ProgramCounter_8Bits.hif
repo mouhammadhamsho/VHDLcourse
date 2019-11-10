@@ -1,0 +1,172 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+7
+3700
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+MUX_2_1
+# storage
+db|ProgramCounter_8Bits.(0).cnf
+db|ProgramCounter_8Bits.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+mux_2_1.vhd
+48bf8ee0d1a34e03ec7b963b04c7f42
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+MUX_2_1:\GenerateINMUX:0:INMUX
+MUX_2_1:\GenerateINMUX:1:INMUX
+MUX_2_1:\GenerateINMUX:2:INMUX
+MUX_2_1:\GenerateINMUX:3:INMUX
+MUX_2_1:\GenerateINMUX:4:INMUX
+MUX_2_1:\GenerateINMUX:5:INMUX
+MUX_2_1:\GenerateINMUX:6:INMUX
+MUX_2_1:\GenerateINMUX:7:INMUX
+MUX_2_1:\GenerateOUTMUX:1:outMUX
+MUX_2_1:\GenerateOUTMUX:2:outMUX
+MUX_2_1:\GenerateOUTMUX:3:outMUX
+MUX_2_1:\GenerateOUTMUX:4:outMUX
+MUX_2_1:\GenerateOUTMUX:5:outMUX
+MUX_2_1:\GenerateOUTMUX:6:outMUX
+MUX_2_1:\GenerateOUTMUX:7:outMUX
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+DFF_8
+# storage
+db|ProgramCounter_8Bits.(1).cnf
+db|ProgramCounter_8Bits.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+dff_8.vhd
+2f549a5be62b81ff6d33e35b58921f
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+DFF_1
+# storage
+db|ProgramCounter_8Bits.(3).cnf
+db|ProgramCounter_8Bits.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+dff_1.vhd
+1870f787d39207252b7d7b2f7bd44d6
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+DFF_1:\GenerateDFFs:1:DFFn
+DFF_1:\GenerateDFFs:2:DFFn
+DFF_1:\GenerateDFFs:3:DFFn
+DFF_1:\GenerateDFFs:4:DFFn
+DFF_1:\GenerateDFFs:5:DFFn
+DFF_1:\GenerateDFFs:6:DFFn
+DFF_1:\GenerateDFFs:7:DFFn
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+ProgramCounterTopLevel
+# storage
+db|ProgramCounter_8Bits.(2).cnf
+db|ProgramCounter_8Bits.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+programcountertoplevel.vhd
+9fee7d0c1806fa60b221419721ea94
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+|
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# complete
+

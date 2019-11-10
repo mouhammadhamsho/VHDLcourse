@@ -1,0 +1,40 @@
+# do MPCRAM.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ModulePCRAM
+# 
+# Top level modules:
+# 	ModulePCRAM
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ModulePCRAM_vlg_sample_tst
+# -- Compiling module ModulePCRAM_vlg_check_tst
+# -- Compiling module ModulePCRAM_vlg_vec_tst
+# 
+# Top level modules:
+# 	ModulePCRAM_vlg_vec_tst
+# vsim -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -voptargs=\"+acc\" -t 1ps -novopt work.ModulePCRAM_vlg_vec_tst 
+# Loading work.ModulePCRAM_vlg_vec_tst
+# Loading work.ModulePCRAM
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading altera_ver.dffeas
+# Loading cycloneive_ver.cycloneive_ram_block
+# Loading cycloneive_ver.cycloneive_ram_register
+# Loading cycloneive_ver.cycloneive_ram_pulse_generator
+# Loading work.ModulePCRAM_vlg_sample_tst
+# Loading work.ModulePCRAM_vlg_check_tst
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Loading instances from MPCRAM_v.sdo
+# Loading altera_ver.PRIM_GDFF_LOW
+# Loading timing data from MPCRAM_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /ModulePCRAM_vlg_vec_tst File: MPCRAM.vwf.vt
+# Simulation passed !
+# ** Note: $finish    : MPCRAM.vwf.vt(439)
+#    Time: 1 us  Iteration: 0  Instance: /ModulePCRAM_vlg_vec_tst/tb_out

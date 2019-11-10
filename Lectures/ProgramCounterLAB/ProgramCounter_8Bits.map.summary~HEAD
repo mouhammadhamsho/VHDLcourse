@@ -1,0 +1,32 @@
+<<<<<<< HEAD:Lectures/ProgramCounterLAB/ProgramCounter_8Bits.map.summary
+Analysis & Synthesis Status : Successful - Sat Nov 09 22:30:35 2019
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Revision Name : ProgramCounter_8Bits
+Top-level Entity Name : ProgramCounterTopLevel
+Family : Cyclone IV E
+Total logic elements : 15
+    Total combinational functions : 15
+    Dedicated logic registers : 10
+Total registers : 10
+Total pins : 14
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+=======
+Analysis & Synthesis Status : Failed - Mon Nov 04 00:29:26 2019
+Quartus II Version : 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition
+Revision Name : ProgramCounter_8Bits
+Top-level Entity Name : ProgramCounterTopLevel
+Family : Stratix II
+Logic utilization : N/A until Partition Merge
+    Combinational ALUTs : N/A until Partition Merge
+    Dedicated logic registers : N/A until Partition Merge
+Total registers : N/A until Partition Merge
+Total pins : N/A until Partition Merge
+Total virtual pins : N/A until Partition Merge
+Total block memory bits : N/A until Partition Merge
+DSP block 9-bit elements : N/A until Partition Merge
+Total PLLs : N/A until Partition Merge
+Total DLLs : N/A until Partition Merge
+>>>>>>> parent of e50d8b1... ProgramCounter:Lectures/Program Counter LAB/ProgramCounter_8Bits.map.summary

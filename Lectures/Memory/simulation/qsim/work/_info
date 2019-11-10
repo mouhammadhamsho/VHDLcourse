@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\MyFiles\Courses\VHDLcourse\Lectures\Memory\simulation\qsim
+vRAM
+Z1 !s100 e2Y;D;CRWVlVif=K@l`O`1
+Z2 ISd8>;@BNUcVZ1ioKgYZP^1
+Z3 Vm`G9nbi3[:a^Y4@Z8@Qhz2
+Z4 dD:\MyFiles\Courses\VHDLcourse\Lectures\Memory\simulation\qsim
+Z5 w1573385330
+Z6 8RAM_Memory.vo
+Z7 FRAM_Memory.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|RAM_Memory.vo|
+Z10 o-work work -O0
+Z11 n@r@a@m
+!i10b 1
+!s85 0
+Z12 !s108 1573385331.287000
+Z13 !s107 RAM_Memory.vo|
+!s101 -O0
+vRAM_vlg_check_tst
+!i10b 1
+Z14 !s100 7A12?19gLTUmMjjmQ^2CI0
+Z15 IcZnRVQh^hX>Xg?b;HMal:0
+Z16 VHPiBn=XLomTf4lFXGD:ZB3
+R4
+Z17 w1573385329
+Z18 8RAM_MEMORZ.vwf.vt
+Z19 FRAM_MEMORZ.vwf.vt
+L0 65
+R8
+r1
+!s85 0
+31
+Z20 !s108 1573385331.489000
+Z21 !s107 RAM_MEMORZ.vwf.vt|
+Z22 !s90 -work|work|RAM_MEMORZ.vwf.vt|
+!s101 -O0
+R10
+Z23 n@r@a@m_vlg_check_tst
+vRAM_vlg_sample_tst
+!i10b 1
+Z24 !s100 =fJ4EB@MPg@JHGBAnm?NP3
+Z25 I[>Je;g[[Hce;K0CBE<T8h0
+Z26 VIVdCAC3l?XegAodBc]h=:0
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@r@a@m_vlg_sample_tst
+vRAM_vlg_vec_tst
+!i10b 1
+!s100 XO0KeQTiNP>i5ZWZeKdG71
+I`<KZ3_6`TcK4JT1am=kgU2
+Z28 V]_4i>KX0g:oXJL]oNWe8n3
+R4
+R17
+R18
+R19
+Z29 L0 285
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z30 n@r@a@m_vlg_vec_tst

@@ -4,32 +4,50 @@ i_PC.Write_Data => MUX_2_1:GenerateCMUX:1:CMUX.DataInput_1
 i_PC.Write_Data => MUX_2_1:GenerateCMUX:2:CMUX.DataInput_1
 i_PC.Write_Data => MUX_2_1:GenerateCMUX:3:CMUX.DataInput_1
 i_PC.Write_Data => MUX_2_1:GenerateCMUX:4:CMUX.DataInput_1
+i_PC.Write_Data => MUX_2_1:GenerateCMUX:5:CMUX.DataInput_1
+i_PC.Write_Data => MUX_2_1:GenerateCMUX:6:CMUX.DataInput_1
+i_PC.Write_Data => MUX_2_1:GenerateCMUX:7:CMUX.DataInput_1
 i_PC.Load => MUX_2_1:GenerateDMUX:0:DMUX.SEL
 i_PC.Load => MUX_2_1:GenerateDMUX:1:DMUX.SEL
 i_PC.Load => MUX_2_1:GenerateDMUX:2:DMUX.SEL
 i_PC.Load => MUX_2_1:GenerateDMUX:3:DMUX.SEL
 i_PC.Load => MUX_2_1:GenerateDMUX:4:DMUX.SEL
+i_PC.Load => MUX_2_1:GenerateDMUX:5:DMUX.SEL
+i_PC.Load => MUX_2_1:GenerateDMUX:6:DMUX.SEL
+i_PC.Load => MUX_2_1:GenerateDMUX:7:DMUX.SEL
 i_PC.Load => MUX_2_1:CMUX1.SEL
 i_PC.Load => MUX_2_1:GenerateCMUX:1:CMUX.SEL
 i_PC.Load => MUX_2_1:GenerateCMUX:2:CMUX.SEL
 i_PC.Load => MUX_2_1:GenerateCMUX:3:CMUX.SEL
 i_PC.Load => MUX_2_1:GenerateCMUX:4:CMUX.SEL
+i_PC.Load => MUX_2_1:GenerateCMUX:5:CMUX.SEL
+i_PC.Load => MUX_2_1:GenerateCMUX:6:CMUX.SEL
+i_PC.Load => MUX_2_1:GenerateCMUX:7:CMUX.SEL
 i_PC.Count => MUX_2_1:CMUX1.DataInput_0
 i_PC.RESET => DFF_1:GenerateDFFs:0:DFFn.RST
 i_PC.RESET => DFF_1:GenerateDFFs:1:DFFn.RST
 i_PC.RESET => DFF_1:GenerateDFFs:2:DFFn.RST
 i_PC.RESET => DFF_1:GenerateDFFs:3:DFFn.RST
 i_PC.RESET => DFF_1:GenerateDFFs:4:DFFn.RST
+i_PC.RESET => DFF_1:GenerateDFFs:5:DFFn.RST
+i_PC.RESET => DFF_1:GenerateDFFs:6:DFFn.RST
+i_PC.RESET => DFF_1:GenerateDFFs:7:DFFn.RST
 i_PC.PC_DATA_IN[0] => MUX_2_1:GenerateDMUX:0:DMUX.DataInput_1
 i_PC.PC_DATA_IN[1] => MUX_2_1:GenerateDMUX:1:DMUX.DataInput_1
 i_PC.PC_DATA_IN[2] => MUX_2_1:GenerateDMUX:2:DMUX.DataInput_1
 i_PC.PC_DATA_IN[3] => MUX_2_1:GenerateDMUX:3:DMUX.DataInput_1
 i_PC.PC_DATA_IN[4] => MUX_2_1:GenerateDMUX:4:DMUX.DataInput_1
+i_PC.PC_DATA_IN[5] => MUX_2_1:GenerateDMUX:5:DMUX.DataInput_1
+i_PC.PC_DATA_IN[6] => MUX_2_1:GenerateDMUX:6:DMUX.DataInput_1
+i_PC.PC_DATA_IN[7] => MUX_2_1:GenerateDMUX:7:DMUX.DataInput_1
 o_PC.PC_COUNT_OUT[0] <= DFF_1:GenerateDFFs:0:DFFn.Q
 o_PC.PC_COUNT_OUT[1] <= DFF_1:GenerateDFFs:1:DFFn.Q
 o_PC.PC_COUNT_OUT[2] <= DFF_1:GenerateDFFs:2:DFFn.Q
 o_PC.PC_COUNT_OUT[3] <= DFF_1:GenerateDFFs:3:DFFn.Q
 o_PC.PC_COUNT_OUT[4] <= DFF_1:GenerateDFFs:4:DFFn.Q
+o_PC.PC_COUNT_OUT[5] <= DFF_1:GenerateDFFs:5:DFFn.Q
+o_PC.PC_COUNT_OUT[6] <= DFF_1:GenerateDFFs:6:DFFn.Q
+o_PC.PC_COUNT_OUT[7] <= DFF_1:GenerateDFFs:7:DFFn.Q
 
 
 |ProgramCounterTopLevel|DFF_1:\GenerateDFFs:0:DFFn
@@ -87,6 +105,39 @@ Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 QN <> QN~reg0
 
 
+|ProgramCounterTopLevel|DFF_1:\GenerateDFFs:5:DFFn
+D => Q~reg0.DATAIN
+D => QN.DATAA
+Clk => QN~reg0.CLK
+Clk => Q~reg0.CLK
+RST => QN.OUTPUTSELECT
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+QN <> QN~reg0
+
+
+|ProgramCounterTopLevel|DFF_1:\GenerateDFFs:6:DFFn
+D => Q~reg0.DATAIN
+D => QN.DATAA
+Clk => QN~reg0.CLK
+Clk => Q~reg0.CLK
+RST => QN.OUTPUTSELECT
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+QN <> QN~reg0
+
+
+|ProgramCounterTopLevel|DFF_1:\GenerateDFFs:7:DFFn
+D => Q~reg0.DATAIN
+D => QN.DATAA
+Clk => QN~reg0.CLK
+Clk => Q~reg0.CLK
+RST => QN.OUTPUTSELECT
+RST => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+QN <> QN~reg0
+
+
 |ProgramCounterTopLevel|MUX_2_1:\GenerateDMUX:0:DMUX
 DataInput_0 => Selector0.IN3
 DataInput_1 => Selector0.IN4
@@ -127,6 +178,30 @@ SEL => Selector0.IN1
 DataOut <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|ProgramCounterTopLevel|MUX_2_1:\GenerateDMUX:5:DMUX
+DataInput_0 => Selector0.IN3
+DataInput_1 => Selector0.IN4
+SEL => Selector0.IN5
+SEL => Selector0.IN1
+DataOut <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ProgramCounterTopLevel|MUX_2_1:\GenerateDMUX:6:DMUX
+DataInput_0 => Selector0.IN3
+DataInput_1 => Selector0.IN4
+SEL => Selector0.IN5
+SEL => Selector0.IN1
+DataOut <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ProgramCounterTopLevel|MUX_2_1:\GenerateDMUX:7:DMUX
+DataInput_0 => Selector0.IN3
+DataInput_1 => Selector0.IN4
+SEL => Selector0.IN5
+SEL => Selector0.IN1
+DataOut <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |ProgramCounterTopLevel|MUX_2_1:CMUX1
 DataInput_0 => Selector0.IN3
 DataInput_1 => Selector0.IN4
@@ -160,6 +235,30 @@ DataOut <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ProgramCounterTopLevel|MUX_2_1:\GenerateCMUX:4:CMUX
+DataInput_0 => Selector0.IN3
+DataInput_1 => Selector0.IN4
+SEL => Selector0.IN5
+SEL => Selector0.IN1
+DataOut <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ProgramCounterTopLevel|MUX_2_1:\GenerateCMUX:5:CMUX
+DataInput_0 => Selector0.IN3
+DataInput_1 => Selector0.IN4
+SEL => Selector0.IN5
+SEL => Selector0.IN1
+DataOut <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ProgramCounterTopLevel|MUX_2_1:\GenerateCMUX:6:CMUX
+DataInput_0 => Selector0.IN3
+DataInput_1 => Selector0.IN4
+SEL => Selector0.IN5
+SEL => Selector0.IN1
+DataOut <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ProgramCounterTopLevel|MUX_2_1:\GenerateCMUX:7:CMUX
 DataInput_0 => Selector0.IN3
 DataInput_1 => Selector0.IN4
 SEL => Selector0.IN5

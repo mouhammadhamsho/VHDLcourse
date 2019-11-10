@@ -5,13 +5,13 @@ package TopLevelIO_pkg is
  
   
    type r_PC_IN  	is record
-		PC_DATA_IN 									  :  std_logic_vector ( 4 downto 0);
+		PC_DATA_IN 									  :  std_logic_vector ( 7 downto 0);
 		RESET , Count , Load, Write_Data      :  std_logic;
   end record r_PC_IN;  
  
   
    type r_PC_OUT 	is record
-		PC_COUNT_OUT				       		   : std_logic_vector( 4 downto 0);
+		PC_COUNT_OUT				       		   : std_logic_vector( 7 downto 0);
    end record r_PC_OUT;
 	
    type r_RF_IN  	is record

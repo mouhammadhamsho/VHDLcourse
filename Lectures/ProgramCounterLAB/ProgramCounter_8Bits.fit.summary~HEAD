@@ -1,0 +1,30 @@
+<<<<<<< HEAD:Lectures/ProgramCounterLAB/ProgramCounter_8Bits.fit.summary
+Fitter Status : Successful - Sat Nov 09 22:30:41 2019
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
+=======
+Fitter Status : Successful - Sun Nov 03 23:51:55 2019
+Quartus II Version : 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition
+>>>>>>> parent of e50d8b1... ProgramCounter:Lectures/Program Counter LAB/ProgramCounter_8Bits.fit.summary
+Revision Name : ProgramCounter_8Bits
+Top-level Entity Name : ProgramCounterTopLevel
+Family : Stratix II
+Device : EP2S15F484C3
+Timing Models : Final
+<<<<<<< HEAD:Lectures/ProgramCounterLAB/ProgramCounter_8Bits.fit.summary
+Total logic elements : 20 / 10,320 ( < 1 % )
+    Total combinational functions : 15 / 10,320 ( < 1 % )
+    Dedicated logic registers : 10 / 10,320 ( < 1 % )
+Total registers : 10
+Total pins : 14 / 180 ( 8 % )
+=======
+Logic utilization : 0 %
+    Combinational ALUTs : 0 / 12,480 ( 0 % )
+    Dedicated logic registers : 0 / 12,480 ( 0 % )
+Total registers : 0
+Total pins : 19 / 343 ( 6 % )
+>>>>>>> parent of e50d8b1... ProgramCounter:Lectures/Program Counter LAB/ProgramCounter_8Bits.fit.summary
+Total virtual pins : 0
+Total block memory bits : 0 / 419,328 ( 0 % )
+DSP block 9-bit elements : 0 / 96 ( 0 % )
+Total PLLs : 0 / 6 ( 0 % )
+Total DLLs : 0 / 2 ( 0 % )

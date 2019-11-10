@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="MPCRAM">
+		<CBX_INST_ENTRY INSTANCE_NAME="|ModulePCRAM|RAM_MEMORY:R|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_0vp3.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
