@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ProgramCounter_8Bits
-Sun Nov 10 15:15:23 2019
+Mon Nov 11 13:44:02 2019
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Sun Nov 10 15:15:23 2019          ;
+; Analysis & Synthesis Status        ; Failed - Mon Nov 11 13:44:02 2019          ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; ProgramCounter_8Bits                       ;
 ; Top-level Entity Name              ; ProgramCounterTopLevel                     ;
@@ -146,7 +146,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 4      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -157,28 +157,24 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sun Nov 10 15:15:23 2019
+    Info: Processing started: Mon Nov 11 13:44:01 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProgramCounter_8Bits -c ProgramCounter_8Bits
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 1 design units, including 0 entities, in source file /myfiles/courses/vhdlcourse/lectures/toplevelio_pkg/toplevelio_pkg.vhd
+Info (12021): Found 1 design units, including 0 entities, in source file /temp/vhdlcourse/vhdlcourse/lectures/toplevelio_pkg/toplevelio_pkg.vhd
     Info (12022): Found design unit 1: TopLevelIO_pkg
 Info (12021): Found 2 design units, including 1 entities, in source file mux_2_1.vhd
     Info (12022): Found design unit 1: MUX_2_1-behavioral
     Info (12023): Found entity 1: MUX_2_1
-Info (12021): Found 2 design units, including 1 entities, in source file programcountertoplevel.vhd
-    Info (12022): Found design unit 1: ProgramCounterTopLevel-behavioral
-    Info (12023): Found entity 1: ProgramCounterTopLevel
+Error (10500): VHDL syntax error at ProgramCounterTopLevel.vhd(51) near text "port";  expecting "end", or "(", or an identifier ("port" is a reserved keyword), or a concurrent statement File: C:/temp/VHDLcourse/VHDLcourse/Lectures/ProgramCounterLAB/ProgramCounterTopLevel.vhd Line: 51
+Error (10500): VHDL syntax error at ProgramCounterTopLevel.vhd(51) near text ";";  expecting "<=" File: C:/temp/VHDLcourse/VHDLcourse/Lectures/ProgramCounterLAB/ProgramCounterTopLevel.vhd Line: 51
+Info (12021): Found 0 design units, including 0 entities, in source file programcountertoplevel.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file dff_1.vhd
     Info (12022): Found design unit 1: DFF_1-Behavioral
     Info (12023): Found entity 1: DFF_1
-Info (12021): Found 2 design units, including 1 entities, in source file programcountertoplevel_tb.vhd
-    Info (12022): Found design unit 1: ProgramCounterTopLevel_TB-behavior
-    Info (12023): Found entity 1: ProgramCounterTopLevel_TB
-Error (10482): VHDL error at ProgramCounterTopLevel_TB.vhd(11): object "r_PC_IN" is used but not declared File: D:/MyFiles/Courses/VHDLcourse/Lectures/ProgramCounterLAB/ProgramCounterTopLevel_TB.vhd Line: 11
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 4652 megabytes
-    Error: Processing ended: Sun Nov 10 15:15:23 2019
-    Error: Elapsed time: 00:00:00
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
+    Error: Peak virtual memory: 4669 megabytes
+    Error: Processing ended: Mon Nov 11 13:44:02 2019
+    Error: Elapsed time: 00:00:01
     Error: Total CPU time (on all processors): 00:00:01
 
 

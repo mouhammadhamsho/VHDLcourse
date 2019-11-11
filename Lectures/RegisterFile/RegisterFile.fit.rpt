@@ -1,5 +1,5 @@
 Fitter report for RegisterFile
-Sat Nov 09 17:47:53 2019
+Mon Nov 11 15:18:49 2019
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -68,7 +68,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Sat Nov 09 17:47:53 2019      ;
+; Fitter Status                      ; Successful - Mon Nov 11 15:18:49 2019      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; RegisterFile                               ;
 ; Top-level Entity Name              ; RegisterFileTopLevel                       ;
@@ -151,7 +151,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 4      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -237,7 +237,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in D:/MyFiles/Courses/VHDLcourse/Lectures/RegisterFile/RegisterFile.pin.
+The pin-out file can be found in C:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/RegisterFile.pin.
 
 
 +----------------------------------------------------------------------+
@@ -1239,25 +1239,25 @@ The pin-out file can be found in D:/MyFiles/Courses/VHDLcourse/Lectures/Register
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                           ;
-+----------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------+--------------+
-; Compilation Hierarchy Node             ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                     ; Library Name ;
-+----------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------+--------------+
-; |RegisterFileTopLevel                  ; 192 (0)     ; 64 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 35   ; 0            ; 128 (0)      ; 40 (0)            ; 24 (0)           ; |RegisterFileTopLevel                                   ; work         ;
-;    |DEMUX_8_8:InputDemux|              ; 64 (64)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 64 (64)      ; 0 (0)             ; 0 (0)            ; |RegisterFileTopLevel|DEMUX_8_8:InputDemux              ; work         ;
-;    |DFF_8:\RegistersGeneration:0:REGn| ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 8 (8)             ; 0 (0)            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn ; work         ;
-;    |DFF_8:\RegistersGeneration:1:REGn| ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 7 (7)             ; 1 (1)            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:1:REGn ; work         ;
-;    |DFF_8:\RegistersGeneration:2:REGn| ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 3 (3)             ; 5 (5)            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:2:REGn ; work         ;
-;    |DFF_8:\RegistersGeneration:3:REGn| ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 4 (4)            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn ; work         ;
-;    |DFF_8:\RegistersGeneration:4:REGn| ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 4 (4)            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn ; work         ;
-;    |DFF_8:\RegistersGeneration:5:REGn| ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 3 (3)             ; 5 (5)            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn ; work         ;
-;    |DFF_8:\RegistersGeneration:6:REGn| ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 2 (2)            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn ; work         ;
-;    |DFF_8:\RegistersGeneration:7:REGn| ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 5 (5)             ; 3 (3)            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn ; work         ;
-;    |Decoder_3_8:Decoder|               ; 8 (8)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; |RegisterFileTopLevel|Decoder_3_8:Decoder               ; work         ;
-;    |MUX_8_8:OutputMux1|                ; 40 (40)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (28)      ; 0 (0)             ; 12 (12)          ; |RegisterFileTopLevel|MUX_8_8:OutputMux1                ; work         ;
-;    |MUX_8_8:OutputMux2|                ; 40 (40)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (28)      ; 0 (0)             ; 12 (12)          ; |RegisterFileTopLevel|MUX_8_8:OutputMux2                ; work         ;
-+----------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                         ;
++---------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------+--------------+
+; Compilation Hierarchy Node            ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                    ; Library Name ;
++---------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------+--------------+
+; |RegisterFileTopLevel                 ; 192 (0)     ; 64 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 35   ; 0            ; 128 (0)      ; 40 (0)            ; 24 (0)           ; |RegisterFileTopLevel                                  ; work         ;
+;    |DEMUX_8_8:InputDemux|             ; 64 (64)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 64 (64)      ; 0 (0)             ; 0 (0)            ; |RegisterFileTopLevel|DEMUX_8_8:InputDemux             ; work         ;
+;    |DFF_8:\RegistersGeneration:0:dff| ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 8 (8)             ; 0 (0)            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:dff ; work         ;
+;    |DFF_8:\RegistersGeneration:1:dff| ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 7 (7)             ; 1 (1)            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:1:dff ; work         ;
+;    |DFF_8:\RegistersGeneration:2:dff| ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 3 (3)             ; 5 (5)            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:2:dff ; work         ;
+;    |DFF_8:\RegistersGeneration:3:dff| ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 4 (4)            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:dff ; work         ;
+;    |DFF_8:\RegistersGeneration:4:dff| ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 4 (4)            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:dff ; work         ;
+;    |DFF_8:\RegistersGeneration:5:dff| ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 3 (3)             ; 5 (5)            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:dff ; work         ;
+;    |DFF_8:\RegistersGeneration:6:dff| ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 2 (2)            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:dff ; work         ;
+;    |DFF_8:\RegistersGeneration:7:dff| ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 5 (5)             ; 3 (3)            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:dff ; work         ;
+;    |Decoder_3_8:Decoder|              ; 8 (8)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; |RegisterFileTopLevel|Decoder_3_8:Decoder              ; work         ;
+;    |MUX_8_8:OutputMux1|               ; 40 (40)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (28)      ; 0 (0)             ; 12 (12)          ; |RegisterFileTopLevel|MUX_8_8:OutputMux1               ; work         ;
+;    |MUX_8_8:OutputMux2|               ; 40 (40)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (28)      ; 0 (0)             ; 12 (12)          ; |RegisterFileTopLevel|MUX_8_8:OutputMux2               ; work         ;
++---------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -1765,238 +1765,238 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------+-------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
-+--------------------------------------------------+
-; Non-Global High Fan-Out Signals                  ;
-+----------------------------------------+---------+
-; Name                                   ; Fan-Out ;
-+----------------------------------------+---------+
-; i_RF.DesReg_ADR[1]~input               ; 72      ;
-; i_RF.DesReg_ADR[0]~input               ; 72      ;
-; i_RF.DesReg_ADR[2]~input               ; 72      ;
-; i_RF.RA_ADR[1]~input                   ; 24      ;
-; i_RF.RA_ADR[0]~input                   ; 24      ;
-; i_RF.RB_ADR[1]~input                   ; 24      ;
-; i_RF.RB_ADR[0]~input                   ; 24      ;
-; i_RF.WR_Data~input                     ; 8       ;
-; i_RF.DataIN[7]~input                   ; 8       ;
-; i_RF.DataIN[6]~input                   ; 8       ;
-; i_RF.DataIN[5]~input                   ; 8       ;
-; i_RF.DataIN[4]~input                   ; 8       ;
-; i_RF.DataIN[3]~input                   ; 8       ;
-; i_RF.DataIN[2]~input                   ; 8       ;
-; i_RF.DataIN[1]~input                   ; 8       ;
-; i_RF.DataIN[0]~input                   ; 8       ;
-; i_RF.RA_ADR[2]~input                   ; 8       ;
-; i_RF.RB_ADR[2]~input                   ; 8       ;
-; DFF_8:\RegistersGeneration:3:REGn|Q[7] ; 2       ;
-; DFF_8:\RegistersGeneration:0:REGn|Q[7] ; 2       ;
-; DFF_8:\RegistersGeneration:1:REGn|Q[7] ; 2       ;
-; DFF_8:\RegistersGeneration:2:REGn|Q[7] ; 2       ;
-; DFF_8:\RegistersGeneration:7:REGn|Q[7] ; 2       ;
-; DFF_8:\RegistersGeneration:4:REGn|Q[7] ; 2       ;
-; DFF_8:\RegistersGeneration:6:REGn|Q[7] ; 2       ;
-; DFF_8:\RegistersGeneration:5:REGn|Q[7] ; 2       ;
-; DFF_8:\RegistersGeneration:3:REGn|Q[6] ; 2       ;
-; DFF_8:\RegistersGeneration:0:REGn|Q[6] ; 2       ;
-; DFF_8:\RegistersGeneration:1:REGn|Q[6] ; 2       ;
-; DFF_8:\RegistersGeneration:2:REGn|Q[6] ; 2       ;
-; DFF_8:\RegistersGeneration:7:REGn|Q[6] ; 2       ;
-; DFF_8:\RegistersGeneration:4:REGn|Q[6] ; 2       ;
-; DFF_8:\RegistersGeneration:6:REGn|Q[6] ; 2       ;
-; DFF_8:\RegistersGeneration:5:REGn|Q[6] ; 2       ;
-; DFF_8:\RegistersGeneration:3:REGn|Q[5] ; 2       ;
-; DFF_8:\RegistersGeneration:0:REGn|Q[5] ; 2       ;
-; DFF_8:\RegistersGeneration:1:REGn|Q[5] ; 2       ;
-; DFF_8:\RegistersGeneration:2:REGn|Q[5] ; 2       ;
-; DFF_8:\RegistersGeneration:7:REGn|Q[5] ; 2       ;
-; DFF_8:\RegistersGeneration:4:REGn|Q[5] ; 2       ;
-; DFF_8:\RegistersGeneration:6:REGn|Q[5] ; 2       ;
-; DFF_8:\RegistersGeneration:5:REGn|Q[5] ; 2       ;
-; DFF_8:\RegistersGeneration:3:REGn|Q[4] ; 2       ;
-; DFF_8:\RegistersGeneration:0:REGn|Q[4] ; 2       ;
-; DFF_8:\RegistersGeneration:1:REGn|Q[4] ; 2       ;
-; DFF_8:\RegistersGeneration:2:REGn|Q[4] ; 2       ;
-; DFF_8:\RegistersGeneration:7:REGn|Q[4] ; 2       ;
-; DFF_8:\RegistersGeneration:4:REGn|Q[4] ; 2       ;
-; DFF_8:\RegistersGeneration:6:REGn|Q[4] ; 2       ;
-; DFF_8:\RegistersGeneration:5:REGn|Q[4] ; 2       ;
-; DFF_8:\RegistersGeneration:3:REGn|Q[3] ; 2       ;
-; DFF_8:\RegistersGeneration:0:REGn|Q[3] ; 2       ;
-; DFF_8:\RegistersGeneration:1:REGn|Q[3] ; 2       ;
-; DFF_8:\RegistersGeneration:2:REGn|Q[3] ; 2       ;
-; DFF_8:\RegistersGeneration:7:REGn|Q[3] ; 2       ;
-; DFF_8:\RegistersGeneration:4:REGn|Q[3] ; 2       ;
-; DFF_8:\RegistersGeneration:6:REGn|Q[3] ; 2       ;
-; DFF_8:\RegistersGeneration:5:REGn|Q[3] ; 2       ;
-; DFF_8:\RegistersGeneration:3:REGn|Q[2] ; 2       ;
-; DFF_8:\RegistersGeneration:0:REGn|Q[2] ; 2       ;
-; DFF_8:\RegistersGeneration:1:REGn|Q[2] ; 2       ;
-; DFF_8:\RegistersGeneration:2:REGn|Q[2] ; 2       ;
-; DFF_8:\RegistersGeneration:7:REGn|Q[2] ; 2       ;
-; DFF_8:\RegistersGeneration:4:REGn|Q[2] ; 2       ;
-; DFF_8:\RegistersGeneration:6:REGn|Q[2] ; 2       ;
-; DFF_8:\RegistersGeneration:5:REGn|Q[2] ; 2       ;
-; DFF_8:\RegistersGeneration:3:REGn|Q[1] ; 2       ;
-; DFF_8:\RegistersGeneration:0:REGn|Q[1] ; 2       ;
-; DFF_8:\RegistersGeneration:1:REGn|Q[1] ; 2       ;
-; DFF_8:\RegistersGeneration:2:REGn|Q[1] ; 2       ;
-; DFF_8:\RegistersGeneration:7:REGn|Q[1] ; 2       ;
-; DFF_8:\RegistersGeneration:4:REGn|Q[1] ; 2       ;
-; DFF_8:\RegistersGeneration:6:REGn|Q[1] ; 2       ;
-; DFF_8:\RegistersGeneration:5:REGn|Q[1] ; 2       ;
-; DFF_8:\RegistersGeneration:3:REGn|Q[0] ; 2       ;
-; DFF_8:\RegistersGeneration:0:REGn|Q[0] ; 2       ;
-; DFF_8:\RegistersGeneration:1:REGn|Q[0] ; 2       ;
-; DFF_8:\RegistersGeneration:2:REGn|Q[0] ; 2       ;
-; DFF_8:\RegistersGeneration:7:REGn|Q[0] ; 2       ;
-; DFF_8:\RegistersGeneration:4:REGn|Q[0] ; 2       ;
-; DFF_8:\RegistersGeneration:6:REGn|Q[0] ; 2       ;
-; DFF_8:\RegistersGeneration:5:REGn|Q[0] ; 2       ;
-; DEMUX_8_8:InputDemux|DataOut_3[7]~7    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_0[7]~7    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_1[7]~7    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_2[7]~7    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_7[7]~7    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_4[7]~7    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_6[7]~7    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_5[7]~7    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_3[6]~6    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_0[6]~6    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_1[6]~6    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_2[6]~6    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_7[6]~6    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_4[6]~6    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_6[6]~6    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_5[6]~6    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_3[5]~5    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_0[5]~5    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_1[5]~5    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_2[5]~5    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_7[5]~5    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_4[5]~5    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_6[5]~5    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_5[5]~5    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_3[4]~4    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_0[4]~4    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_1[4]~4    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_2[4]~4    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_7[4]~4    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_4[4]~4    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_6[4]~4    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_5[4]~4    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_3[3]~3    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_0[3]~3    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_1[3]~3    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_2[3]~3    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_7[3]~3    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_4[3]~3    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_6[3]~3    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_5[3]~3    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_3[2]~2    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_0[2]~2    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_1[2]~2    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_2[2]~2    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_7[2]~2    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_4[2]~2    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_6[2]~2    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_5[2]~2    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_3[1]~1    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_0[1]~1    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_1[1]~1    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_2[1]~1    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_7[1]~1    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_4[1]~1    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_6[1]~1    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_5[1]~1    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_3[0]~0    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_0[0]~0    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_1[0]~0    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_2[0]~0    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_7[0]~0    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_4[0]~0    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_6[0]~0    ; 1       ;
-; DEMUX_8_8:InputDemux|DataOut_5[0]~0    ; 1       ;
-; MUX_8_8:OutputMux1|Mux0~4              ; 1       ;
-; MUX_8_8:OutputMux1|Mux0~3              ; 1       ;
-; MUX_8_8:OutputMux1|Mux0~2              ; 1       ;
-; MUX_8_8:OutputMux1|Mux0~1              ; 1       ;
-; MUX_8_8:OutputMux1|Mux0~0              ; 1       ;
-; MUX_8_8:OutputMux1|Mux1~4              ; 1       ;
-; MUX_8_8:OutputMux1|Mux1~3              ; 1       ;
-; MUX_8_8:OutputMux1|Mux1~2              ; 1       ;
-; MUX_8_8:OutputMux1|Mux1~1              ; 1       ;
-; MUX_8_8:OutputMux1|Mux1~0              ; 1       ;
-; MUX_8_8:OutputMux1|Mux2~4              ; 1       ;
-; MUX_8_8:OutputMux1|Mux2~3              ; 1       ;
-; MUX_8_8:OutputMux1|Mux2~2              ; 1       ;
-; MUX_8_8:OutputMux1|Mux2~1              ; 1       ;
-; MUX_8_8:OutputMux1|Mux2~0              ; 1       ;
-; MUX_8_8:OutputMux1|Mux3~4              ; 1       ;
-; MUX_8_8:OutputMux1|Mux3~3              ; 1       ;
-; MUX_8_8:OutputMux1|Mux3~2              ; 1       ;
-; MUX_8_8:OutputMux1|Mux3~1              ; 1       ;
-; MUX_8_8:OutputMux1|Mux3~0              ; 1       ;
-; MUX_8_8:OutputMux1|Mux4~4              ; 1       ;
-; MUX_8_8:OutputMux1|Mux4~3              ; 1       ;
-; MUX_8_8:OutputMux1|Mux4~2              ; 1       ;
-; MUX_8_8:OutputMux1|Mux4~1              ; 1       ;
-; MUX_8_8:OutputMux1|Mux4~0              ; 1       ;
-; MUX_8_8:OutputMux1|Mux5~4              ; 1       ;
-; MUX_8_8:OutputMux1|Mux5~3              ; 1       ;
-; MUX_8_8:OutputMux1|Mux5~2              ; 1       ;
-; MUX_8_8:OutputMux1|Mux5~1              ; 1       ;
-; MUX_8_8:OutputMux1|Mux5~0              ; 1       ;
-; MUX_8_8:OutputMux1|Mux6~4              ; 1       ;
-; MUX_8_8:OutputMux1|Mux6~3              ; 1       ;
-; MUX_8_8:OutputMux1|Mux6~2              ; 1       ;
-; MUX_8_8:OutputMux1|Mux6~1              ; 1       ;
-; MUX_8_8:OutputMux1|Mux6~0              ; 1       ;
-; MUX_8_8:OutputMux1|Mux7~4              ; 1       ;
-; MUX_8_8:OutputMux1|Mux7~3              ; 1       ;
-; MUX_8_8:OutputMux1|Mux7~2              ; 1       ;
-; MUX_8_8:OutputMux1|Mux7~1              ; 1       ;
-; MUX_8_8:OutputMux1|Mux7~0              ; 1       ;
-; MUX_8_8:OutputMux2|Mux0~4              ; 1       ;
-; MUX_8_8:OutputMux2|Mux0~3              ; 1       ;
-; MUX_8_8:OutputMux2|Mux0~2              ; 1       ;
-; MUX_8_8:OutputMux2|Mux0~1              ; 1       ;
-; MUX_8_8:OutputMux2|Mux0~0              ; 1       ;
-; MUX_8_8:OutputMux2|Mux1~4              ; 1       ;
-; MUX_8_8:OutputMux2|Mux1~3              ; 1       ;
-; MUX_8_8:OutputMux2|Mux1~2              ; 1       ;
-; MUX_8_8:OutputMux2|Mux1~1              ; 1       ;
-; MUX_8_8:OutputMux2|Mux1~0              ; 1       ;
-; MUX_8_8:OutputMux2|Mux2~4              ; 1       ;
-; MUX_8_8:OutputMux2|Mux2~3              ; 1       ;
-; MUX_8_8:OutputMux2|Mux2~2              ; 1       ;
-; MUX_8_8:OutputMux2|Mux2~1              ; 1       ;
-; MUX_8_8:OutputMux2|Mux2~0              ; 1       ;
-; MUX_8_8:OutputMux2|Mux3~4              ; 1       ;
-; MUX_8_8:OutputMux2|Mux3~3              ; 1       ;
-; MUX_8_8:OutputMux2|Mux3~2              ; 1       ;
-; MUX_8_8:OutputMux2|Mux3~1              ; 1       ;
-; MUX_8_8:OutputMux2|Mux3~0              ; 1       ;
-; MUX_8_8:OutputMux2|Mux4~4              ; 1       ;
-; MUX_8_8:OutputMux2|Mux4~3              ; 1       ;
-; MUX_8_8:OutputMux2|Mux4~2              ; 1       ;
-; MUX_8_8:OutputMux2|Mux4~1              ; 1       ;
-; MUX_8_8:OutputMux2|Mux4~0              ; 1       ;
-; MUX_8_8:OutputMux2|Mux5~4              ; 1       ;
-; MUX_8_8:OutputMux2|Mux5~3              ; 1       ;
-; MUX_8_8:OutputMux2|Mux5~2              ; 1       ;
-; MUX_8_8:OutputMux2|Mux5~1              ; 1       ;
-; MUX_8_8:OutputMux2|Mux5~0              ; 1       ;
-; MUX_8_8:OutputMux2|Mux6~4              ; 1       ;
-; MUX_8_8:OutputMux2|Mux6~3              ; 1       ;
-; MUX_8_8:OutputMux2|Mux6~2              ; 1       ;
-; MUX_8_8:OutputMux2|Mux6~1              ; 1       ;
-; MUX_8_8:OutputMux2|Mux6~0              ; 1       ;
-; MUX_8_8:OutputMux2|Mux7~4              ; 1       ;
-; MUX_8_8:OutputMux2|Mux7~3              ; 1       ;
-; MUX_8_8:OutputMux2|Mux7~2              ; 1       ;
-; MUX_8_8:OutputMux2|Mux7~1              ; 1       ;
-; MUX_8_8:OutputMux2|Mux7~0              ; 1       ;
-+----------------------------------------+---------+
++-------------------------------------------------+
+; Non-Global High Fan-Out Signals                 ;
++---------------------------------------+---------+
+; Name                                  ; Fan-Out ;
++---------------------------------------+---------+
+; i_RF.DesReg_ADR[1]~input              ; 72      ;
+; i_RF.DesReg_ADR[0]~input              ; 72      ;
+; i_RF.DesReg_ADR[2]~input              ; 72      ;
+; i_RF.RA_ADR[1]~input                  ; 24      ;
+; i_RF.RA_ADR[0]~input                  ; 24      ;
+; i_RF.RB_ADR[1]~input                  ; 24      ;
+; i_RF.RB_ADR[0]~input                  ; 24      ;
+; i_RF.WR_Data~input                    ; 8       ;
+; i_RF.DataIN[7]~input                  ; 8       ;
+; i_RF.DataIN[6]~input                  ; 8       ;
+; i_RF.DataIN[5]~input                  ; 8       ;
+; i_RF.DataIN[4]~input                  ; 8       ;
+; i_RF.DataIN[3]~input                  ; 8       ;
+; i_RF.DataIN[2]~input                  ; 8       ;
+; i_RF.DataIN[1]~input                  ; 8       ;
+; i_RF.DataIN[0]~input                  ; 8       ;
+; i_RF.RA_ADR[2]~input                  ; 8       ;
+; i_RF.RB_ADR[2]~input                  ; 8       ;
+; DFF_8:\RegistersGeneration:3:dff|Q[7] ; 2       ;
+; DFF_8:\RegistersGeneration:0:dff|Q[7] ; 2       ;
+; DFF_8:\RegistersGeneration:1:dff|Q[7] ; 2       ;
+; DFF_8:\RegistersGeneration:2:dff|Q[7] ; 2       ;
+; DFF_8:\RegistersGeneration:7:dff|Q[7] ; 2       ;
+; DFF_8:\RegistersGeneration:4:dff|Q[7] ; 2       ;
+; DFF_8:\RegistersGeneration:6:dff|Q[7] ; 2       ;
+; DFF_8:\RegistersGeneration:5:dff|Q[7] ; 2       ;
+; DFF_8:\RegistersGeneration:3:dff|Q[6] ; 2       ;
+; DFF_8:\RegistersGeneration:0:dff|Q[6] ; 2       ;
+; DFF_8:\RegistersGeneration:1:dff|Q[6] ; 2       ;
+; DFF_8:\RegistersGeneration:2:dff|Q[6] ; 2       ;
+; DFF_8:\RegistersGeneration:7:dff|Q[6] ; 2       ;
+; DFF_8:\RegistersGeneration:4:dff|Q[6] ; 2       ;
+; DFF_8:\RegistersGeneration:6:dff|Q[6] ; 2       ;
+; DFF_8:\RegistersGeneration:5:dff|Q[6] ; 2       ;
+; DFF_8:\RegistersGeneration:3:dff|Q[5] ; 2       ;
+; DFF_8:\RegistersGeneration:0:dff|Q[5] ; 2       ;
+; DFF_8:\RegistersGeneration:1:dff|Q[5] ; 2       ;
+; DFF_8:\RegistersGeneration:2:dff|Q[5] ; 2       ;
+; DFF_8:\RegistersGeneration:7:dff|Q[5] ; 2       ;
+; DFF_8:\RegistersGeneration:4:dff|Q[5] ; 2       ;
+; DFF_8:\RegistersGeneration:6:dff|Q[5] ; 2       ;
+; DFF_8:\RegistersGeneration:5:dff|Q[5] ; 2       ;
+; DFF_8:\RegistersGeneration:3:dff|Q[4] ; 2       ;
+; DFF_8:\RegistersGeneration:0:dff|Q[4] ; 2       ;
+; DFF_8:\RegistersGeneration:1:dff|Q[4] ; 2       ;
+; DFF_8:\RegistersGeneration:2:dff|Q[4] ; 2       ;
+; DFF_8:\RegistersGeneration:7:dff|Q[4] ; 2       ;
+; DFF_8:\RegistersGeneration:4:dff|Q[4] ; 2       ;
+; DFF_8:\RegistersGeneration:6:dff|Q[4] ; 2       ;
+; DFF_8:\RegistersGeneration:5:dff|Q[4] ; 2       ;
+; DFF_8:\RegistersGeneration:3:dff|Q[3] ; 2       ;
+; DFF_8:\RegistersGeneration:0:dff|Q[3] ; 2       ;
+; DFF_8:\RegistersGeneration:1:dff|Q[3] ; 2       ;
+; DFF_8:\RegistersGeneration:2:dff|Q[3] ; 2       ;
+; DFF_8:\RegistersGeneration:7:dff|Q[3] ; 2       ;
+; DFF_8:\RegistersGeneration:4:dff|Q[3] ; 2       ;
+; DFF_8:\RegistersGeneration:6:dff|Q[3] ; 2       ;
+; DFF_8:\RegistersGeneration:5:dff|Q[3] ; 2       ;
+; DFF_8:\RegistersGeneration:3:dff|Q[2] ; 2       ;
+; DFF_8:\RegistersGeneration:0:dff|Q[2] ; 2       ;
+; DFF_8:\RegistersGeneration:1:dff|Q[2] ; 2       ;
+; DFF_8:\RegistersGeneration:2:dff|Q[2] ; 2       ;
+; DFF_8:\RegistersGeneration:7:dff|Q[2] ; 2       ;
+; DFF_8:\RegistersGeneration:4:dff|Q[2] ; 2       ;
+; DFF_8:\RegistersGeneration:6:dff|Q[2] ; 2       ;
+; DFF_8:\RegistersGeneration:5:dff|Q[2] ; 2       ;
+; DFF_8:\RegistersGeneration:3:dff|Q[1] ; 2       ;
+; DFF_8:\RegistersGeneration:0:dff|Q[1] ; 2       ;
+; DFF_8:\RegistersGeneration:1:dff|Q[1] ; 2       ;
+; DFF_8:\RegistersGeneration:2:dff|Q[1] ; 2       ;
+; DFF_8:\RegistersGeneration:7:dff|Q[1] ; 2       ;
+; DFF_8:\RegistersGeneration:4:dff|Q[1] ; 2       ;
+; DFF_8:\RegistersGeneration:6:dff|Q[1] ; 2       ;
+; DFF_8:\RegistersGeneration:5:dff|Q[1] ; 2       ;
+; DFF_8:\RegistersGeneration:3:dff|Q[0] ; 2       ;
+; DFF_8:\RegistersGeneration:0:dff|Q[0] ; 2       ;
+; DFF_8:\RegistersGeneration:1:dff|Q[0] ; 2       ;
+; DFF_8:\RegistersGeneration:2:dff|Q[0] ; 2       ;
+; DFF_8:\RegistersGeneration:7:dff|Q[0] ; 2       ;
+; DFF_8:\RegistersGeneration:4:dff|Q[0] ; 2       ;
+; DFF_8:\RegistersGeneration:6:dff|Q[0] ; 2       ;
+; DFF_8:\RegistersGeneration:5:dff|Q[0] ; 2       ;
+; DEMUX_8_8:InputDemux|DataOut_3[7]~7   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_0[7]~7   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_1[7]~7   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_2[7]~7   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_7[7]~7   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_4[7]~7   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_6[7]~7   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_5[7]~7   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_3[6]~6   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_0[6]~6   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_1[6]~6   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_2[6]~6   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_7[6]~6   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_4[6]~6   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_6[6]~6   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_5[6]~6   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_3[5]~5   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_0[5]~5   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_1[5]~5   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_2[5]~5   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_7[5]~5   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_4[5]~5   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_6[5]~5   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_5[5]~5   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_3[4]~4   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_0[4]~4   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_1[4]~4   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_2[4]~4   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_7[4]~4   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_4[4]~4   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_6[4]~4   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_5[4]~4   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_3[3]~3   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_0[3]~3   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_1[3]~3   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_2[3]~3   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_7[3]~3   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_4[3]~3   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_6[3]~3   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_5[3]~3   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_3[2]~2   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_0[2]~2   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_1[2]~2   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_2[2]~2   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_7[2]~2   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_4[2]~2   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_6[2]~2   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_5[2]~2   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_3[1]~1   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_0[1]~1   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_1[1]~1   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_2[1]~1   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_7[1]~1   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_4[1]~1   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_6[1]~1   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_5[1]~1   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_3[0]~0   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_0[0]~0   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_1[0]~0   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_2[0]~0   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_7[0]~0   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_4[0]~0   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_6[0]~0   ; 1       ;
+; DEMUX_8_8:InputDemux|DataOut_5[0]~0   ; 1       ;
+; MUX_8_8:OutputMux1|Mux0~4             ; 1       ;
+; MUX_8_8:OutputMux1|Mux0~3             ; 1       ;
+; MUX_8_8:OutputMux1|Mux0~2             ; 1       ;
+; MUX_8_8:OutputMux1|Mux0~1             ; 1       ;
+; MUX_8_8:OutputMux1|Mux0~0             ; 1       ;
+; MUX_8_8:OutputMux1|Mux1~4             ; 1       ;
+; MUX_8_8:OutputMux1|Mux1~3             ; 1       ;
+; MUX_8_8:OutputMux1|Mux1~2             ; 1       ;
+; MUX_8_8:OutputMux1|Mux1~1             ; 1       ;
+; MUX_8_8:OutputMux1|Mux1~0             ; 1       ;
+; MUX_8_8:OutputMux1|Mux2~4             ; 1       ;
+; MUX_8_8:OutputMux1|Mux2~3             ; 1       ;
+; MUX_8_8:OutputMux1|Mux2~2             ; 1       ;
+; MUX_8_8:OutputMux1|Mux2~1             ; 1       ;
+; MUX_8_8:OutputMux1|Mux2~0             ; 1       ;
+; MUX_8_8:OutputMux1|Mux3~4             ; 1       ;
+; MUX_8_8:OutputMux1|Mux3~3             ; 1       ;
+; MUX_8_8:OutputMux1|Mux3~2             ; 1       ;
+; MUX_8_8:OutputMux1|Mux3~1             ; 1       ;
+; MUX_8_8:OutputMux1|Mux3~0             ; 1       ;
+; MUX_8_8:OutputMux1|Mux4~4             ; 1       ;
+; MUX_8_8:OutputMux1|Mux4~3             ; 1       ;
+; MUX_8_8:OutputMux1|Mux4~2             ; 1       ;
+; MUX_8_8:OutputMux1|Mux4~1             ; 1       ;
+; MUX_8_8:OutputMux1|Mux4~0             ; 1       ;
+; MUX_8_8:OutputMux1|Mux5~4             ; 1       ;
+; MUX_8_8:OutputMux1|Mux5~3             ; 1       ;
+; MUX_8_8:OutputMux1|Mux5~2             ; 1       ;
+; MUX_8_8:OutputMux1|Mux5~1             ; 1       ;
+; MUX_8_8:OutputMux1|Mux5~0             ; 1       ;
+; MUX_8_8:OutputMux1|Mux6~4             ; 1       ;
+; MUX_8_8:OutputMux1|Mux6~3             ; 1       ;
+; MUX_8_8:OutputMux1|Mux6~2             ; 1       ;
+; MUX_8_8:OutputMux1|Mux6~1             ; 1       ;
+; MUX_8_8:OutputMux1|Mux6~0             ; 1       ;
+; MUX_8_8:OutputMux1|Mux7~4             ; 1       ;
+; MUX_8_8:OutputMux1|Mux7~3             ; 1       ;
+; MUX_8_8:OutputMux1|Mux7~2             ; 1       ;
+; MUX_8_8:OutputMux1|Mux7~1             ; 1       ;
+; MUX_8_8:OutputMux1|Mux7~0             ; 1       ;
+; MUX_8_8:OutputMux2|Mux0~4             ; 1       ;
+; MUX_8_8:OutputMux2|Mux0~3             ; 1       ;
+; MUX_8_8:OutputMux2|Mux0~2             ; 1       ;
+; MUX_8_8:OutputMux2|Mux0~1             ; 1       ;
+; MUX_8_8:OutputMux2|Mux0~0             ; 1       ;
+; MUX_8_8:OutputMux2|Mux1~4             ; 1       ;
+; MUX_8_8:OutputMux2|Mux1~3             ; 1       ;
+; MUX_8_8:OutputMux2|Mux1~2             ; 1       ;
+; MUX_8_8:OutputMux2|Mux1~1             ; 1       ;
+; MUX_8_8:OutputMux2|Mux1~0             ; 1       ;
+; MUX_8_8:OutputMux2|Mux2~4             ; 1       ;
+; MUX_8_8:OutputMux2|Mux2~3             ; 1       ;
+; MUX_8_8:OutputMux2|Mux2~2             ; 1       ;
+; MUX_8_8:OutputMux2|Mux2~1             ; 1       ;
+; MUX_8_8:OutputMux2|Mux2~0             ; 1       ;
+; MUX_8_8:OutputMux2|Mux3~4             ; 1       ;
+; MUX_8_8:OutputMux2|Mux3~3             ; 1       ;
+; MUX_8_8:OutputMux2|Mux3~2             ; 1       ;
+; MUX_8_8:OutputMux2|Mux3~1             ; 1       ;
+; MUX_8_8:OutputMux2|Mux3~0             ; 1       ;
+; MUX_8_8:OutputMux2|Mux4~4             ; 1       ;
+; MUX_8_8:OutputMux2|Mux4~3             ; 1       ;
+; MUX_8_8:OutputMux2|Mux4~2             ; 1       ;
+; MUX_8_8:OutputMux2|Mux4~1             ; 1       ;
+; MUX_8_8:OutputMux2|Mux4~0             ; 1       ;
+; MUX_8_8:OutputMux2|Mux5~4             ; 1       ;
+; MUX_8_8:OutputMux2|Mux5~3             ; 1       ;
+; MUX_8_8:OutputMux2|Mux5~2             ; 1       ;
+; MUX_8_8:OutputMux2|Mux5~1             ; 1       ;
+; MUX_8_8:OutputMux2|Mux5~0             ; 1       ;
+; MUX_8_8:OutputMux2|Mux6~4             ; 1       ;
+; MUX_8_8:OutputMux2|Mux6~3             ; 1       ;
+; MUX_8_8:OutputMux2|Mux6~2             ; 1       ;
+; MUX_8_8:OutputMux2|Mux6~1             ; 1       ;
+; MUX_8_8:OutputMux2|Mux6~0             ; 1       ;
+; MUX_8_8:OutputMux2|Mux7~4             ; 1       ;
+; MUX_8_8:OutputMux2|Mux7~3             ; 1       ;
+; MUX_8_8:OutputMux2|Mux7~2             ; 1       ;
+; MUX_8_8:OutputMux2|Mux7~1             ; 1       ;
+; MUX_8_8:OutputMux2|Mux7~0             ; 1       ;
++---------------------------------------+---------+
 
 
 +-------------------------------------------------+
@@ -2298,23 +2298,23 @@ Note: For more information on problematic transfers, consider running the Fitter
 This will disable optimization of problematic paths and expose them for further analysis using the TimeQuest Timing Analyzer.
 
 
-+---------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                   ;
-+--------------------+----------------------------------------+-------------------+
-; Source Register    ; Destination Register                   ; Delay Added in ns ;
-+--------------------+----------------------------------------+-------------------+
-; i_RF.DesReg_ADR[0] ; DFF_8:\RegistersGeneration:1:REGn|Q[5] ; 3.266             ;
-; i_RF.DataIN[5]     ; DFF_8:\RegistersGeneration:1:REGn|Q[5] ; 1.633             ;
-; i_RF.DataIN[3]     ; DFF_8:\RegistersGeneration:1:REGn|Q[3] ; 1.633             ;
-; i_RF.DesReg_ADR[2] ; DFF_8:\RegistersGeneration:1:REGn|Q[5] ; 1.633             ;
-; i_RF.DesReg_ADR[1] ; DFF_8:\RegistersGeneration:1:REGn|Q[5] ; 1.633             ;
-; i_RF.DataIN[4]     ; DFF_8:\RegistersGeneration:3:REGn|Q[4] ; 1.629             ;
-; i_RF.DataIN[0]     ; DFF_8:\RegistersGeneration:1:REGn|Q[0] ; 1.625             ;
-; i_RF.DataIN[6]     ; DFF_8:\RegistersGeneration:1:REGn|Q[6] ; 1.623             ;
-; i_RF.DataIN[2]     ; DFF_8:\RegistersGeneration:1:REGn|Q[2] ; 1.623             ;
-; i_RF.DataIN[7]     ; DFF_8:\RegistersGeneration:1:REGn|Q[7] ; 1.607             ;
-; i_RF.DataIN[1]     ; DFF_8:\RegistersGeneration:3:REGn|Q[1] ; 1.517             ;
-+--------------------+----------------------------------------+-------------------+
++--------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                  ;
++--------------------+---------------------------------------+-------------------+
+; Source Register    ; Destination Register                  ; Delay Added in ns ;
++--------------------+---------------------------------------+-------------------+
+; i_RF.DesReg_ADR[0] ; DFF_8:\RegistersGeneration:1:dff|Q[5] ; 3.266             ;
+; i_RF.DataIN[5]     ; DFF_8:\RegistersGeneration:1:dff|Q[5] ; 1.633             ;
+; i_RF.DataIN[3]     ; DFF_8:\RegistersGeneration:1:dff|Q[3] ; 1.633             ;
+; i_RF.DesReg_ADR[2] ; DFF_8:\RegistersGeneration:1:dff|Q[5] ; 1.633             ;
+; i_RF.DesReg_ADR[1] ; DFF_8:\RegistersGeneration:1:dff|Q[5] ; 1.633             ;
+; i_RF.DataIN[4]     ; DFF_8:\RegistersGeneration:3:dff|Q[4] ; 1.629             ;
+; i_RF.DataIN[0]     ; DFF_8:\RegistersGeneration:1:dff|Q[0] ; 1.625             ;
+; i_RF.DataIN[6]     ; DFF_8:\RegistersGeneration:1:dff|Q[6] ; 1.623             ;
+; i_RF.DataIN[2]     ; DFF_8:\RegistersGeneration:1:dff|Q[2] ; 1.623             ;
+; i_RF.DataIN[7]     ; DFF_8:\RegistersGeneration:1:dff|Q[7] ; 1.607             ;
+; i_RF.DataIN[1]     ; DFF_8:\RegistersGeneration:3:dff|Q[1] ; 1.517             ;
++--------------------+---------------------------------------+-------------------+
 Note: This table only shows the top 11 path(s) that have the largest delay added for hold.
 
 
@@ -2419,7 +2419,7 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  64 pins available
         Info (176213): I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  67 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  66 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:03
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
@@ -2432,23 +2432,23 @@ Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.13 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.20 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
-Info (144001): Generated suppressed messages file D:/MyFiles/Courses/VHDLcourse/Lectures/RegisterFile/RegisterFile.fit.smsg
+Info (144001): Generated suppressed messages file C:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/RegisterFile.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 5016 megabytes
-    Info: Processing ended: Sat Nov 09 17:47:54 2019
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:09
+    Info: Peak virtual memory: 5034 megabytes
+    Info: Processing ended: Mon Nov 11 15:18:50 2019
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:15
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in D:/MyFiles/Courses/VHDLcourse/Lectures/RegisterFile/RegisterFile.fit.smsg.
+The suppressed messages can be found in C:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/RegisterFile.fit.smsg.
 
 

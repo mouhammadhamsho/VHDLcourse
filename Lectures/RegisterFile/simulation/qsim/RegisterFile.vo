@@ -1,0 +1,565 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II 64-Bit"
+// VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
+
+// DATE "11/11/2019 14:38:53"
+
+// 
+// Device: Altera EP4CE40F29I7 Package FBGA780
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module RegisterFileTopLevel (
+	\i_RF.RESET ,
+	\i_RF.WR_Data ,
+	\i_RF.DataIN ,
+	\i_RF.DesReg_ADR ,
+	\i_RF.RB_ADR ,
+	\i_RF.RA_ADR ,
+	\o_RF.RB_DATA ,
+	\o_RF.RA_DATA );
+input 	\i_RF.RESET ;
+input 	\i_RF.WR_Data ;
+input 	[7:0] \i_RF.DataIN ;
+input 	[2:0] \i_RF.DesReg_ADR ;
+input 	[2:0] \i_RF.RB_ADR ;
+input 	[2:0] \i_RF.RA_ADR ;
+output 	[7:0] \o_RF.RB_DATA ;
+output 	[7:0] \o_RF.RA_DATA ;
+
+// Design Ports Information
+// i_RF.RESET	=>  Location: PIN_AE9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// i_RF.WR_Data	=>  Location: PIN_F2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// i_RF.DataIN[0]	=>  Location: PIN_D2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// i_RF.DataIN[1]	=>  Location: PIN_W4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// i_RF.DataIN[2]	=>  Location: PIN_AG21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// i_RF.DataIN[3]	=>  Location: PIN_E4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// i_RF.DataIN[4]	=>  Location: PIN_U28,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// i_RF.DataIN[5]	=>  Location: PIN_G5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// i_RF.DataIN[6]	=>  Location: PIN_D8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// i_RF.DataIN[7]	=>  Location: PIN_Y24,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// i_RF.DesReg_ADR[0]	=>  Location: PIN_J5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// i_RF.DesReg_ADR[1]	=>  Location: PIN_AH3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// i_RF.DesReg_ADR[2]	=>  Location: PIN_R24,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// o_RF.RB_DATA[0]	=>  Location: PIN_G12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// o_RF.RB_DATA[1]	=>  Location: PIN_AD17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// o_RF.RB_DATA[2]	=>  Location: PIN_A6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// o_RF.RB_DATA[3]	=>  Location: PIN_J7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// o_RF.RB_DATA[4]	=>  Location: PIN_E1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// o_RF.RB_DATA[5]	=>  Location: PIN_AE18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// o_RF.RB_DATA[6]	=>  Location: PIN_F1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// o_RF.RB_DATA[7]	=>  Location: PIN_U25,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// o_RF.RA_DATA[0]	=>  Location: PIN_L2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// o_RF.RA_DATA[1]	=>  Location: PIN_AB22,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// o_RF.RA_DATA[2]	=>  Location: PIN_N25,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// o_RF.RA_DATA[3]	=>  Location: PIN_P2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// o_RF.RA_DATA[4]	=>  Location: PIN_Y10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// o_RF.RA_DATA[5]	=>  Location: PIN_H15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// o_RF.RA_DATA[6]	=>  Location: PIN_A10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// o_RF.RA_DATA[7]	=>  Location: PIN_AE24,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// i_RF.RB_ADR[2]	=>  Location: PIN_F3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// i_RF.RB_ADR[1]	=>  Location: PIN_F5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// i_RF.RB_ADR[0]	=>  Location: PIN_AB8,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// i_RF.RA_ADR[2]	=>  Location: PIN_G3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// i_RF.RA_ADR[1]	=>  Location: PIN_G4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// i_RF.RA_ADR[0]	=>  Location: PIN_AD24,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \i_RF.RESET~input_o ;
+wire \i_RF.WR_Data~input_o ;
+wire \i_RF.DataIN[0]~input_o ;
+wire \i_RF.DataIN[1]~input_o ;
+wire \i_RF.DataIN[2]~input_o ;
+wire \i_RF.DataIN[3]~input_o ;
+wire \i_RF.DataIN[4]~input_o ;
+wire \i_RF.DataIN[5]~input_o ;
+wire \i_RF.DataIN[6]~input_o ;
+wire \i_RF.DataIN[7]~input_o ;
+wire \i_RF.DesReg_ADR[0]~input_o ;
+wire \i_RF.DesReg_ADR[1]~input_o ;
+wire \i_RF.DesReg_ADR[2]~input_o ;
+wire \i_RF.RB_ADR[2]~input_o ;
+wire \i_RF.RB_ADR[1]~input_o ;
+wire \i_RF.RB_ADR[0]~input_o ;
+wire \i_RF.RA_ADR[2]~input_o ;
+wire \i_RF.RA_ADR[1]~input_o ;
+wire \i_RF.RA_ADR[0]~input_o ;
+wire \o_RF.RB_DATA[0]~output_o ;
+wire \o_RF.RB_DATA[1]~output_o ;
+wire \o_RF.RB_DATA[2]~output_o ;
+wire \o_RF.RB_DATA[3]~output_o ;
+wire \o_RF.RB_DATA[4]~output_o ;
+wire \o_RF.RB_DATA[5]~output_o ;
+wire \o_RF.RB_DATA[6]~output_o ;
+wire \o_RF.RB_DATA[7]~output_o ;
+wire \o_RF.RA_DATA[0]~output_o ;
+wire \o_RF.RA_DATA[1]~output_o ;
+wire \o_RF.RA_DATA[2]~output_o ;
+wire \o_RF.RA_DATA[3]~output_o ;
+wire \o_RF.RA_DATA[4]~output_o ;
+wire \o_RF.RA_DATA[5]~output_o ;
+wire \o_RF.RA_DATA[6]~output_o ;
+wire \o_RF.RA_DATA[7]~output_o ;
+
+
+// Location: IOOBUF_X11_Y43_N16
+cycloneive_io_obuf \o_RF.RB_DATA[0]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\o_RF.RB_DATA[0]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \o_RF.RB_DATA[0]~output .bus_hold = "false";
+defparam \o_RF.RB_DATA[0]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X45_Y0_N9
+cycloneive_io_obuf \o_RF.RB_DATA[1]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\o_RF.RB_DATA[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \o_RF.RB_DATA[1]~output .bus_hold = "false";
+defparam \o_RF.RB_DATA[1]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X11_Y43_N30
+cycloneive_io_obuf \o_RF.RB_DATA[2]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\o_RF.RB_DATA[2]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \o_RF.RB_DATA[2]~output .bus_hold = "false";
+defparam \o_RF.RB_DATA[2]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y35_N2
+cycloneive_io_obuf \o_RF.RB_DATA[3]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\o_RF.RB_DATA[3]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \o_RF.RB_DATA[3]~output .bus_hold = "false";
+defparam \o_RF.RB_DATA[3]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y36_N23
+cycloneive_io_obuf \o_RF.RB_DATA[4]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\o_RF.RB_DATA[4]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \o_RF.RB_DATA[4]~output .bus_hold = "false";
+defparam \o_RF.RB_DATA[4]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X48_Y0_N30
+cycloneive_io_obuf \o_RF.RB_DATA[5]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\o_RF.RB_DATA[5]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \o_RF.RB_DATA[5]~output .bus_hold = "false";
+defparam \o_RF.RB_DATA[5]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y35_N16
+cycloneive_io_obuf \o_RF.RB_DATA[6]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\o_RF.RB_DATA[6]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \o_RF.RB_DATA[6]~output .bus_hold = "false";
+defparam \o_RF.RB_DATA[6]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X67_Y19_N16
+cycloneive_io_obuf \o_RF.RB_DATA[7]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\o_RF.RB_DATA[7]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \o_RF.RB_DATA[7]~output .bus_hold = "false";
+defparam \o_RF.RB_DATA[7]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y29_N23
+cycloneive_io_obuf \o_RF.RA_DATA[0]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\o_RF.RA_DATA[0]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \o_RF.RA_DATA[0]~output .bus_hold = "false";
+defparam \o_RF.RA_DATA[0]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X67_Y2_N16
+cycloneive_io_obuf \o_RF.RA_DATA[1]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\o_RF.RA_DATA[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \o_RF.RA_DATA[1]~output .bus_hold = "false";
+defparam \o_RF.RA_DATA[1]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X67_Y26_N9
+cycloneive_io_obuf \o_RF.RA_DATA[2]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\o_RF.RA_DATA[2]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \o_RF.RA_DATA[2]~output .bus_hold = "false";
+defparam \o_RF.RA_DATA[2]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y27_N2
+cycloneive_io_obuf \o_RF.RA_DATA[3]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\o_RF.RA_DATA[3]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \o_RF.RA_DATA[3]~output .bus_hold = "false";
+defparam \o_RF.RA_DATA[3]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X3_Y0_N16
+cycloneive_io_obuf \o_RF.RA_DATA[4]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\o_RF.RA_DATA[4]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \o_RF.RA_DATA[4]~output .bus_hold = "false";
+defparam \o_RF.RA_DATA[4]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X48_Y43_N23
+cycloneive_io_obuf \o_RF.RA_DATA[5]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\o_RF.RA_DATA[5]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \o_RF.RA_DATA[5]~output .bus_hold = "false";
+defparam \o_RF.RA_DATA[5]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X25_Y43_N16
+cycloneive_io_obuf \o_RF.RA_DATA[6]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\o_RF.RA_DATA[6]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \o_RF.RA_DATA[6]~output .bus_hold = "false";
+defparam \o_RF.RA_DATA[6]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X63_Y0_N23
+cycloneive_io_obuf \o_RF.RA_DATA[7]~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\o_RF.RA_DATA[7]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \o_RF.RA_DATA[7]~output .bus_hold = "false";
+defparam \o_RF.RA_DATA[7]~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X27_Y0_N22
+cycloneive_io_ibuf \i_RF.RESET~input (
+	.i(\i_RF.RESET ),
+	.ibar(gnd),
+	.o(\i_RF.RESET~input_o ));
+// synopsys translate_off
+defparam \i_RF.RESET~input .bus_hold = "false";
+defparam \i_RF.RESET~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y35_N8
+cycloneive_io_ibuf \i_RF.WR_Data~input (
+	.i(\i_RF.WR_Data ),
+	.ibar(gnd),
+	.o(\i_RF.WR_Data~input_o ));
+// synopsys translate_off
+defparam \i_RF.WR_Data~input .bus_hold = "false";
+defparam \i_RF.WR_Data~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y41_N22
+cycloneive_io_ibuf \i_RF.DataIN[0]~input (
+	.i(\i_RF.DataIN [0]),
+	.ibar(gnd),
+	.o(\i_RF.DataIN[0]~input_o ));
+// synopsys translate_off
+defparam \i_RF.DataIN[0]~input .bus_hold = "false";
+defparam \i_RF.DataIN[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y14_N8
+cycloneive_io_ibuf \i_RF.DataIN[1]~input (
+	.i(\i_RF.DataIN [1]),
+	.ibar(gnd),
+	.o(\i_RF.DataIN[1]~input_o ));
+// synopsys translate_off
+defparam \i_RF.DataIN[1]~input .bus_hold = "false";
+defparam \i_RF.DataIN[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X48_Y0_N15
+cycloneive_io_ibuf \i_RF.DataIN[2]~input (
+	.i(\i_RF.DataIN [2]),
+	.ibar(gnd),
+	.o(\i_RF.DataIN[2]~input_o ));
+// synopsys translate_off
+defparam \i_RF.DataIN[2]~input .bus_hold = "false";
+defparam \i_RF.DataIN[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y40_N22
+cycloneive_io_ibuf \i_RF.DataIN[3]~input (
+	.i(\i_RF.DataIN [3]),
+	.ibar(gnd),
+	.o(\i_RF.DataIN[3]~input_o ));
+// synopsys translate_off
+defparam \i_RF.DataIN[3]~input .bus_hold = "false";
+defparam \i_RF.DataIN[3]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X67_Y15_N1
+cycloneive_io_ibuf \i_RF.DataIN[4]~input (
+	.i(\i_RF.DataIN [4]),
+	.ibar(gnd),
+	.o(\i_RF.DataIN[4]~input_o ));
+// synopsys translate_off
+defparam \i_RF.DataIN[4]~input .bus_hold = "false";
+defparam \i_RF.DataIN[4]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y39_N8
+cycloneive_io_ibuf \i_RF.DataIN[5]~input (
+	.i(\i_RF.DataIN [5]),
+	.ibar(gnd),
+	.o(\i_RF.DataIN[5]~input_o ));
+// synopsys translate_off
+defparam \i_RF.DataIN[5]~input .bus_hold = "false";
+defparam \i_RF.DataIN[5]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X7_Y43_N29
+cycloneive_io_ibuf \i_RF.DataIN[6]~input (
+	.i(\i_RF.DataIN [6]),
+	.ibar(gnd),
+	.o(\i_RF.DataIN[6]~input_o ));
+// synopsys translate_off
+defparam \i_RF.DataIN[6]~input .bus_hold = "false";
+defparam \i_RF.DataIN[6]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X67_Y8_N15
+cycloneive_io_ibuf \i_RF.DataIN[7]~input (
+	.i(\i_RF.DataIN [7]),
+	.ibar(gnd),
+	.o(\i_RF.DataIN[7]~input_o ));
+// synopsys translate_off
+defparam \i_RF.DataIN[7]~input .bus_hold = "false";
+defparam \i_RF.DataIN[7]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y38_N1
+cycloneive_io_ibuf \i_RF.DesReg_ADR[0]~input (
+	.i(\i_RF.DesReg_ADR [0]),
+	.ibar(gnd),
+	.o(\i_RF.DesReg_ADR[0]~input_o ));
+// synopsys translate_off
+defparam \i_RF.DesReg_ADR[0]~input .bus_hold = "false";
+defparam \i_RF.DesReg_ADR[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X7_Y0_N15
+cycloneive_io_ibuf \i_RF.DesReg_ADR[1]~input (
+	.i(\i_RF.DesReg_ADR [1]),
+	.ibar(gnd),
+	.o(\i_RF.DesReg_ADR[1]~input_o ));
+// synopsys translate_off
+defparam \i_RF.DesReg_ADR[1]~input .bus_hold = "false";
+defparam \i_RF.DesReg_ADR[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X67_Y19_N8
+cycloneive_io_ibuf \i_RF.DesReg_ADR[2]~input (
+	.i(\i_RF.DesReg_ADR [2]),
+	.ibar(gnd),
+	.o(\i_RF.DesReg_ADR[2]~input_o ));
+// synopsys translate_off
+defparam \i_RF.DesReg_ADR[2]~input .bus_hold = "false";
+defparam \i_RF.DesReg_ADR[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y38_N22
+cycloneive_io_ibuf \i_RF.RB_ADR[2]~input (
+	.i(\i_RF.RB_ADR [2]),
+	.ibar(gnd),
+	.o(\i_RF.RB_ADR[2]~input_o ));
+// synopsys translate_off
+defparam \i_RF.RB_ADR[2]~input .bus_hold = "false";
+defparam \i_RF.RB_ADR[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y37_N1
+cycloneive_io_ibuf \i_RF.RB_ADR[1]~input (
+	.i(\i_RF.RB_ADR [1]),
+	.ibar(gnd),
+	.o(\i_RF.RB_ADR[1]~input_o ));
+// synopsys translate_off
+defparam \i_RF.RB_ADR[1]~input .bus_hold = "false";
+defparam \i_RF.RB_ADR[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y3_N1
+cycloneive_io_ibuf \i_RF.RB_ADR[0]~input (
+	.i(\i_RF.RB_ADR [0]),
+	.ibar(gnd),
+	.o(\i_RF.RB_ADR[0]~input_o ));
+// synopsys translate_off
+defparam \i_RF.RB_ADR[0]~input .bus_hold = "false";
+defparam \i_RF.RB_ADR[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y36_N1
+cycloneive_io_ibuf \i_RF.RA_ADR[2]~input (
+	.i(\i_RF.RA_ADR [2]),
+	.ibar(gnd),
+	.o(\i_RF.RA_ADR[2]~input_o ));
+// synopsys translate_off
+defparam \i_RF.RA_ADR[2]~input .bus_hold = "false";
+defparam \i_RF.RA_ADR[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y37_N22
+cycloneive_io_ibuf \i_RF.RA_ADR[1]~input (
+	.i(\i_RF.RA_ADR [1]),
+	.ibar(gnd),
+	.o(\i_RF.RA_ADR[1]~input_o ));
+// synopsys translate_off
+defparam \i_RF.RA_ADR[1]~input .bus_hold = "false";
+defparam \i_RF.RA_ADR[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X67_Y5_N15
+cycloneive_io_ibuf \i_RF.RA_ADR[0]~input (
+	.i(\i_RF.RA_ADR [0]),
+	.ibar(gnd),
+	.o(\i_RF.RA_ADR[0]~input_o ));
+// synopsys translate_off
+defparam \i_RF.RA_ADR[0]~input .bus_hold = "false";
+defparam \i_RF.RA_ADR[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+assign \o_RF.RB_DATA [0] = \o_RF.RB_DATA[0]~output_o ;
+
+assign \o_RF.RB_DATA [1] = \o_RF.RB_DATA[1]~output_o ;
+
+assign \o_RF.RB_DATA [2] = \o_RF.RB_DATA[2]~output_o ;
+
+assign \o_RF.RB_DATA [3] = \o_RF.RB_DATA[3]~output_o ;
+
+assign \o_RF.RB_DATA [4] = \o_RF.RB_DATA[4]~output_o ;
+
+assign \o_RF.RB_DATA [5] = \o_RF.RB_DATA[5]~output_o ;
+
+assign \o_RF.RB_DATA [6] = \o_RF.RB_DATA[6]~output_o ;
+
+assign \o_RF.RB_DATA [7] = \o_RF.RB_DATA[7]~output_o ;
+
+assign \o_RF.RA_DATA [0] = \o_RF.RA_DATA[0]~output_o ;
+
+assign \o_RF.RA_DATA [1] = \o_RF.RA_DATA[1]~output_o ;
+
+assign \o_RF.RA_DATA [2] = \o_RF.RA_DATA[2]~output_o ;
+
+assign \o_RF.RA_DATA [3] = \o_RF.RA_DATA[3]~output_o ;
+
+assign \o_RF.RA_DATA [4] = \o_RF.RA_DATA[4]~output_o ;
+
+assign \o_RF.RA_DATA [5] = \o_RF.RA_DATA[5]~output_o ;
+
+assign \o_RF.RA_DATA [6] = \o_RF.RA_DATA[6]~output_o ;
+
+assign \o_RF.RA_DATA [7] = \o_RF.RA_DATA[7]~output_o ;
+
+endmodule

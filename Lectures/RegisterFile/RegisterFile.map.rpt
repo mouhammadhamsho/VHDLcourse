@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RegisterFile
-Sat Nov 09 17:47:43 2019
+Mon Nov 11 15:18:34 2019
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -42,7 +42,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 09 17:47:43 2019      ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 11 15:18:33 2019      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; RegisterFile                               ;
 ; Top-level Entity Name              ; RegisterFileTopLevel                       ;
@@ -152,7 +152,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 4      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -162,12 +162,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path     ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                 ; Library ;
 +--------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
-; ../TopLevelIO_pkg/TopLevelIO_pkg.vhd ; yes             ; User VHDL File  ; D:/MyFiles/Courses/VHDLcourse/Lectures/TopLevelIO_pkg/TopLevelIO_pkg.vhd     ;         ;
-; Decoder_3_8.vhd                      ; yes             ; User VHDL File  ; D:/MyFiles/Courses/VHDLcourse/Lectures/RegisterFile/Decoder_3_8.vhd          ;         ;
-; MUX_8_8.vhd                          ; yes             ; User VHDL File  ; D:/MyFiles/Courses/VHDLcourse/Lectures/RegisterFile/MUX_8_8.vhd              ;         ;
-; DEMUX_8_8.vhd                        ; yes             ; User VHDL File  ; D:/MyFiles/Courses/VHDLcourse/Lectures/RegisterFile/DEMUX_8_8.vhd            ;         ;
-; DFF_8.vhd                            ; yes             ; User VHDL File  ; D:/MyFiles/Courses/VHDLcourse/Lectures/RegisterFile/DFF_8.vhd                ;         ;
-; RegisterFileTopLevel.vhd             ; yes             ; User VHDL File  ; D:/MyFiles/Courses/VHDLcourse/Lectures/RegisterFile/RegisterFileTopLevel.vhd ;         ;
+; ../TopLevelIO_pkg/TopLevelIO_pkg.vhd ; yes             ; User VHDL File  ; C:/temp/VHDLcourse/VHDLcourse/Lectures/TopLevelIO_pkg/TopLevelIO_pkg.vhd     ;         ;
+; Decoder_3_8.vhd                      ; yes             ; User VHDL File  ; C:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/Decoder_3_8.vhd          ;         ;
+; MUX_8_8.vhd                          ; yes             ; User VHDL File  ; C:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/MUX_8_8.vhd              ;         ;
+; DEMUX_8_8.vhd                        ; yes             ; User VHDL File  ; C:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/DEMUX_8_8.vhd            ;         ;
+; DFF_8.vhd                            ; yes             ; User VHDL File  ; C:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/DFF_8.vhd                ;         ;
+; RegisterFileTopLevel.vhd             ; yes             ; User VHDL File  ; C:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/RegisterFileTopLevel.vhd ;         ;
 +--------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------+---------+
 
 
@@ -201,25 +201,25 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                         ;
-+----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+--------------+
-; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                     ; Library Name ;
-+----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+--------------+
-; |RegisterFileTopLevel                  ; 152 (0)           ; 64 (0)       ; 0           ; 0            ; 0       ; 0         ; 35   ; 0            ; |RegisterFileTopLevel                                   ; work         ;
-;    |DEMUX_8_8:InputDemux|              ; 64 (64)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFileTopLevel|DEMUX_8_8:InputDemux              ; work         ;
-;    |DFF_8:\RegistersGeneration:0:REGn| ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn ; work         ;
-;    |DFF_8:\RegistersGeneration:1:REGn| ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:1:REGn ; work         ;
-;    |DFF_8:\RegistersGeneration:2:REGn| ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:2:REGn ; work         ;
-;    |DFF_8:\RegistersGeneration:3:REGn| ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn ; work         ;
-;    |DFF_8:\RegistersGeneration:4:REGn| ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn ; work         ;
-;    |DFF_8:\RegistersGeneration:5:REGn| ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn ; work         ;
-;    |DFF_8:\RegistersGeneration:6:REGn| ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn ; work         ;
-;    |DFF_8:\RegistersGeneration:7:REGn| ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn ; work         ;
-;    |Decoder_3_8:Decoder|               ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFileTopLevel|Decoder_3_8:Decoder               ; work         ;
-;    |MUX_8_8:OutputMux1|                ; 40 (40)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFileTopLevel|MUX_8_8:OutputMux1                ; work         ;
-;    |MUX_8_8:OutputMux2|                ; 40 (40)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFileTopLevel|MUX_8_8:OutputMux2                ; work         ;
-+----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                       ;
++---------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------+--------------+
+; Compilation Hierarchy Node            ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                    ; Library Name ;
++---------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------+--------------+
+; |RegisterFileTopLevel                 ; 152 (0)           ; 64 (0)       ; 0           ; 0            ; 0       ; 0         ; 35   ; 0            ; |RegisterFileTopLevel                                  ; work         ;
+;    |DEMUX_8_8:InputDemux|             ; 64 (64)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFileTopLevel|DEMUX_8_8:InputDemux             ; work         ;
+;    |DFF_8:\RegistersGeneration:0:dff| ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:dff ; work         ;
+;    |DFF_8:\RegistersGeneration:1:dff| ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:1:dff ; work         ;
+;    |DFF_8:\RegistersGeneration:2:dff| ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:2:dff ; work         ;
+;    |DFF_8:\RegistersGeneration:3:dff| ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:dff ; work         ;
+;    |DFF_8:\RegistersGeneration:4:dff| ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:dff ; work         ;
+;    |DFF_8:\RegistersGeneration:5:dff| ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:dff ; work         ;
+;    |DFF_8:\RegistersGeneration:6:dff| ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:dff ; work         ;
+;    |DFF_8:\RegistersGeneration:7:dff| ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:dff ; work         ;
+;    |Decoder_3_8:Decoder|              ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFileTopLevel|Decoder_3_8:Decoder              ; work         ;
+;    |MUX_8_8:OutputMux1|               ; 40 (40)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFileTopLevel|MUX_8_8:OutputMux1               ; work         ;
+;    |MUX_8_8:OutputMux2|               ; 40 (40)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RegisterFileTopLevel|MUX_8_8:OutputMux2               ; work         ;
++---------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -265,10 +265,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sat Nov 09 17:47:41 2019
+    Info: Processing started: Mon Nov 11 15:18:30 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RegisterFile -c RegisterFile
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 1 design units, including 0 entities, in source file /myfiles/courses/vhdlcourse/lectures/toplevelio_pkg/toplevelio_pkg.vhd
+Info (12021): Found 1 design units, including 0 entities, in source file /temp/vhdlcourse/vhdlcourse/lectures/toplevelio_pkg/toplevelio_pkg.vhd
     Info (12022): Found design unit 1: TopLevelIO_pkg
 Info (12021): Found 2 design units, including 1 entities, in source file decoder_3_8.vhd
     Info (12022): Found design unit 1: Decoder_3_8-behavioral
@@ -285,8 +285,11 @@ Info (12021): Found 2 design units, including 1 entities, in source file dff_8.v
 Info (12021): Found 2 design units, including 1 entities, in source file registerfiletoplevel.vhd
     Info (12022): Found design unit 1: RegisterFileTopLevel-behavioral
     Info (12023): Found entity 1: RegisterFileTopLevel
+Info (12021): Found 2 design units, including 1 entities, in source file rf_tb.vhd
+    Info (12022): Found design unit 1: RF_tb-RF_tb
+    Info (12023): Found entity 1: RF_tb
 Info (12127): Elaborating entity "RegisterFileTopLevel" for the top level hierarchy
-Info (12128): Elaborating entity "DFF_8" for hierarchy "DFF_8:\RegistersGeneration:0:REGn"
+Info (12128): Elaborating entity "DFF_8" for hierarchy "DFF_8:\RegistersGeneration:0:dff"
 Warning (10492): VHDL Process Statement warning at DFF_8.vhd(18): signal "RST" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "MUX_8_8" for hierarchy "MUX_8_8:OutputMux1"
 Info (12128): Elaborating entity "Decoder_3_8" for hierarchy "Decoder_3_8:Decoder"
@@ -312,9 +315,9 @@ Info (21057): Implemented 187 device resources after synthesis - the final resou
     Info (21059): Implemented 16 output pins
     Info (21061): Implemented 152 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 4658 megabytes
-    Info: Processing ended: Sat Nov 09 17:47:43 2019
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 4687 megabytes
+    Info: Processing ended: Mon Nov 11 15:18:34 2019
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
 
 

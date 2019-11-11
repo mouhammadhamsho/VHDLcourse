@@ -1,0 +1,203 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\temp\VHDLcourse\VHDLcourse\Lectures\RegisterFile\simulation\qsim
+Edecoder_3_8
+Z1 w1573200217
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\temp\VHDLcourse\VHDLcourse\Lectures\RegisterFile\simulation\qsim
+Z5 8C:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/Decoder_3_8.vhd
+Z6 FC:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/Decoder_3_8.vhd
+l0
+L4
+VkzK7=T8K=3a;3?ZVI]5PM2
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1573479417.026000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/Decoder_3_8.vhd|
+Z10 !s107 C:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/Decoder_3_8.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 RZ20B4mbli_:IF7MVC>We1
+!i10b 1
+Abehavioral
+R2
+R3
+DEx4 work 11 decoder_3_8 0 22 kzK7=T8K=3a;3?ZVI]5PM2
+l14
+L13
+Vi_Onel<=VO?>9H:mcae`a3
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 F^G?4M=Oe533MXFa490_<2
+!i10b 1
+Edemux_8_8
+R1
+R2
+R3
+R4
+Z13 8C:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/DEMUX_8_8.vhd
+Z14 FC:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/DEMUX_8_8.vhd
+l0
+L4
+VX=l[l81OK7nMO^N`J@PXN2
+R7
+31
+Z15 !s108 1573479417.324000
+Z16 !s90 -reportprogress|300|-93|-work|work|C:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/DEMUX_8_8.vhd|
+Z17 !s107 C:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/DEMUX_8_8.vhd|
+R11
+R12
+!s100 QjFm:HCbbMdW60a@Gk7mb2
+!i10b 1
+Abehavioral
+R2
+R3
+DEx4 work 9 demux_8_8 0 22 X=l[l81OK7nMO^N`J@PXN2
+l23
+L22
+ViGUEVPS0GiWaH<cAP38B71
+R7
+31
+R15
+R16
+R17
+R11
+R12
+!s100 Cj2Ekcc`G=D>Lfh]UC03[0
+!i10b 1
+Emux_8_8
+R1
+R2
+R3
+R4
+Z18 8C:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/MUX_8_8.vhd
+Z19 FC:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/MUX_8_8.vhd
+l0
+L4
+VzYn36UlGiHKW38_ac;nnA2
+R7
+31
+Z20 !s108 1573479417.178000
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/MUX_8_8.vhd|
+Z22 !s107 C:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/MUX_8_8.vhd|
+R11
+R12
+!s100 APCWdiaB@1ic_ZL0C7DkP1
+!i10b 1
+Abehavioral
+R2
+R3
+DEx4 work 7 mux_8_8 0 22 zYn36UlGiHKW38_ac;nnA2
+l22
+L21
+VZEgi10aP6@z=idOAien6b0
+R7
+31
+R20
+R21
+R22
+R11
+R12
+!s100 b6X0FCaUgo4mXGh<b53dg2
+!i10b 1
+Eregisterfiletoplevel
+Z23 w1573462686
+Z24 DPx4 work 14 toplevelio_pkg 0 22 SjX5mZ_Nf;egaN9NA]E[^3
+R2
+R3
+R4
+Z25 8C:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/RegisterFileTopLevel.vhd
+Z26 FC:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/RegisterFileTopLevel.vhd
+l0
+L4
+Vi1WcD9mIoWZZ<Eg6Qm69b1
+R7
+31
+Z27 !s108 1573479417.467000
+Z28 !s90 -reportprogress|300|-93|-work|work|C:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/RegisterFileTopLevel.vhd|
+Z29 !s107 C:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/RegisterFileTopLevel.vhd|
+R11
+R12
+!s100 ?;Jc38gV<GC=>cjd1NIA11
+!i10b 1
+Abehavioral
+R24
+R2
+R3
+DEx4 work 20 registerfiletoplevel 0 22 i1WcD9mIoWZZ<Eg6Qm69b1
+l81
+L14
+Va1lAmn[LFK7g<9A`fY02l2
+R7
+31
+R27
+R28
+R29
+R11
+R12
+!s100 7JE9aHCRjk?lY9H5IV:dS0
+!i10b 1
+Erf_tb
+Z30 w1573479006
+R24
+R2
+R3
+R4
+Z31 8C:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/RF_tb.vhd
+Z32 FC:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/RF_tb.vhd
+l0
+L6
+V@iM<Te6RP4BOcHh2U`ZlV2
+!s100 hR0J9TbH?deNN6n]ZHm7V1
+R7
+31
+!i10b 1
+Z33 !s108 1573479417.623000
+Z34 !s90 -reportprogress|300|-93|-work|work|C:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/RF_tb.vhd|
+Z35 !s107 C:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/RF_tb.vhd|
+R11
+R12
+Arf_tb
+R24
+R2
+R3
+DEx4 work 5 rf_tb 0 22 @iM<Te6RP4BOcHh2U`ZlV2
+l23
+L10
+VOEXB2]J[:91GbF:>AYnMC2
+!s100 ]58Y^7z1m2[V[gRQQnK`I0
+R7
+31
+!i10b 1
+R33
+R34
+R35
+R11
+R12
+Ptoplevelio_pkg
+R2
+R3
+R23
+R4
+8C:/temp/VHDLcourse/VHDLcourse/Lectures/TopLevelIO_pkg/TopLevelIO_pkg.vhd
+FC:/temp/VHDLcourse/VHDLcourse/Lectures/TopLevelIO_pkg/TopLevelIO_pkg.vhd
+l0
+L4
+VSjX5mZ_Nf;egaN9NA]E[^3
+R7
+31
+R11
+R12
+!s100 9mL`:oOE[JkXZE;a@;NE@1
+!i10b 1
+!s108 1573479416.867000
+!s90 -reportprogress|300|-93|-work|work|C:/temp/VHDLcourse/VHDLcourse/Lectures/TopLevelIO_pkg/TopLevelIO_pkg.vhd|
+!s107 C:/temp/VHDLcourse/VHDLcourse/Lectures/TopLevelIO_pkg/TopLevelIO_pkg.vhd|

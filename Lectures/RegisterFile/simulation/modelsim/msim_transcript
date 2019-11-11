@@ -1,0 +1,85 @@
+# Reading C:/temp/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do RegisterFile_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\temp\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\temp\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/temp/VHDLcourse/VHDLcourse/Lectures/TopLevelIO_pkg/TopLevelIO_pkg.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package TopLevelIO_pkg
+# vcom -93 -work work {C:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/Decoder_3_8.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Decoder_3_8
+# -- Compiling architecture behavioral of Decoder_3_8
+# vcom -93 -work work {C:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/MUX_8_8.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity MUX_8_8
+# -- Compiling architecture behavioral of MUX_8_8
+# vcom -93 -work work {C:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/DEMUX_8_8.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DEMUX_8_8
+# -- Compiling architecture behavioral of DEMUX_8_8
+# vcom -93 -work work {C:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/DFF_8.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DFF_8
+# -- Compiling architecture Behavioral of DFF_8
+# vcom -93 -work work {C:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/RegisterFileTopLevel.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package TopLevelIO_pkg
+# -- Compiling entity RegisterFileTopLevel
+# -- Compiling architecture behavioral of RegisterFileTopLevel
+# 
+# vcom -93 -work work {C:/temp/VHDLcourse/VHDLcourse/Lectures/RegisterFile/RF_tb.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package TopLevelIO_pkg
+# -- Compiling entity RF_tb
+# -- Compiling architecture RF_tb of RF_tb
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  rf_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=\"+acc\" -t 1ps rf_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.toplevelio_pkg
+# Loading work.rf_tb(rf_tb)
+# Loading work.registerfiletoplevel(behavioral)
+# Loading work.dff_8(behavioral)
+# Loading work.mux_8_8(behavioral)
+# Loading work.decoder_3_8(behavioral)
+# Loading work.demux_8_8(behavioral)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+run
+run

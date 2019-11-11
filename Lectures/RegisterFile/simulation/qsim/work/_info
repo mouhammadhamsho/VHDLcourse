@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\temp\VHDLcourse\VHDLcourse\Lectures\RegisterFile\simulation\qsim
+vRegisterFileTopLevel
+!i10b 1
+!s100 h>Fh6KGef=A9RU6LmP:8N3
+I:V3YoLGL_7]z0TdKJejI91
+VfjG_b@fVb1l]D_G40E:e;0
+Z1 dC:\temp\VHDLcourse\VHDLcourse\Lectures\RegisterFile\simulation\qsim
+w1573478607
+8RegisterFile.vo
+FRegisterFile.vo
+L0 31
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1573478609.353000
+!s107 RegisterFile.vo|
+!s90 -work|work|RegisterFile.vo|
+!s101 -O0
+o-work work -O0
+n@register@file@top@level

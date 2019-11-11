@@ -1,12 +1,12 @@
 |RegisterFileTopLevel
-i_RF.RESET => DFF_8:RegistersGeneration:0:REGn.RST
-i_RF.RESET => DFF_8:RegistersGeneration:1:REGn.RST
-i_RF.RESET => DFF_8:RegistersGeneration:2:REGn.RST
-i_RF.RESET => DFF_8:RegistersGeneration:3:REGn.RST
-i_RF.RESET => DFF_8:RegistersGeneration:4:REGn.RST
-i_RF.RESET => DFF_8:RegistersGeneration:5:REGn.RST
-i_RF.RESET => DFF_8:RegistersGeneration:6:REGn.RST
-i_RF.RESET => DFF_8:RegistersGeneration:7:REGn.RST
+i_RF.RESET => DFF_8:RegistersGeneration:0:dff.RST
+i_RF.RESET => DFF_8:RegistersGeneration:1:dff.RST
+i_RF.RESET => DFF_8:RegistersGeneration:2:dff.RST
+i_RF.RESET => DFF_8:RegistersGeneration:3:dff.RST
+i_RF.RESET => DFF_8:RegistersGeneration:4:dff.RST
+i_RF.RESET => DFF_8:RegistersGeneration:5:dff.RST
+i_RF.RESET => DFF_8:RegistersGeneration:6:dff.RST
+i_RF.RESET => DFF_8:RegistersGeneration:7:dff.RST
 i_RF.WR_Data => Decoder_3_8:Decoder.DecoderEN
 i_RF.DataIN[0] => DEMUX_8_8:InputDemux.DataIn[0]
 i_RF.DataIN[1] => DEMUX_8_8:InputDemux.DataIn[1]
@@ -28,25 +28,25 @@ i_RF.RB_ADR[2] => MUX_8_8:OutputMux2.SEL[2]
 i_RF.RA_ADR[0] => MUX_8_8:OutputMux1.SEL[0]
 i_RF.RA_ADR[1] => MUX_8_8:OutputMux1.SEL[1]
 i_RF.RA_ADR[2] => MUX_8_8:OutputMux1.SEL[2]
-o_RF.RB_DATA[0] <= MUX_8_8:OutputMux2.DataOut[0]
-o_RF.RB_DATA[1] <= MUX_8_8:OutputMux2.DataOut[1]
-o_RF.RB_DATA[2] <= MUX_8_8:OutputMux2.DataOut[2]
-o_RF.RB_DATA[3] <= MUX_8_8:OutputMux2.DataOut[3]
-o_RF.RB_DATA[4] <= MUX_8_8:OutputMux2.DataOut[4]
-o_RF.RB_DATA[5] <= MUX_8_8:OutputMux2.DataOut[5]
-o_RF.RB_DATA[6] <= MUX_8_8:OutputMux2.DataOut[6]
-o_RF.RB_DATA[7] <= MUX_8_8:OutputMux2.DataOut[7]
-o_RF.RA_DATA[0] <= MUX_8_8:OutputMux1.DataOut[0]
-o_RF.RA_DATA[1] <= MUX_8_8:OutputMux1.DataOut[1]
-o_RF.RA_DATA[2] <= MUX_8_8:OutputMux1.DataOut[2]
-o_RF.RA_DATA[3] <= MUX_8_8:OutputMux1.DataOut[3]
-o_RF.RA_DATA[4] <= MUX_8_8:OutputMux1.DataOut[4]
-o_RF.RA_DATA[5] <= MUX_8_8:OutputMux1.DataOut[5]
-o_RF.RA_DATA[6] <= MUX_8_8:OutputMux1.DataOut[6]
-o_RF.RA_DATA[7] <= MUX_8_8:OutputMux1.DataOut[7]
+o_RF.RB_DATA[0] << MUX_8_8:OutputMux2.DataOut[0]
+o_RF.RB_DATA[1] << MUX_8_8:OutputMux2.DataOut[1]
+o_RF.RB_DATA[2] << MUX_8_8:OutputMux2.DataOut[2]
+o_RF.RB_DATA[3] << MUX_8_8:OutputMux2.DataOut[3]
+o_RF.RB_DATA[4] << MUX_8_8:OutputMux2.DataOut[4]
+o_RF.RB_DATA[5] << MUX_8_8:OutputMux2.DataOut[5]
+o_RF.RB_DATA[6] << MUX_8_8:OutputMux2.DataOut[6]
+o_RF.RB_DATA[7] << MUX_8_8:OutputMux2.DataOut[7]
+o_RF.RA_DATA[0] << MUX_8_8:OutputMux1.DataOut[0]
+o_RF.RA_DATA[1] << MUX_8_8:OutputMux1.DataOut[1]
+o_RF.RA_DATA[2] << MUX_8_8:OutputMux1.DataOut[2]
+o_RF.RA_DATA[3] << MUX_8_8:OutputMux1.DataOut[3]
+o_RF.RA_DATA[4] << MUX_8_8:OutputMux1.DataOut[4]
+o_RF.RA_DATA[5] << MUX_8_8:OutputMux1.DataOut[5]
+o_RF.RA_DATA[6] << MUX_8_8:OutputMux1.DataOut[6]
+o_RF.RA_DATA[7] << MUX_8_8:OutputMux1.DataOut[7]
 
 
-|RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:REGn
+|RegisterFileTopLevel|DFF_8:\RegistersGeneration:0:dff
 D[0] => Q[0]~reg0.DATAIN
 D[1] => Q[1]~reg0.DATAIN
 D[2] => Q[2]~reg0.DATAIN
@@ -81,7 +81,7 @@ Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RegisterFileTopLevel|DFF_8:\RegistersGeneration:1:REGn
+|RegisterFileTopLevel|DFF_8:\RegistersGeneration:1:dff
 D[0] => Q[0]~reg0.DATAIN
 D[1] => Q[1]~reg0.DATAIN
 D[2] => Q[2]~reg0.DATAIN
@@ -116,7 +116,7 @@ Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RegisterFileTopLevel|DFF_8:\RegistersGeneration:2:REGn
+|RegisterFileTopLevel|DFF_8:\RegistersGeneration:2:dff
 D[0] => Q[0]~reg0.DATAIN
 D[1] => Q[1]~reg0.DATAIN
 D[2] => Q[2]~reg0.DATAIN
@@ -151,7 +151,7 @@ Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:REGn
+|RegisterFileTopLevel|DFF_8:\RegistersGeneration:3:dff
 D[0] => Q[0]~reg0.DATAIN
 D[1] => Q[1]~reg0.DATAIN
 D[2] => Q[2]~reg0.DATAIN
@@ -186,7 +186,7 @@ Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:REGn
+|RegisterFileTopLevel|DFF_8:\RegistersGeneration:4:dff
 D[0] => Q[0]~reg0.DATAIN
 D[1] => Q[1]~reg0.DATAIN
 D[2] => Q[2]~reg0.DATAIN
@@ -221,7 +221,7 @@ Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:REGn
+|RegisterFileTopLevel|DFF_8:\RegistersGeneration:5:dff
 D[0] => Q[0]~reg0.DATAIN
 D[1] => Q[1]~reg0.DATAIN
 D[2] => Q[2]~reg0.DATAIN
@@ -256,7 +256,7 @@ Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:REGn
+|RegisterFileTopLevel|DFF_8:\RegistersGeneration:6:dff
 D[0] => Q[0]~reg0.DATAIN
 D[1] => Q[1]~reg0.DATAIN
 D[2] => Q[2]~reg0.DATAIN
@@ -291,7 +291,7 @@ Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:REGn
+|RegisterFileTopLevel|DFF_8:\RegistersGeneration:7:dff
 D[0] => Q[0]~reg0.DATAIN
 D[1] => Q[1]~reg0.DATAIN
 D[2] => Q[2]~reg0.DATAIN

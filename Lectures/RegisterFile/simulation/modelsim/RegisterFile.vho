@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
--- DATE "11/09/2019 17:48:02"
+-- DATE "11/11/2019 15:19:02"
 
 -- 
 -- Device: Altera EP4CE40F29I7 Package FBGA780
@@ -41,8 +41,8 @@ ENTITY 	RegisterFileTopLevel IS
 	\i_RF.DesReg_ADR\ : IN std_logic_vector(2 DOWNTO 0);
 	\i_RF.RB_ADR\ : IN std_logic_vector(2 DOWNTO 0);
 	\i_RF.RA_ADR\ : IN std_logic_vector(2 DOWNTO 0);
-	\o_RF.RB_DATA\ : OUT std_logic_vector(7 DOWNTO 0);
-	\o_RF.RA_DATA\ : OUT std_logic_vector(7 DOWNTO 0)
+	\o_RF.RB_DATA\ : BUFFER std_logic_vector(7 DOWNTO 0);
+	\o_RF.RA_DATA\ : BUFFER std_logic_vector(7 DOWNTO 0)
 	);
 END RegisterFileTopLevel;
 
@@ -134,7 +134,7 @@ SIGNAL \i_RF.DesReg_ADR[0]~input_o\ : std_logic;
 SIGNAL \Decoder|OutputDecode[3]~clkctrl_outclk\ : std_logic;
 SIGNAL \i_RF.DataIN[0]~input_o\ : std_logic;
 SIGNAL \InputDemux|DataOut_3[0]~0_combout\ : std_logic;
-SIGNAL \RegistersGeneration:3:REGn|Q[0]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:3:dff|Q[0]~feeder_combout\ : std_logic;
 SIGNAL \i_RF.RESET~input_o\ : std_logic;
 SIGNAL \i_RF.RESET~inputclkctrl_outclk\ : std_logic;
 SIGNAL \Decoder|OutputDecode[2]~clkctrl_outclk\ : std_logic;
@@ -142,7 +142,7 @@ SIGNAL \InputDemux|DataOut_2[0]~0_combout\ : std_logic;
 SIGNAL \i_RF.RB_ADR[1]~input_o\ : std_logic;
 SIGNAL \Decoder|OutputDecode[1]~clkctrl_outclk\ : std_logic;
 SIGNAL \InputDemux|DataOut_1[0]~0_combout\ : std_logic;
-SIGNAL \RegistersGeneration:1:REGn|Q[0]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:1:dff|Q[0]~feeder_combout\ : std_logic;
 SIGNAL \Decoder|OutputDecode[0]~clkctrl_outclk\ : std_logic;
 SIGNAL \InputDemux|DataOut_0[0]~0_combout\ : std_logic;
 SIGNAL \i_RF.RB_ADR[0]~input_o\ : std_logic;
@@ -152,66 +152,66 @@ SIGNAL \Decoder|OutputDecode[4]~clkctrl_outclk\ : std_logic;
 SIGNAL \InputDemux|DataOut_4[0]~0_combout\ : std_logic;
 SIGNAL \Decoder|OutputDecode[6]~clkctrl_outclk\ : std_logic;
 SIGNAL \InputDemux|DataOut_6[0]~0_combout\ : std_logic;
-SIGNAL \RegistersGeneration:6:REGn|Q[0]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:6:dff|Q[0]~feeder_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux7~0_combout\ : std_logic;
 SIGNAL \Decoder|OutputDecode[7]~clkctrl_outclk\ : std_logic;
 SIGNAL \InputDemux|DataOut_7[0]~0_combout\ : std_logic;
-SIGNAL \RegistersGeneration:7:REGn|Q[0]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:7:dff|Q[0]~feeder_combout\ : std_logic;
 SIGNAL \Decoder|OutputDecode[5]~clkctrl_outclk\ : std_logic;
 SIGNAL \InputDemux|DataOut_5[0]~0_combout\ : std_logic;
-SIGNAL \RegistersGeneration:5:REGn|Q[0]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:5:dff|Q[0]~feeder_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux7~1_combout\ : std_logic;
 SIGNAL \i_RF.RB_ADR[2]~input_o\ : std_logic;
 SIGNAL \OutputMux2|Mux7~4_combout\ : std_logic;
 SIGNAL \i_RF.DataIN[1]~input_o\ : std_logic;
 SIGNAL \InputDemux|DataOut_7[1]~1_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_6[1]~1_combout\ : std_logic;
-SIGNAL \RegistersGeneration:6:REGn|Q[1]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:6:dff|Q[1]~feeder_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_4[1]~1_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux6~0_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_5[1]~1_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux6~1_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_0[1]~1_combout\ : std_logic;
-SIGNAL \RegistersGeneration:0:REGn|Q[1]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:0:dff|Q[1]~feeder_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_1[1]~1_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux6~2_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_2[1]~1_combout\ : std_logic;
-SIGNAL \RegistersGeneration:2:REGn|Q[1]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:2:dff|Q[1]~feeder_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_3[1]~1_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux6~3_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux6~4_combout\ : std_logic;
 SIGNAL \i_RF.DataIN[2]~input_o\ : std_logic;
 SIGNAL \InputDemux|DataOut_3[2]~2_combout\ : std_logic;
-SIGNAL \RegistersGeneration:3:REGn|Q[2]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:3:dff|Q[2]~feeder_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_2[2]~2_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_1[2]~2_combout\ : std_logic;
-SIGNAL \RegistersGeneration:1:REGn|Q[2]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:1:dff|Q[2]~feeder_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_0[2]~2_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux5~2_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux5~3_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_4[2]~2_combout\ : std_logic;
-SIGNAL \RegistersGeneration:4:REGn|Q[2]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:4:dff|Q[2]~feeder_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_6[2]~2_combout\ : std_logic;
-SIGNAL \RegistersGeneration:6:REGn|Q[2]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:6:dff|Q[2]~feeder_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux5~0_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_7[2]~2_combout\ : std_logic;
-SIGNAL \RegistersGeneration:7:REGn|Q[2]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:7:dff|Q[2]~feeder_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_5[2]~2_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux5~1_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux5~4_combout\ : std_logic;
 SIGNAL \i_RF.DataIN[3]~input_o\ : std_logic;
 SIGNAL \InputDemux|DataOut_0[3]~3_combout\ : std_logic;
-SIGNAL \RegistersGeneration:0:REGn|Q[3]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:0:dff|Q[3]~feeder_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_1[3]~3_combout\ : std_logic;
-SIGNAL \RegistersGeneration:1:REGn|Q[3]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:1:dff|Q[3]~feeder_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux4~2_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_2[3]~3_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_3[3]~3_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux4~3_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_4[3]~3_combout\ : std_logic;
-SIGNAL \RegistersGeneration:4:REGn|Q[3]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:4:dff|Q[3]~feeder_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_6[3]~3_combout\ : std_logic;
-SIGNAL \RegistersGeneration:6:REGn|Q[3]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:6:dff|Q[3]~feeder_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux4~0_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_7[3]~3_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_5[3]~3_combout\ : std_logic;
@@ -219,17 +219,17 @@ SIGNAL \OutputMux2|Mux4~1_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux4~4_combout\ : std_logic;
 SIGNAL \i_RF.DataIN[4]~input_o\ : std_logic;
 SIGNAL \InputDemux|DataOut_3[4]~4_combout\ : std_logic;
-SIGNAL \RegistersGeneration:3:REGn|Q[4]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:3:dff|Q[4]~feeder_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_2[4]~4_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_1[4]~4_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_0[4]~4_combout\ : std_logic;
-SIGNAL \RegistersGeneration:0:REGn|Q[4]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:0:dff|Q[4]~feeder_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux3~2_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux3~3_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_6[4]~4_combout\ : std_logic;
-SIGNAL \RegistersGeneration:6:REGn|Q[4]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:6:dff|Q[4]~feeder_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_4[4]~4_combout\ : std_logic;
-SIGNAL \RegistersGeneration:4:REGn|Q[4]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:4:dff|Q[4]~feeder_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux3~0_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_7[4]~4_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_5[4]~4_combout\ : std_logic;
@@ -238,56 +238,56 @@ SIGNAL \OutputMux2|Mux3~4_combout\ : std_logic;
 SIGNAL \i_RF.DataIN[5]~input_o\ : std_logic;
 SIGNAL \InputDemux|DataOut_2[5]~5_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_0[5]~5_combout\ : std_logic;
-SIGNAL \RegistersGeneration:0:REGn|Q[5]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:0:dff|Q[5]~feeder_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_1[5]~5_combout\ : std_logic;
-SIGNAL \RegistersGeneration:1:REGn|Q[5]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:1:dff|Q[5]~feeder_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux2~2_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_3[5]~5_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux2~3_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_7[5]~5_combout\ : std_logic;
-SIGNAL \RegistersGeneration:7:REGn|Q[5]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:7:dff|Q[5]~feeder_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_4[5]~5_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_6[5]~5_combout\ : std_logic;
-SIGNAL \RegistersGeneration:6:REGn|Q[5]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:6:dff|Q[5]~feeder_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux2~0_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_5[5]~5_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux2~1_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux2~4_combout\ : std_logic;
 SIGNAL \i_RF.DataIN[6]~input_o\ : std_logic;
 SIGNAL \InputDemux|DataOut_2[6]~6_combout\ : std_logic;
-SIGNAL \RegistersGeneration:2:REGn|Q[6]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:2:dff|Q[6]~feeder_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_3[6]~6_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_1[6]~6_combout\ : std_logic;
-SIGNAL \RegistersGeneration:1:REGn|Q[6]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:1:dff|Q[6]~feeder_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_0[6]~6_combout\ : std_logic;
-SIGNAL \RegistersGeneration:0:REGn|Q[6]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:0:dff|Q[6]~feeder_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux1~2_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux1~3_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_4[6]~6_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_6[6]~6_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux1~0_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_5[6]~6_combout\ : std_logic;
-SIGNAL \RegistersGeneration:5:REGn|Q[6]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:5:dff|Q[6]~feeder_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_7[6]~6_combout\ : std_logic;
-SIGNAL \RegistersGeneration:7:REGn|Q[6]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:7:dff|Q[6]~feeder_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux1~1_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux1~4_combout\ : std_logic;
 SIGNAL \i_RF.DataIN[7]~input_o\ : std_logic;
 SIGNAL \InputDemux|DataOut_7[7]~7_combout\ : std_logic;
-SIGNAL \RegistersGeneration:7:REGn|Q[7]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:7:dff|Q[7]~feeder_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_4[7]~7_combout\ : std_logic;
-SIGNAL \RegistersGeneration:4:REGn|Q[7]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:4:dff|Q[7]~feeder_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_6[7]~7_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux0~0_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_5[7]~7_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux0~1_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_3[7]~7_combout\ : std_logic;
-SIGNAL \RegistersGeneration:3:REGn|Q[7]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:3:dff|Q[7]~feeder_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_2[7]~7_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_1[7]~7_combout\ : std_logic;
-SIGNAL \RegistersGeneration:1:REGn|Q[7]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:1:dff|Q[7]~feeder_combout\ : std_logic;
 SIGNAL \InputDemux|DataOut_0[7]~7_combout\ : std_logic;
-SIGNAL \RegistersGeneration:0:REGn|Q[7]~feeder_combout\ : std_logic;
+SIGNAL \RegistersGeneration:0:dff|Q[7]~feeder_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux0~2_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux0~3_combout\ : std_logic;
 SIGNAL \OutputMux2|Mux0~4_combout\ : std_logic;
@@ -335,14 +335,14 @@ SIGNAL \OutputMux1|Mux0~2_combout\ : std_logic;
 SIGNAL \OutputMux1|Mux0~3_combout\ : std_logic;
 SIGNAL \OutputMux1|Mux0~4_combout\ : std_logic;
 SIGNAL \Decoder|OutputDecode\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \RegistersGeneration:4:REGn|Q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \RegistersGeneration:1:REGn|Q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \RegistersGeneration:3:REGn|Q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \RegistersGeneration:7:REGn|Q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \RegistersGeneration:6:REGn|Q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \RegistersGeneration:5:REGn|Q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \RegistersGeneration:2:REGn|Q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \RegistersGeneration:0:REGn|Q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \RegistersGeneration:3:dff|Q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \RegistersGeneration:1:dff|Q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \RegistersGeneration:0:dff|Q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \RegistersGeneration:2:dff|Q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \RegistersGeneration:6:dff|Q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \RegistersGeneration:4:dff|Q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \RegistersGeneration:5:dff|Q\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \RegistersGeneration:7:dff|Q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \ALT_INV_i_RF.RESET~inputclkctrl_outclk\ : std_logic;
 
 BEGIN
@@ -673,9 +673,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_3[0]~0_combout\);
 
 -- Location: LCCOMB_X6_Y2_N10
-\RegistersGeneration:3:REGn|Q[0]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:3:dff|Q[0]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:3:REGn|Q[0]~feeder_combout\ = \InputDemux|DataOut_3[0]~0_combout\
+-- \RegistersGeneration:3:dff|Q[0]~feeder_combout\ = \InputDemux|DataOut_3[0]~0_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -684,7 +684,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datac => \InputDemux|DataOut_3[0]~0_combout\,
-	combout => \RegistersGeneration:3:REGn|Q[0]~feeder_combout\);
+	combout => \RegistersGeneration:3:dff|Q[0]~feeder_combout\);
 
 -- Location: IOIBUF_X36_Y0_N15
 \i_RF.RESET~input\ : cycloneive_io_ibuf
@@ -711,7 +711,7 @@ PORT MAP (
 	outclk => \i_RF.RESET~inputclkctrl_outclk\);
 
 -- Location: FF_X6_Y2_N11
-\RegistersGeneration:3:REGn|Q[0]\ : dffeas
+\RegistersGeneration:3:dff|Q[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -719,11 +719,11 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[3]~clkctrl_outclk\,
-	d => \RegistersGeneration:3:REGn|Q[0]~feeder_combout\,
+	d => \RegistersGeneration:3:dff|Q[0]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:3:REGn|Q\(0));
+	q => \RegistersGeneration:3:dff|Q\(0));
 
 -- Location: LCCOMB_X1_Y21_N16
 \Decoder|OutputDecode[2]\ : cycloneive_lcell_comb
@@ -773,7 +773,7 @@ PORT MAP (
 	combout => \InputDemux|DataOut_2[0]~0_combout\);
 
 -- Location: FF_X6_Y2_N9
-\RegistersGeneration:2:REGn|Q[0]\ : dffeas
+\RegistersGeneration:2:dff|Q[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -786,7 +786,7 @@ PORT MAP (
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:2:REGn|Q\(0));
+	q => \RegistersGeneration:2:dff|Q\(0));
 
 -- Location: IOIBUF_X3_Y0_N1
 \i_RF.RB_ADR[1]~input\ : cycloneive_io_ibuf
@@ -847,9 +847,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_1[0]~0_combout\);
 
 -- Location: LCCOMB_X5_Y2_N4
-\RegistersGeneration:1:REGn|Q[0]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:1:dff|Q[0]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:1:REGn|Q[0]~feeder_combout\ = \InputDemux|DataOut_1[0]~0_combout\
+-- \RegistersGeneration:1:dff|Q[0]~feeder_combout\ = \InputDemux|DataOut_1[0]~0_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -858,10 +858,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \InputDemux|DataOut_1[0]~0_combout\,
-	combout => \RegistersGeneration:1:REGn|Q[0]~feeder_combout\);
+	combout => \RegistersGeneration:1:dff|Q[0]~feeder_combout\);
 
 -- Location: FF_X5_Y2_N5
-\RegistersGeneration:1:REGn|Q[0]\ : dffeas
+\RegistersGeneration:1:dff|Q[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -869,11 +869,11 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[1]~clkctrl_outclk\,
-	d => \RegistersGeneration:1:REGn|Q[0]~feeder_combout\,
+	d => \RegistersGeneration:1:dff|Q[0]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:1:REGn|Q\(0));
+	q => \RegistersGeneration:1:dff|Q\(0));
 
 -- Location: LCCOMB_X1_Y21_N22
 \Decoder|OutputDecode[0]\ : cycloneive_lcell_comb
@@ -923,7 +923,7 @@ PORT MAP (
 	combout => \InputDemux|DataOut_0[0]~0_combout\);
 
 -- Location: FF_X5_Y2_N27
-\RegistersGeneration:0:REGn|Q[0]\ : dffeas
+\RegistersGeneration:0:dff|Q[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -936,7 +936,7 @@ PORT MAP (
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:0:REGn|Q\(0));
+	q => \RegistersGeneration:0:dff|Q\(0));
 
 -- Location: IOIBUF_X7_Y0_N8
 \i_RF.RB_ADR[0]~input\ : cycloneive_io_ibuf
@@ -952,8 +952,8 @@ PORT MAP (
 -- Location: LCCOMB_X5_Y2_N24
 \OutputMux2|Mux7~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux7~2_combout\ = (\i_RF.RB_ADR[1]~input_o\ & (((\i_RF.RB_ADR[0]~input_o\)))) # (!\i_RF.RB_ADR[1]~input_o\ & ((\i_RF.RB_ADR[0]~input_o\ & (\RegistersGeneration:1:REGn|Q\(0))) # (!\i_RF.RB_ADR[0]~input_o\ & 
--- ((\RegistersGeneration:0:REGn|Q\(0))))))
+-- \OutputMux2|Mux7~2_combout\ = (\i_RF.RB_ADR[1]~input_o\ & (((\i_RF.RB_ADR[0]~input_o\)))) # (!\i_RF.RB_ADR[1]~input_o\ & ((\i_RF.RB_ADR[0]~input_o\ & (\RegistersGeneration:1:dff|Q\(0))) # (!\i_RF.RB_ADR[0]~input_o\ & 
+-- ((\RegistersGeneration:0:dff|Q\(0))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -962,15 +962,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \i_RF.RB_ADR[1]~input_o\,
-	datab => \RegistersGeneration:1:REGn|Q\(0),
-	datac => \RegistersGeneration:0:REGn|Q\(0),
+	datab => \RegistersGeneration:1:dff|Q\(0),
+	datac => \RegistersGeneration:0:dff|Q\(0),
 	datad => \i_RF.RB_ADR[0]~input_o\,
 	combout => \OutputMux2|Mux7~2_combout\);
 
 -- Location: LCCOMB_X6_Y2_N28
 \OutputMux2|Mux7~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux7~3_combout\ = (\OutputMux2|Mux7~2_combout\ & ((\RegistersGeneration:3:REGn|Q\(0)) # ((!\i_RF.RB_ADR[1]~input_o\)))) # (!\OutputMux2|Mux7~2_combout\ & (((\RegistersGeneration:2:REGn|Q\(0) & \i_RF.RB_ADR[1]~input_o\))))
+-- \OutputMux2|Mux7~3_combout\ = (\OutputMux2|Mux7~2_combout\ & ((\RegistersGeneration:3:dff|Q\(0)) # ((!\i_RF.RB_ADR[1]~input_o\)))) # (!\OutputMux2|Mux7~2_combout\ & (((\RegistersGeneration:2:dff|Q\(0) & \i_RF.RB_ADR[1]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -978,8 +978,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \RegistersGeneration:3:REGn|Q\(0),
-	datab => \RegistersGeneration:2:REGn|Q\(0),
+	dataa => \RegistersGeneration:3:dff|Q\(0),
+	datab => \RegistersGeneration:2:dff|Q\(0),
 	datac => \OutputMux2|Mux7~2_combout\,
 	datad => \i_RF.RB_ADR[1]~input_o\,
 	combout => \OutputMux2|Mux7~3_combout\);
@@ -1032,7 +1032,7 @@ PORT MAP (
 	combout => \InputDemux|DataOut_4[0]~0_combout\);
 
 -- Location: FF_X5_Y1_N13
-\RegistersGeneration:4:REGn|Q[0]\ : dffeas
+\RegistersGeneration:4:dff|Q[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -1045,7 +1045,7 @@ PORT MAP (
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:4:REGn|Q\(0));
+	q => \RegistersGeneration:4:dff|Q\(0));
 
 -- Location: LCCOMB_X1_Y21_N20
 \Decoder|OutputDecode[6]\ : cycloneive_lcell_comb
@@ -1095,9 +1095,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_6[0]~0_combout\);
 
 -- Location: LCCOMB_X3_Y1_N28
-\RegistersGeneration:6:REGn|Q[0]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:6:dff|Q[0]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:6:REGn|Q[0]~feeder_combout\ = \InputDemux|DataOut_6[0]~0_combout\
+-- \RegistersGeneration:6:dff|Q[0]~feeder_combout\ = \InputDemux|DataOut_6[0]~0_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1106,10 +1106,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datab => \InputDemux|DataOut_6[0]~0_combout\,
-	combout => \RegistersGeneration:6:REGn|Q[0]~feeder_combout\);
+	combout => \RegistersGeneration:6:dff|Q[0]~feeder_combout\);
 
 -- Location: FF_X3_Y1_N29
-\RegistersGeneration:6:REGn|Q[0]\ : dffeas
+\RegistersGeneration:6:dff|Q[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -1117,16 +1117,16 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[6]~clkctrl_outclk\,
-	d => \RegistersGeneration:6:REGn|Q[0]~feeder_combout\,
+	d => \RegistersGeneration:6:dff|Q[0]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:6:REGn|Q\(0));
+	q => \RegistersGeneration:6:dff|Q\(0));
 
 -- Location: LCCOMB_X5_Y1_N2
 \OutputMux2|Mux7~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux7~0_combout\ = (\i_RF.RB_ADR[1]~input_o\ & (((\RegistersGeneration:6:REGn|Q\(0)) # (\i_RF.RB_ADR[0]~input_o\)))) # (!\i_RF.RB_ADR[1]~input_o\ & (\RegistersGeneration:4:REGn|Q\(0) & ((!\i_RF.RB_ADR[0]~input_o\))))
+-- \OutputMux2|Mux7~0_combout\ = (\i_RF.RB_ADR[1]~input_o\ & (((\RegistersGeneration:6:dff|Q\(0)) # (\i_RF.RB_ADR[0]~input_o\)))) # (!\i_RF.RB_ADR[1]~input_o\ & (\RegistersGeneration:4:dff|Q\(0) & ((!\i_RF.RB_ADR[0]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1134,8 +1134,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \RegistersGeneration:4:REGn|Q\(0),
-	datab => \RegistersGeneration:6:REGn|Q\(0),
+	dataa => \RegistersGeneration:4:dff|Q\(0),
+	datab => \RegistersGeneration:6:dff|Q\(0),
 	datac => \i_RF.RB_ADR[1]~input_o\,
 	datad => \i_RF.RB_ADR[0]~input_o\,
 	combout => \OutputMux2|Mux7~0_combout\);
@@ -1188,9 +1188,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_7[0]~0_combout\);
 
 -- Location: LCCOMB_X6_Y1_N2
-\RegistersGeneration:7:REGn|Q[0]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:7:dff|Q[0]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:7:REGn|Q[0]~feeder_combout\ = \InputDemux|DataOut_7[0]~0_combout\
+-- \RegistersGeneration:7:dff|Q[0]~feeder_combout\ = \InputDemux|DataOut_7[0]~0_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1199,10 +1199,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datab => \InputDemux|DataOut_7[0]~0_combout\,
-	combout => \RegistersGeneration:7:REGn|Q[0]~feeder_combout\);
+	combout => \RegistersGeneration:7:dff|Q[0]~feeder_combout\);
 
 -- Location: FF_X6_Y1_N3
-\RegistersGeneration:7:REGn|Q[0]\ : dffeas
+\RegistersGeneration:7:dff|Q[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -1210,11 +1210,11 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[7]~clkctrl_outclk\,
-	d => \RegistersGeneration:7:REGn|Q[0]~feeder_combout\,
+	d => \RegistersGeneration:7:dff|Q[0]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:7:REGn|Q\(0));
+	q => \RegistersGeneration:7:dff|Q\(0));
 
 -- Location: LCCOMB_X1_Y21_N14
 \Decoder|OutputDecode[5]\ : cycloneive_lcell_comb
@@ -1264,9 +1264,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_5[0]~0_combout\);
 
 -- Location: LCCOMB_X6_Y1_N28
-\RegistersGeneration:5:REGn|Q[0]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:5:dff|Q[0]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:5:REGn|Q[0]~feeder_combout\ = \InputDemux|DataOut_5[0]~0_combout\
+-- \RegistersGeneration:5:dff|Q[0]~feeder_combout\ = \InputDemux|DataOut_5[0]~0_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1275,10 +1275,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datac => \InputDemux|DataOut_5[0]~0_combout\,
-	combout => \RegistersGeneration:5:REGn|Q[0]~feeder_combout\);
+	combout => \RegistersGeneration:5:dff|Q[0]~feeder_combout\);
 
 -- Location: FF_X6_Y1_N29
-\RegistersGeneration:5:REGn|Q[0]\ : dffeas
+\RegistersGeneration:5:dff|Q[0]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -1286,16 +1286,16 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[5]~clkctrl_outclk\,
-	d => \RegistersGeneration:5:REGn|Q[0]~feeder_combout\,
+	d => \RegistersGeneration:5:dff|Q[0]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:5:REGn|Q\(0));
+	q => \RegistersGeneration:5:dff|Q\(0));
 
 -- Location: LCCOMB_X6_Y1_N16
 \OutputMux2|Mux7~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux7~1_combout\ = (\OutputMux2|Mux7~0_combout\ & ((\RegistersGeneration:7:REGn|Q\(0)) # ((!\i_RF.RB_ADR[0]~input_o\)))) # (!\OutputMux2|Mux7~0_combout\ & (((\i_RF.RB_ADR[0]~input_o\ & \RegistersGeneration:5:REGn|Q\(0)))))
+-- \OutputMux2|Mux7~1_combout\ = (\OutputMux2|Mux7~0_combout\ & ((\RegistersGeneration:7:dff|Q\(0)) # ((!\i_RF.RB_ADR[0]~input_o\)))) # (!\OutputMux2|Mux7~0_combout\ & (((\i_RF.RB_ADR[0]~input_o\ & \RegistersGeneration:5:dff|Q\(0)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1304,9 +1304,9 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \OutputMux2|Mux7~0_combout\,
-	datab => \RegistersGeneration:7:REGn|Q\(0),
+	datab => \RegistersGeneration:7:dff|Q\(0),
 	datac => \i_RF.RB_ADR[0]~input_o\,
-	datad => \RegistersGeneration:5:REGn|Q\(0),
+	datad => \RegistersGeneration:5:dff|Q\(0),
 	combout => \OutputMux2|Mux7~1_combout\);
 
 -- Location: IOIBUF_X7_Y0_N15
@@ -1365,7 +1365,7 @@ PORT MAP (
 	combout => \InputDemux|DataOut_7[1]~1_combout\);
 
 -- Location: FF_X6_Y1_N23
-\RegistersGeneration:7:REGn|Q[1]\ : dffeas
+\RegistersGeneration:7:dff|Q[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -1378,7 +1378,7 @@ PORT MAP (
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:7:REGn|Q\(1));
+	q => \RegistersGeneration:7:dff|Q\(1));
 
 -- Location: LCCOMB_X3_Y1_N10
 \InputDemux|DataOut_6[1]~1\ : cycloneive_lcell_comb
@@ -1398,9 +1398,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_6[1]~1_combout\);
 
 -- Location: LCCOMB_X3_Y1_N26
-\RegistersGeneration:6:REGn|Q[1]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:6:dff|Q[1]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:6:REGn|Q[1]~feeder_combout\ = \InputDemux|DataOut_6[1]~1_combout\
+-- \RegistersGeneration:6:dff|Q[1]~feeder_combout\ = \InputDemux|DataOut_6[1]~1_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1409,10 +1409,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \InputDemux|DataOut_6[1]~1_combout\,
-	combout => \RegistersGeneration:6:REGn|Q[1]~feeder_combout\);
+	combout => \RegistersGeneration:6:dff|Q[1]~feeder_combout\);
 
 -- Location: FF_X3_Y1_N27
-\RegistersGeneration:6:REGn|Q[1]\ : dffeas
+\RegistersGeneration:6:dff|Q[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -1420,11 +1420,11 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[6]~clkctrl_outclk\,
-	d => \RegistersGeneration:6:REGn|Q[1]~feeder_combout\,
+	d => \RegistersGeneration:6:dff|Q[1]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:6:REGn|Q\(1));
+	q => \RegistersGeneration:6:dff|Q\(1));
 
 -- Location: LCCOMB_X5_Y1_N18
 \InputDemux|DataOut_4[1]~1\ : cycloneive_lcell_comb
@@ -1444,7 +1444,7 @@ PORT MAP (
 	combout => \InputDemux|DataOut_4[1]~1_combout\);
 
 -- Location: FF_X5_Y1_N29
-\RegistersGeneration:4:REGn|Q[1]\ : dffeas
+\RegistersGeneration:4:dff|Q[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -1457,13 +1457,13 @@ PORT MAP (
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:4:REGn|Q\(1));
+	q => \RegistersGeneration:4:dff|Q\(1));
 
 -- Location: LCCOMB_X4_Y1_N20
 \OutputMux2|Mux6~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux6~0_combout\ = (\i_RF.RB_ADR[0]~input_o\ & (((\i_RF.RB_ADR[1]~input_o\)))) # (!\i_RF.RB_ADR[0]~input_o\ & ((\i_RF.RB_ADR[1]~input_o\ & (\RegistersGeneration:6:REGn|Q\(1))) # (!\i_RF.RB_ADR[1]~input_o\ & 
--- ((\RegistersGeneration:4:REGn|Q\(1))))))
+-- \OutputMux2|Mux6~0_combout\ = (\i_RF.RB_ADR[0]~input_o\ & (((\i_RF.RB_ADR[1]~input_o\)))) # (!\i_RF.RB_ADR[0]~input_o\ & ((\i_RF.RB_ADR[1]~input_o\ & (\RegistersGeneration:6:dff|Q\(1))) # (!\i_RF.RB_ADR[1]~input_o\ & 
+-- ((\RegistersGeneration:4:dff|Q\(1))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1471,10 +1471,10 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \RegistersGeneration:6:REGn|Q\(1),
+	dataa => \RegistersGeneration:6:dff|Q\(1),
 	datab => \i_RF.RB_ADR[0]~input_o\,
 	datac => \i_RF.RB_ADR[1]~input_o\,
-	datad => \RegistersGeneration:4:REGn|Q\(1),
+	datad => \RegistersGeneration:4:dff|Q\(1),
 	combout => \OutputMux2|Mux6~0_combout\);
 
 -- Location: LCCOMB_X6_Y1_N6
@@ -1495,7 +1495,7 @@ PORT MAP (
 	combout => \InputDemux|DataOut_5[1]~1_combout\);
 
 -- Location: FF_X6_Y1_N21
-\RegistersGeneration:5:REGn|Q[1]\ : dffeas
+\RegistersGeneration:5:dff|Q[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -1508,12 +1508,12 @@ PORT MAP (
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:5:REGn|Q\(1));
+	q => \RegistersGeneration:5:dff|Q\(1));
 
 -- Location: LCCOMB_X6_Y1_N12
 \OutputMux2|Mux6~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux6~1_combout\ = (\OutputMux2|Mux6~0_combout\ & ((\RegistersGeneration:7:REGn|Q\(1)) # ((!\i_RF.RB_ADR[0]~input_o\)))) # (!\OutputMux2|Mux6~0_combout\ & (((\i_RF.RB_ADR[0]~input_o\ & \RegistersGeneration:5:REGn|Q\(1)))))
+-- \OutputMux2|Mux6~1_combout\ = (\OutputMux2|Mux6~0_combout\ & ((\RegistersGeneration:7:dff|Q\(1)) # ((!\i_RF.RB_ADR[0]~input_o\)))) # (!\OutputMux2|Mux6~0_combout\ & (((\i_RF.RB_ADR[0]~input_o\ & \RegistersGeneration:5:dff|Q\(1)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1521,10 +1521,10 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \RegistersGeneration:7:REGn|Q\(1),
+	dataa => \RegistersGeneration:7:dff|Q\(1),
 	datab => \OutputMux2|Mux6~0_combout\,
 	datac => \i_RF.RB_ADR[0]~input_o\,
-	datad => \RegistersGeneration:5:REGn|Q\(1),
+	datad => \RegistersGeneration:5:dff|Q\(1),
 	combout => \OutputMux2|Mux6~1_combout\);
 
 -- Location: LCCOMB_X1_Y2_N0
@@ -1545,9 +1545,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_0[1]~1_combout\);
 
 -- Location: LCCOMB_X1_Y2_N24
-\RegistersGeneration:0:REGn|Q[1]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:0:dff|Q[1]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:0:REGn|Q[1]~feeder_combout\ = \InputDemux|DataOut_0[1]~1_combout\
+-- \RegistersGeneration:0:dff|Q[1]~feeder_combout\ = \InputDemux|DataOut_0[1]~1_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1556,10 +1556,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datac => \InputDemux|DataOut_0[1]~1_combout\,
-	combout => \RegistersGeneration:0:REGn|Q[1]~feeder_combout\);
+	combout => \RegistersGeneration:0:dff|Q[1]~feeder_combout\);
 
 -- Location: FF_X1_Y2_N25
-\RegistersGeneration:0:REGn|Q[1]\ : dffeas
+\RegistersGeneration:0:dff|Q[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -1567,11 +1567,11 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[0]~clkctrl_outclk\,
-	d => \RegistersGeneration:0:REGn|Q[1]~feeder_combout\,
+	d => \RegistersGeneration:0:dff|Q[1]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:0:REGn|Q\(1));
+	q => \RegistersGeneration:0:dff|Q\(1));
 
 -- Location: LCCOMB_X4_Y2_N8
 \InputDemux|DataOut_1[1]~1\ : cycloneive_lcell_comb
@@ -1591,7 +1591,7 @@ PORT MAP (
 	combout => \InputDemux|DataOut_1[1]~1_combout\);
 
 -- Location: FF_X5_Y2_N3
-\RegistersGeneration:1:REGn|Q[1]\ : dffeas
+\RegistersGeneration:1:dff|Q[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -1604,13 +1604,13 @@ PORT MAP (
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:1:REGn|Q\(1));
+	q => \RegistersGeneration:1:dff|Q\(1));
 
 -- Location: LCCOMB_X5_Y2_N2
 \OutputMux2|Mux6~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux6~2_combout\ = (\i_RF.RB_ADR[1]~input_o\ & (((\i_RF.RB_ADR[0]~input_o\)))) # (!\i_RF.RB_ADR[1]~input_o\ & ((\i_RF.RB_ADR[0]~input_o\ & ((\RegistersGeneration:1:REGn|Q\(1)))) # (!\i_RF.RB_ADR[0]~input_o\ & 
--- (\RegistersGeneration:0:REGn|Q\(1)))))
+-- \OutputMux2|Mux6~2_combout\ = (\i_RF.RB_ADR[1]~input_o\ & (((\i_RF.RB_ADR[0]~input_o\)))) # (!\i_RF.RB_ADR[1]~input_o\ & ((\i_RF.RB_ADR[0]~input_o\ & ((\RegistersGeneration:1:dff|Q\(1)))) # (!\i_RF.RB_ADR[0]~input_o\ & 
+-- (\RegistersGeneration:0:dff|Q\(1)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1619,8 +1619,8 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \i_RF.RB_ADR[1]~input_o\,
-	datab => \RegistersGeneration:0:REGn|Q\(1),
-	datac => \RegistersGeneration:1:REGn|Q\(1),
+	datab => \RegistersGeneration:0:dff|Q\(1),
+	datac => \RegistersGeneration:1:dff|Q\(1),
 	datad => \i_RF.RB_ADR[0]~input_o\,
 	combout => \OutputMux2|Mux6~2_combout\);
 
@@ -1642,9 +1642,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_2[1]~1_combout\);
 
 -- Location: LCCOMB_X6_Y2_N2
-\RegistersGeneration:2:REGn|Q[1]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:2:dff|Q[1]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:2:REGn|Q[1]~feeder_combout\ = \InputDemux|DataOut_2[1]~1_combout\
+-- \RegistersGeneration:2:dff|Q[1]~feeder_combout\ = \InputDemux|DataOut_2[1]~1_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1653,10 +1653,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \InputDemux|DataOut_2[1]~1_combout\,
-	combout => \RegistersGeneration:2:REGn|Q[1]~feeder_combout\);
+	combout => \RegistersGeneration:2:dff|Q[1]~feeder_combout\);
 
 -- Location: FF_X6_Y2_N3
-\RegistersGeneration:2:REGn|Q[1]\ : dffeas
+\RegistersGeneration:2:dff|Q[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -1664,11 +1664,11 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[2]~clkctrl_outclk\,
-	d => \RegistersGeneration:2:REGn|Q[1]~feeder_combout\,
+	d => \RegistersGeneration:2:dff|Q[1]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:2:REGn|Q\(1));
+	q => \RegistersGeneration:2:dff|Q\(1));
 
 -- Location: LCCOMB_X6_Y2_N22
 \InputDemux|DataOut_3[1]~1\ : cycloneive_lcell_comb
@@ -1688,7 +1688,7 @@ PORT MAP (
 	combout => \InputDemux|DataOut_3[1]~1_combout\);
 
 -- Location: FF_X6_Y2_N17
-\RegistersGeneration:3:REGn|Q[1]\ : dffeas
+\RegistersGeneration:3:dff|Q[1]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -1701,12 +1701,12 @@ PORT MAP (
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:3:REGn|Q\(1));
+	q => \RegistersGeneration:3:dff|Q\(1));
 
 -- Location: LCCOMB_X6_Y2_N30
 \OutputMux2|Mux6~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux6~3_combout\ = (\OutputMux2|Mux6~2_combout\ & (((\RegistersGeneration:3:REGn|Q\(1)) # (!\i_RF.RB_ADR[1]~input_o\)))) # (!\OutputMux2|Mux6~2_combout\ & (\RegistersGeneration:2:REGn|Q\(1) & (\i_RF.RB_ADR[1]~input_o\)))
+-- \OutputMux2|Mux6~3_combout\ = (\OutputMux2|Mux6~2_combout\ & (((\RegistersGeneration:3:dff|Q\(1)) # (!\i_RF.RB_ADR[1]~input_o\)))) # (!\OutputMux2|Mux6~2_combout\ & (\RegistersGeneration:2:dff|Q\(1) & (\i_RF.RB_ADR[1]~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1715,9 +1715,9 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \OutputMux2|Mux6~2_combout\,
-	datab => \RegistersGeneration:2:REGn|Q\(1),
+	datab => \RegistersGeneration:2:dff|Q\(1),
 	datac => \i_RF.RB_ADR[1]~input_o\,
-	datad => \RegistersGeneration:3:REGn|Q\(1),
+	datad => \RegistersGeneration:3:dff|Q\(1),
 	combout => \OutputMux2|Mux6~3_combout\);
 
 -- Location: LCCOMB_X6_Y1_N30
@@ -1765,9 +1765,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_3[2]~2_combout\);
 
 -- Location: LCCOMB_X1_Y2_N10
-\RegistersGeneration:3:REGn|Q[2]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:3:dff|Q[2]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:3:REGn|Q[2]~feeder_combout\ = \InputDemux|DataOut_3[2]~2_combout\
+-- \RegistersGeneration:3:dff|Q[2]~feeder_combout\ = \InputDemux|DataOut_3[2]~2_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1776,10 +1776,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datac => \InputDemux|DataOut_3[2]~2_combout\,
-	combout => \RegistersGeneration:3:REGn|Q[2]~feeder_combout\);
+	combout => \RegistersGeneration:3:dff|Q[2]~feeder_combout\);
 
 -- Location: FF_X1_Y2_N11
-\RegistersGeneration:3:REGn|Q[2]\ : dffeas
+\RegistersGeneration:3:dff|Q[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -1787,11 +1787,11 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[3]~clkctrl_outclk\,
-	d => \RegistersGeneration:3:REGn|Q[2]~feeder_combout\,
+	d => \RegistersGeneration:3:dff|Q[2]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:3:REGn|Q\(2));
+	q => \RegistersGeneration:3:dff|Q\(2));
 
 -- Location: LCCOMB_X6_Y2_N0
 \InputDemux|DataOut_2[2]~2\ : cycloneive_lcell_comb
@@ -1811,7 +1811,7 @@ PORT MAP (
 	combout => \InputDemux|DataOut_2[2]~2_combout\);
 
 -- Location: FF_X6_Y2_N5
-\RegistersGeneration:2:REGn|Q[2]\ : dffeas
+\RegistersGeneration:2:dff|Q[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -1824,7 +1824,7 @@ PORT MAP (
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:2:REGn|Q\(2));
+	q => \RegistersGeneration:2:dff|Q\(2));
 
 -- Location: LCCOMB_X5_Y2_N8
 \InputDemux|DataOut_1[2]~2\ : cycloneive_lcell_comb
@@ -1844,9 +1844,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_1[2]~2_combout\);
 
 -- Location: LCCOMB_X5_Y2_N0
-\RegistersGeneration:1:REGn|Q[2]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:1:dff|Q[2]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:1:REGn|Q[2]~feeder_combout\ = \InputDemux|DataOut_1[2]~2_combout\
+-- \RegistersGeneration:1:dff|Q[2]~feeder_combout\ = \InputDemux|DataOut_1[2]~2_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1855,10 +1855,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \InputDemux|DataOut_1[2]~2_combout\,
-	combout => \RegistersGeneration:1:REGn|Q[2]~feeder_combout\);
+	combout => \RegistersGeneration:1:dff|Q[2]~feeder_combout\);
 
 -- Location: FF_X5_Y2_N1
-\RegistersGeneration:1:REGn|Q[2]\ : dffeas
+\RegistersGeneration:1:dff|Q[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -1866,11 +1866,11 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[1]~clkctrl_outclk\,
-	d => \RegistersGeneration:1:REGn|Q[2]~feeder_combout\,
+	d => \RegistersGeneration:1:dff|Q[2]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:1:REGn|Q\(2));
+	q => \RegistersGeneration:1:dff|Q\(2));
 
 -- Location: LCCOMB_X5_Y2_N22
 \InputDemux|DataOut_0[2]~2\ : cycloneive_lcell_comb
@@ -1890,7 +1890,7 @@ PORT MAP (
 	combout => \InputDemux|DataOut_0[2]~2_combout\);
 
 -- Location: FF_X5_Y2_N19
-\RegistersGeneration:0:REGn|Q[2]\ : dffeas
+\RegistersGeneration:0:dff|Q[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -1903,12 +1903,12 @@ PORT MAP (
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:0:REGn|Q\(2));
+	q => \RegistersGeneration:0:dff|Q\(2));
 
 -- Location: LCCOMB_X5_Y2_N12
 \OutputMux2|Mux5~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux5~2_combout\ = (\i_RF.RB_ADR[0]~input_o\ & ((\RegistersGeneration:1:REGn|Q\(2)) # ((\i_RF.RB_ADR[1]~input_o\)))) # (!\i_RF.RB_ADR[0]~input_o\ & (((!\i_RF.RB_ADR[1]~input_o\ & \RegistersGeneration:0:REGn|Q\(2)))))
+-- \OutputMux2|Mux5~2_combout\ = (\i_RF.RB_ADR[0]~input_o\ & ((\RegistersGeneration:1:dff|Q\(2)) # ((\i_RF.RB_ADR[1]~input_o\)))) # (!\i_RF.RB_ADR[0]~input_o\ & (((!\i_RF.RB_ADR[1]~input_o\ & \RegistersGeneration:0:dff|Q\(2)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1917,15 +1917,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \i_RF.RB_ADR[0]~input_o\,
-	datab => \RegistersGeneration:1:REGn|Q\(2),
+	datab => \RegistersGeneration:1:dff|Q\(2),
 	datac => \i_RF.RB_ADR[1]~input_o\,
-	datad => \RegistersGeneration:0:REGn|Q\(2),
+	datad => \RegistersGeneration:0:dff|Q\(2),
 	combout => \OutputMux2|Mux5~2_combout\);
 
 -- Location: LCCOMB_X6_Y2_N4
 \OutputMux2|Mux5~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux5~3_combout\ = (\i_RF.RB_ADR[1]~input_o\ & ((\OutputMux2|Mux5~2_combout\ & (\RegistersGeneration:3:REGn|Q\(2))) # (!\OutputMux2|Mux5~2_combout\ & ((\RegistersGeneration:2:REGn|Q\(2)))))) # (!\i_RF.RB_ADR[1]~input_o\ & 
+-- \OutputMux2|Mux5~3_combout\ = (\i_RF.RB_ADR[1]~input_o\ & ((\OutputMux2|Mux5~2_combout\ & (\RegistersGeneration:3:dff|Q\(2))) # (!\OutputMux2|Mux5~2_combout\ & ((\RegistersGeneration:2:dff|Q\(2)))))) # (!\i_RF.RB_ADR[1]~input_o\ & 
 -- (((\OutputMux2|Mux5~2_combout\))))
 
 -- pragma translate_off
@@ -1934,9 +1934,9 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \RegistersGeneration:3:REGn|Q\(2),
+	dataa => \RegistersGeneration:3:dff|Q\(2),
 	datab => \i_RF.RB_ADR[1]~input_o\,
-	datac => \RegistersGeneration:2:REGn|Q\(2),
+	datac => \RegistersGeneration:2:dff|Q\(2),
 	datad => \OutputMux2|Mux5~2_combout\,
 	combout => \OutputMux2|Mux5~3_combout\);
 
@@ -1958,9 +1958,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_4[2]~2_combout\);
 
 -- Location: LCCOMB_X1_Y1_N14
-\RegistersGeneration:4:REGn|Q[2]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:4:dff|Q[2]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:4:REGn|Q[2]~feeder_combout\ = \InputDemux|DataOut_4[2]~2_combout\
+-- \RegistersGeneration:4:dff|Q[2]~feeder_combout\ = \InputDemux|DataOut_4[2]~2_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1969,10 +1969,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \InputDemux|DataOut_4[2]~2_combout\,
-	combout => \RegistersGeneration:4:REGn|Q[2]~feeder_combout\);
+	combout => \RegistersGeneration:4:dff|Q[2]~feeder_combout\);
 
 -- Location: FF_X1_Y1_N15
-\RegistersGeneration:4:REGn|Q[2]\ : dffeas
+\RegistersGeneration:4:dff|Q[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -1980,11 +1980,11 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[4]~clkctrl_outclk\,
-	d => \RegistersGeneration:4:REGn|Q[2]~feeder_combout\,
+	d => \RegistersGeneration:4:dff|Q[2]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:4:REGn|Q\(2));
+	q => \RegistersGeneration:4:dff|Q\(2));
 
 -- Location: LCCOMB_X1_Y1_N12
 \InputDemux|DataOut_6[2]~2\ : cycloneive_lcell_comb
@@ -2004,9 +2004,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_6[2]~2_combout\);
 
 -- Location: LCCOMB_X1_Y1_N16
-\RegistersGeneration:6:REGn|Q[2]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:6:dff|Q[2]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:6:REGn|Q[2]~feeder_combout\ = \InputDemux|DataOut_6[2]~2_combout\
+-- \RegistersGeneration:6:dff|Q[2]~feeder_combout\ = \InputDemux|DataOut_6[2]~2_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2015,10 +2015,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datab => \InputDemux|DataOut_6[2]~2_combout\,
-	combout => \RegistersGeneration:6:REGn|Q[2]~feeder_combout\);
+	combout => \RegistersGeneration:6:dff|Q[2]~feeder_combout\);
 
 -- Location: FF_X1_Y1_N17
-\RegistersGeneration:6:REGn|Q[2]\ : dffeas
+\RegistersGeneration:6:dff|Q[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2026,17 +2026,17 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[6]~clkctrl_outclk\,
-	d => \RegistersGeneration:6:REGn|Q[2]~feeder_combout\,
+	d => \RegistersGeneration:6:dff|Q[2]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:6:REGn|Q\(2));
+	q => \RegistersGeneration:6:dff|Q\(2));
 
 -- Location: LCCOMB_X6_Y1_N4
 \OutputMux2|Mux5~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux5~0_combout\ = (\i_RF.RB_ADR[0]~input_o\ & (((\i_RF.RB_ADR[1]~input_o\)))) # (!\i_RF.RB_ADR[0]~input_o\ & ((\i_RF.RB_ADR[1]~input_o\ & ((\RegistersGeneration:6:REGn|Q\(2)))) # (!\i_RF.RB_ADR[1]~input_o\ & 
--- (\RegistersGeneration:4:REGn|Q\(2)))))
+-- \OutputMux2|Mux5~0_combout\ = (\i_RF.RB_ADR[0]~input_o\ & (((\i_RF.RB_ADR[1]~input_o\)))) # (!\i_RF.RB_ADR[0]~input_o\ & ((\i_RF.RB_ADR[1]~input_o\ & ((\RegistersGeneration:6:dff|Q\(2)))) # (!\i_RF.RB_ADR[1]~input_o\ & 
+-- (\RegistersGeneration:4:dff|Q\(2)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2044,8 +2044,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \RegistersGeneration:4:REGn|Q\(2),
-	datab => \RegistersGeneration:6:REGn|Q\(2),
+	dataa => \RegistersGeneration:4:dff|Q\(2),
+	datab => \RegistersGeneration:6:dff|Q\(2),
 	datac => \i_RF.RB_ADR[0]~input_o\,
 	datad => \i_RF.RB_ADR[1]~input_o\,
 	combout => \OutputMux2|Mux5~0_combout\);
@@ -2068,9 +2068,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_7[2]~2_combout\);
 
 -- Location: LCCOMB_X3_Y1_N24
-\RegistersGeneration:7:REGn|Q[2]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:7:dff|Q[2]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:7:REGn|Q[2]~feeder_combout\ = \InputDemux|DataOut_7[2]~2_combout\
+-- \RegistersGeneration:7:dff|Q[2]~feeder_combout\ = \InputDemux|DataOut_7[2]~2_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2079,10 +2079,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datad => \InputDemux|DataOut_7[2]~2_combout\,
-	combout => \RegistersGeneration:7:REGn|Q[2]~feeder_combout\);
+	combout => \RegistersGeneration:7:dff|Q[2]~feeder_combout\);
 
 -- Location: FF_X3_Y1_N25
-\RegistersGeneration:7:REGn|Q[2]\ : dffeas
+\RegistersGeneration:7:dff|Q[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2090,11 +2090,11 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[7]~clkctrl_outclk\,
-	d => \RegistersGeneration:7:REGn|Q[2]~feeder_combout\,
+	d => \RegistersGeneration:7:dff|Q[2]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:7:REGn|Q\(2));
+	q => \RegistersGeneration:7:dff|Q\(2));
 
 -- Location: LCCOMB_X4_Y1_N22
 \InputDemux|DataOut_5[2]~2\ : cycloneive_lcell_comb
@@ -2114,7 +2114,7 @@ PORT MAP (
 	combout => \InputDemux|DataOut_5[2]~2_combout\);
 
 -- Location: FF_X4_Y1_N19
-\RegistersGeneration:5:REGn|Q[2]\ : dffeas
+\RegistersGeneration:5:dff|Q[2]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2127,12 +2127,12 @@ PORT MAP (
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:5:REGn|Q\(2));
+	q => \RegistersGeneration:5:dff|Q\(2));
 
 -- Location: LCCOMB_X4_Y1_N18
 \OutputMux2|Mux5~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux5~1_combout\ = (\OutputMux2|Mux5~0_combout\ & ((\RegistersGeneration:7:REGn|Q\(2)) # ((!\i_RF.RB_ADR[0]~input_o\)))) # (!\OutputMux2|Mux5~0_combout\ & (((\RegistersGeneration:5:REGn|Q\(2) & \i_RF.RB_ADR[0]~input_o\))))
+-- \OutputMux2|Mux5~1_combout\ = (\OutputMux2|Mux5~0_combout\ & ((\RegistersGeneration:7:dff|Q\(2)) # ((!\i_RF.RB_ADR[0]~input_o\)))) # (!\OutputMux2|Mux5~0_combout\ & (((\RegistersGeneration:5:dff|Q\(2) & \i_RF.RB_ADR[0]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2141,8 +2141,8 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \OutputMux2|Mux5~0_combout\,
-	datab => \RegistersGeneration:7:REGn|Q\(2),
-	datac => \RegistersGeneration:5:REGn|Q\(2),
+	datab => \RegistersGeneration:7:dff|Q\(2),
+	datac => \RegistersGeneration:5:dff|Q\(2),
 	datad => \i_RF.RB_ADR[0]~input_o\,
 	combout => \OutputMux2|Mux5~1_combout\);
 
@@ -2191,9 +2191,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_0[3]~3_combout\);
 
 -- Location: LCCOMB_X5_Y4_N26
-\RegistersGeneration:0:REGn|Q[3]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:0:dff|Q[3]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:0:REGn|Q[3]~feeder_combout\ = \InputDemux|DataOut_0[3]~3_combout\
+-- \RegistersGeneration:0:dff|Q[3]~feeder_combout\ = \InputDemux|DataOut_0[3]~3_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2202,10 +2202,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datab => \InputDemux|DataOut_0[3]~3_combout\,
-	combout => \RegistersGeneration:0:REGn|Q[3]~feeder_combout\);
+	combout => \RegistersGeneration:0:dff|Q[3]~feeder_combout\);
 
 -- Location: FF_X5_Y4_N27
-\RegistersGeneration:0:REGn|Q[3]\ : dffeas
+\RegistersGeneration:0:dff|Q[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2213,11 +2213,11 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[0]~clkctrl_outclk\,
-	d => \RegistersGeneration:0:REGn|Q[3]~feeder_combout\,
+	d => \RegistersGeneration:0:dff|Q[3]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:0:REGn|Q\(3));
+	q => \RegistersGeneration:0:dff|Q\(3));
 
 -- Location: LCCOMB_X5_Y4_N2
 \InputDemux|DataOut_1[3]~3\ : cycloneive_lcell_comb
@@ -2237,9 +2237,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_1[3]~3_combout\);
 
 -- Location: LCCOMB_X5_Y4_N12
-\RegistersGeneration:1:REGn|Q[3]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:1:dff|Q[3]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:1:REGn|Q[3]~feeder_combout\ = \InputDemux|DataOut_1[3]~3_combout\
+-- \RegistersGeneration:1:dff|Q[3]~feeder_combout\ = \InputDemux|DataOut_1[3]~3_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2248,10 +2248,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \InputDemux|DataOut_1[3]~3_combout\,
-	combout => \RegistersGeneration:1:REGn|Q[3]~feeder_combout\);
+	combout => \RegistersGeneration:1:dff|Q[3]~feeder_combout\);
 
 -- Location: FF_X5_Y4_N13
-\RegistersGeneration:1:REGn|Q[3]\ : dffeas
+\RegistersGeneration:1:dff|Q[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2259,16 +2259,16 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[1]~clkctrl_outclk\,
-	d => \RegistersGeneration:1:REGn|Q[3]~feeder_combout\,
+	d => \RegistersGeneration:1:dff|Q[3]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:1:REGn|Q\(3));
+	q => \RegistersGeneration:1:dff|Q\(3));
 
 -- Location: LCCOMB_X5_Y4_N4
 \OutputMux2|Mux4~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux4~2_combout\ = (\i_RF.RB_ADR[0]~input_o\ & (((\i_RF.RB_ADR[1]~input_o\) # (\RegistersGeneration:1:REGn|Q\(3))))) # (!\i_RF.RB_ADR[0]~input_o\ & (\RegistersGeneration:0:REGn|Q\(3) & (!\i_RF.RB_ADR[1]~input_o\)))
+-- \OutputMux2|Mux4~2_combout\ = (\i_RF.RB_ADR[0]~input_o\ & (((\i_RF.RB_ADR[1]~input_o\) # (\RegistersGeneration:1:dff|Q\(3))))) # (!\i_RF.RB_ADR[0]~input_o\ & (\RegistersGeneration:0:dff|Q\(3) & (!\i_RF.RB_ADR[1]~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2276,10 +2276,10 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \RegistersGeneration:0:REGn|Q\(3),
+	dataa => \RegistersGeneration:0:dff|Q\(3),
 	datab => \i_RF.RB_ADR[0]~input_o\,
 	datac => \i_RF.RB_ADR[1]~input_o\,
-	datad => \RegistersGeneration:1:REGn|Q\(3),
+	datad => \RegistersGeneration:1:dff|Q\(3),
 	combout => \OutputMux2|Mux4~2_combout\);
 
 -- Location: LCCOMB_X4_Y4_N30
@@ -2300,7 +2300,7 @@ PORT MAP (
 	combout => \InputDemux|DataOut_2[3]~3_combout\);
 
 -- Location: FF_X4_Y4_N17
-\RegistersGeneration:2:REGn|Q[3]\ : dffeas
+\RegistersGeneration:2:dff|Q[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2313,7 +2313,7 @@ PORT MAP (
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:2:REGn|Q\(3));
+	q => \RegistersGeneration:2:dff|Q\(3));
 
 -- Location: LCCOMB_X4_Y4_N24
 \InputDemux|DataOut_3[3]~3\ : cycloneive_lcell_comb
@@ -2333,7 +2333,7 @@ PORT MAP (
 	combout => \InputDemux|DataOut_3[3]~3_combout\);
 
 -- Location: FF_X4_Y4_N19
-\RegistersGeneration:3:REGn|Q[3]\ : dffeas
+\RegistersGeneration:3:dff|Q[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2346,12 +2346,12 @@ PORT MAP (
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:3:REGn|Q\(3));
+	q => \RegistersGeneration:3:dff|Q\(3));
 
 -- Location: LCCOMB_X4_Y4_N16
 \OutputMux2|Mux4~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux4~3_combout\ = (\OutputMux2|Mux4~2_combout\ & (((\RegistersGeneration:3:REGn|Q\(3))) # (!\i_RF.RB_ADR[1]~input_o\))) # (!\OutputMux2|Mux4~2_combout\ & (\i_RF.RB_ADR[1]~input_o\ & (\RegistersGeneration:2:REGn|Q\(3))))
+-- \OutputMux2|Mux4~3_combout\ = (\OutputMux2|Mux4~2_combout\ & (((\RegistersGeneration:3:dff|Q\(3))) # (!\i_RF.RB_ADR[1]~input_o\))) # (!\OutputMux2|Mux4~2_combout\ & (\i_RF.RB_ADR[1]~input_o\ & (\RegistersGeneration:2:dff|Q\(3))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2361,8 +2361,8 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \OutputMux2|Mux4~2_combout\,
 	datab => \i_RF.RB_ADR[1]~input_o\,
-	datac => \RegistersGeneration:2:REGn|Q\(3),
-	datad => \RegistersGeneration:3:REGn|Q\(3),
+	datac => \RegistersGeneration:2:dff|Q\(3),
+	datad => \RegistersGeneration:3:dff|Q\(3),
 	combout => \OutputMux2|Mux4~3_combout\);
 
 -- Location: LCCOMB_X1_Y1_N8
@@ -2383,9 +2383,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_4[3]~3_combout\);
 
 -- Location: LCCOMB_X1_Y1_N20
-\RegistersGeneration:4:REGn|Q[3]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:4:dff|Q[3]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:4:REGn|Q[3]~feeder_combout\ = \InputDemux|DataOut_4[3]~3_combout\
+-- \RegistersGeneration:4:dff|Q[3]~feeder_combout\ = \InputDemux|DataOut_4[3]~3_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2394,10 +2394,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datab => \InputDemux|DataOut_4[3]~3_combout\,
-	combout => \RegistersGeneration:4:REGn|Q[3]~feeder_combout\);
+	combout => \RegistersGeneration:4:dff|Q[3]~feeder_combout\);
 
 -- Location: FF_X1_Y1_N21
-\RegistersGeneration:4:REGn|Q[3]\ : dffeas
+\RegistersGeneration:4:dff|Q[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2405,11 +2405,11 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[4]~clkctrl_outclk\,
-	d => \RegistersGeneration:4:REGn|Q[3]~feeder_combout\,
+	d => \RegistersGeneration:4:dff|Q[3]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:4:REGn|Q\(3));
+	q => \RegistersGeneration:4:dff|Q\(3));
 
 -- Location: LCCOMB_X3_Y5_N18
 \InputDemux|DataOut_6[3]~3\ : cycloneive_lcell_comb
@@ -2429,9 +2429,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_6[3]~3_combout\);
 
 -- Location: LCCOMB_X3_Y5_N4
-\RegistersGeneration:6:REGn|Q[3]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:6:dff|Q[3]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:6:REGn|Q[3]~feeder_combout\ = \InputDemux|DataOut_6[3]~3_combout\
+-- \RegistersGeneration:6:dff|Q[3]~feeder_combout\ = \InputDemux|DataOut_6[3]~3_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2440,10 +2440,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \InputDemux|DataOut_6[3]~3_combout\,
-	combout => \RegistersGeneration:6:REGn|Q[3]~feeder_combout\);
+	combout => \RegistersGeneration:6:dff|Q[3]~feeder_combout\);
 
 -- Location: FF_X3_Y5_N5
-\RegistersGeneration:6:REGn|Q[3]\ : dffeas
+\RegistersGeneration:6:dff|Q[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2451,17 +2451,17 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[6]~clkctrl_outclk\,
-	d => \RegistersGeneration:6:REGn|Q[3]~feeder_combout\,
+	d => \RegistersGeneration:6:dff|Q[3]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:6:REGn|Q\(3));
+	q => \RegistersGeneration:6:dff|Q\(3));
 
 -- Location: LCCOMB_X6_Y1_N14
 \OutputMux2|Mux4~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux4~0_combout\ = (\i_RF.RB_ADR[0]~input_o\ & (((\i_RF.RB_ADR[1]~input_o\)))) # (!\i_RF.RB_ADR[0]~input_o\ & ((\i_RF.RB_ADR[1]~input_o\ & ((\RegistersGeneration:6:REGn|Q\(3)))) # (!\i_RF.RB_ADR[1]~input_o\ & 
--- (\RegistersGeneration:4:REGn|Q\(3)))))
+-- \OutputMux2|Mux4~0_combout\ = (\i_RF.RB_ADR[0]~input_o\ & (((\i_RF.RB_ADR[1]~input_o\)))) # (!\i_RF.RB_ADR[0]~input_o\ & ((\i_RF.RB_ADR[1]~input_o\ & ((\RegistersGeneration:6:dff|Q\(3)))) # (!\i_RF.RB_ADR[1]~input_o\ & 
+-- (\RegistersGeneration:4:dff|Q\(3)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2469,8 +2469,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \RegistersGeneration:4:REGn|Q\(3),
-	datab => \RegistersGeneration:6:REGn|Q\(3),
+	dataa => \RegistersGeneration:4:dff|Q\(3),
+	datab => \RegistersGeneration:6:dff|Q\(3),
 	datac => \i_RF.RB_ADR[0]~input_o\,
 	datad => \i_RF.RB_ADR[1]~input_o\,
 	combout => \OutputMux2|Mux4~0_combout\);
@@ -2493,7 +2493,7 @@ PORT MAP (
 	combout => \InputDemux|DataOut_7[3]~3_combout\);
 
 -- Location: FF_X4_Y1_N15
-\RegistersGeneration:7:REGn|Q[3]\ : dffeas
+\RegistersGeneration:7:dff|Q[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2506,7 +2506,7 @@ PORT MAP (
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:7:REGn|Q\(3));
+	q => \RegistersGeneration:7:dff|Q\(3));
 
 -- Location: LCCOMB_X4_Y4_N20
 \InputDemux|DataOut_5[3]~3\ : cycloneive_lcell_comb
@@ -2526,7 +2526,7 @@ PORT MAP (
 	combout => \InputDemux|DataOut_5[3]~3_combout\);
 
 -- Location: FF_X4_Y1_N9
-\RegistersGeneration:5:REGn|Q[3]\ : dffeas
+\RegistersGeneration:5:dff|Q[3]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2539,12 +2539,12 @@ PORT MAP (
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:5:REGn|Q\(3));
+	q => \RegistersGeneration:5:dff|Q\(3));
 
 -- Location: LCCOMB_X4_Y1_N8
 \OutputMux2|Mux4~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux4~1_combout\ = (\OutputMux2|Mux4~0_combout\ & ((\RegistersGeneration:7:REGn|Q\(3)) # ((!\i_RF.RB_ADR[0]~input_o\)))) # (!\OutputMux2|Mux4~0_combout\ & (((\RegistersGeneration:5:REGn|Q\(3) & \i_RF.RB_ADR[0]~input_o\))))
+-- \OutputMux2|Mux4~1_combout\ = (\OutputMux2|Mux4~0_combout\ & ((\RegistersGeneration:7:dff|Q\(3)) # ((!\i_RF.RB_ADR[0]~input_o\)))) # (!\OutputMux2|Mux4~0_combout\ & (((\RegistersGeneration:5:dff|Q\(3) & \i_RF.RB_ADR[0]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2553,8 +2553,8 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \OutputMux2|Mux4~0_combout\,
-	datab => \RegistersGeneration:7:REGn|Q\(3),
-	datac => \RegistersGeneration:5:REGn|Q\(3),
+	datab => \RegistersGeneration:7:dff|Q\(3),
+	datac => \RegistersGeneration:5:dff|Q\(3),
 	datad => \i_RF.RB_ADR[0]~input_o\,
 	combout => \OutputMux2|Mux4~1_combout\);
 
@@ -2603,9 +2603,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_3[4]~4_combout\);
 
 -- Location: LCCOMB_X1_Y4_N24
-\RegistersGeneration:3:REGn|Q[4]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:3:dff|Q[4]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:3:REGn|Q[4]~feeder_combout\ = \InputDemux|DataOut_3[4]~4_combout\
+-- \RegistersGeneration:3:dff|Q[4]~feeder_combout\ = \InputDemux|DataOut_3[4]~4_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2614,10 +2614,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datab => \InputDemux|DataOut_3[4]~4_combout\,
-	combout => \RegistersGeneration:3:REGn|Q[4]~feeder_combout\);
+	combout => \RegistersGeneration:3:dff|Q[4]~feeder_combout\);
 
 -- Location: FF_X1_Y4_N25
-\RegistersGeneration:3:REGn|Q[4]\ : dffeas
+\RegistersGeneration:3:dff|Q[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2625,11 +2625,11 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[3]~clkctrl_outclk\,
-	d => \RegistersGeneration:3:REGn|Q[4]~feeder_combout\,
+	d => \RegistersGeneration:3:dff|Q[4]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:3:REGn|Q\(4));
+	q => \RegistersGeneration:3:dff|Q\(4));
 
 -- Location: LCCOMB_X4_Y4_N10
 \InputDemux|DataOut_2[4]~4\ : cycloneive_lcell_comb
@@ -2649,7 +2649,7 @@ PORT MAP (
 	combout => \InputDemux|DataOut_2[4]~4_combout\);
 
 -- Location: FF_X4_Y4_N5
-\RegistersGeneration:2:REGn|Q[4]\ : dffeas
+\RegistersGeneration:2:dff|Q[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2662,7 +2662,7 @@ PORT MAP (
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:2:REGn|Q\(4));
+	q => \RegistersGeneration:2:dff|Q\(4));
 
 -- Location: LCCOMB_X1_Y1_N6
 \InputDemux|DataOut_1[4]~4\ : cycloneive_lcell_comb
@@ -2682,7 +2682,7 @@ PORT MAP (
 	combout => \InputDemux|DataOut_1[4]~4_combout\);
 
 -- Location: FF_X3_Y4_N27
-\RegistersGeneration:1:REGn|Q[4]\ : dffeas
+\RegistersGeneration:1:dff|Q[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2695,7 +2695,7 @@ PORT MAP (
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:1:REGn|Q\(4));
+	q => \RegistersGeneration:1:dff|Q\(4));
 
 -- Location: LCCOMB_X3_Y4_N2
 \InputDemux|DataOut_0[4]~4\ : cycloneive_lcell_comb
@@ -2715,9 +2715,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_0[4]~4_combout\);
 
 -- Location: LCCOMB_X3_Y4_N8
-\RegistersGeneration:0:REGn|Q[4]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:0:dff|Q[4]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:0:REGn|Q[4]~feeder_combout\ = \InputDemux|DataOut_0[4]~4_combout\
+-- \RegistersGeneration:0:dff|Q[4]~feeder_combout\ = \InputDemux|DataOut_0[4]~4_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2726,10 +2726,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datab => \InputDemux|DataOut_0[4]~4_combout\,
-	combout => \RegistersGeneration:0:REGn|Q[4]~feeder_combout\);
+	combout => \RegistersGeneration:0:dff|Q[4]~feeder_combout\);
 
 -- Location: FF_X3_Y4_N9
-\RegistersGeneration:0:REGn|Q[4]\ : dffeas
+\RegistersGeneration:0:dff|Q[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2737,17 +2737,17 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[0]~clkctrl_outclk\,
-	d => \RegistersGeneration:0:REGn|Q[4]~feeder_combout\,
+	d => \RegistersGeneration:0:dff|Q[4]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:0:REGn|Q\(4));
+	q => \RegistersGeneration:0:dff|Q\(4));
 
 -- Location: LCCOMB_X3_Y4_N18
 \OutputMux2|Mux3~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux3~2_combout\ = (\i_RF.RB_ADR[1]~input_o\ & (((\i_RF.RB_ADR[0]~input_o\)))) # (!\i_RF.RB_ADR[1]~input_o\ & ((\i_RF.RB_ADR[0]~input_o\ & (\RegistersGeneration:1:REGn|Q\(4))) # (!\i_RF.RB_ADR[0]~input_o\ & 
--- ((\RegistersGeneration:0:REGn|Q\(4))))))
+-- \OutputMux2|Mux3~2_combout\ = (\i_RF.RB_ADR[1]~input_o\ & (((\i_RF.RB_ADR[0]~input_o\)))) # (!\i_RF.RB_ADR[1]~input_o\ & ((\i_RF.RB_ADR[0]~input_o\ & (\RegistersGeneration:1:dff|Q\(4))) # (!\i_RF.RB_ADR[0]~input_o\ & 
+-- ((\RegistersGeneration:0:dff|Q\(4))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2755,16 +2755,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \RegistersGeneration:1:REGn|Q\(4),
+	dataa => \RegistersGeneration:1:dff|Q\(4),
 	datab => \i_RF.RB_ADR[1]~input_o\,
-	datac => \RegistersGeneration:0:REGn|Q\(4),
+	datac => \RegistersGeneration:0:dff|Q\(4),
 	datad => \i_RF.RB_ADR[0]~input_o\,
 	combout => \OutputMux2|Mux3~2_combout\);
 
 -- Location: LCCOMB_X4_Y4_N4
 \OutputMux2|Mux3~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux3~3_combout\ = (\i_RF.RB_ADR[1]~input_o\ & ((\OutputMux2|Mux3~2_combout\ & (\RegistersGeneration:3:REGn|Q\(4))) # (!\OutputMux2|Mux3~2_combout\ & ((\RegistersGeneration:2:REGn|Q\(4)))))) # (!\i_RF.RB_ADR[1]~input_o\ & 
+-- \OutputMux2|Mux3~3_combout\ = (\i_RF.RB_ADR[1]~input_o\ & ((\OutputMux2|Mux3~2_combout\ & (\RegistersGeneration:3:dff|Q\(4))) # (!\OutputMux2|Mux3~2_combout\ & ((\RegistersGeneration:2:dff|Q\(4)))))) # (!\i_RF.RB_ADR[1]~input_o\ & 
 -- (((\OutputMux2|Mux3~2_combout\))))
 
 -- pragma translate_off
@@ -2773,9 +2773,9 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \RegistersGeneration:3:REGn|Q\(4),
+	dataa => \RegistersGeneration:3:dff|Q\(4),
 	datab => \i_RF.RB_ADR[1]~input_o\,
-	datac => \RegistersGeneration:2:REGn|Q\(4),
+	datac => \RegistersGeneration:2:dff|Q\(4),
 	datad => \OutputMux2|Mux3~2_combout\,
 	combout => \OutputMux2|Mux3~3_combout\);
 
@@ -2797,9 +2797,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_6[4]~4_combout\);
 
 -- Location: LCCOMB_X1_Y1_N26
-\RegistersGeneration:6:REGn|Q[4]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:6:dff|Q[4]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:6:REGn|Q[4]~feeder_combout\ = \InputDemux|DataOut_6[4]~4_combout\
+-- \RegistersGeneration:6:dff|Q[4]~feeder_combout\ = \InputDemux|DataOut_6[4]~4_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2808,10 +2808,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \InputDemux|DataOut_6[4]~4_combout\,
-	combout => \RegistersGeneration:6:REGn|Q[4]~feeder_combout\);
+	combout => \RegistersGeneration:6:dff|Q[4]~feeder_combout\);
 
 -- Location: FF_X1_Y1_N27
-\RegistersGeneration:6:REGn|Q[4]\ : dffeas
+\RegistersGeneration:6:dff|Q[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2819,11 +2819,11 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[6]~clkctrl_outclk\,
-	d => \RegistersGeneration:6:REGn|Q[4]~feeder_combout\,
+	d => \RegistersGeneration:6:dff|Q[4]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:6:REGn|Q\(4));
+	q => \RegistersGeneration:6:dff|Q\(4));
 
 -- Location: LCCOMB_X1_Y1_N0
 \InputDemux|DataOut_4[4]~4\ : cycloneive_lcell_comb
@@ -2843,9 +2843,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_4[4]~4_combout\);
 
 -- Location: LCCOMB_X2_Y1_N28
-\RegistersGeneration:4:REGn|Q[4]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:4:dff|Q[4]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:4:REGn|Q[4]~feeder_combout\ = \InputDemux|DataOut_4[4]~4_combout\
+-- \RegistersGeneration:4:dff|Q[4]~feeder_combout\ = \InputDemux|DataOut_4[4]~4_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2854,10 +2854,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datab => \InputDemux|DataOut_4[4]~4_combout\,
-	combout => \RegistersGeneration:4:REGn|Q[4]~feeder_combout\);
+	combout => \RegistersGeneration:4:dff|Q[4]~feeder_combout\);
 
 -- Location: FF_X2_Y1_N29
-\RegistersGeneration:4:REGn|Q[4]\ : dffeas
+\RegistersGeneration:4:dff|Q[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2865,16 +2865,16 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[4]~clkctrl_outclk\,
-	d => \RegistersGeneration:4:REGn|Q[4]~feeder_combout\,
+	d => \RegistersGeneration:4:dff|Q[4]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:4:REGn|Q\(4));
+	q => \RegistersGeneration:4:dff|Q\(4));
 
 -- Location: LCCOMB_X5_Y1_N10
 \OutputMux2|Mux3~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux3~0_combout\ = (\i_RF.RB_ADR[1]~input_o\ & ((\RegistersGeneration:6:REGn|Q\(4)) # ((\i_RF.RB_ADR[0]~input_o\)))) # (!\i_RF.RB_ADR[1]~input_o\ & (((\RegistersGeneration:4:REGn|Q\(4) & !\i_RF.RB_ADR[0]~input_o\))))
+-- \OutputMux2|Mux3~0_combout\ = (\i_RF.RB_ADR[1]~input_o\ & ((\RegistersGeneration:6:dff|Q\(4)) # ((\i_RF.RB_ADR[0]~input_o\)))) # (!\i_RF.RB_ADR[1]~input_o\ & (((\RegistersGeneration:4:dff|Q\(4) & !\i_RF.RB_ADR[0]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2883,8 +2883,8 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \i_RF.RB_ADR[1]~input_o\,
-	datab => \RegistersGeneration:6:REGn|Q\(4),
-	datac => \RegistersGeneration:4:REGn|Q\(4),
+	datab => \RegistersGeneration:6:dff|Q\(4),
+	datac => \RegistersGeneration:4:dff|Q\(4),
 	datad => \i_RF.RB_ADR[0]~input_o\,
 	combout => \OutputMux2|Mux3~0_combout\);
 
@@ -2906,7 +2906,7 @@ PORT MAP (
 	combout => \InputDemux|DataOut_7[4]~4_combout\);
 
 -- Location: FF_X3_Y1_N31
-\RegistersGeneration:7:REGn|Q[4]\ : dffeas
+\RegistersGeneration:7:dff|Q[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2919,7 +2919,7 @@ PORT MAP (
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:7:REGn|Q\(4));
+	q => \RegistersGeneration:7:dff|Q\(4));
 
 -- Location: LCCOMB_X3_Y1_N6
 \InputDemux|DataOut_5[4]~4\ : cycloneive_lcell_comb
@@ -2939,7 +2939,7 @@ PORT MAP (
 	combout => \InputDemux|DataOut_5[4]~4_combout\);
 
 -- Location: FF_X4_Y1_N17
-\RegistersGeneration:5:REGn|Q[4]\ : dffeas
+\RegistersGeneration:5:dff|Q[4]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -2952,12 +2952,12 @@ PORT MAP (
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:5:REGn|Q\(4));
+	q => \RegistersGeneration:5:dff|Q\(4));
 
 -- Location: LCCOMB_X4_Y1_N16
 \OutputMux2|Mux3~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux3~1_combout\ = (\OutputMux2|Mux3~0_combout\ & ((\RegistersGeneration:7:REGn|Q\(4)) # ((!\i_RF.RB_ADR[0]~input_o\)))) # (!\OutputMux2|Mux3~0_combout\ & (((\RegistersGeneration:5:REGn|Q\(4) & \i_RF.RB_ADR[0]~input_o\))))
+-- \OutputMux2|Mux3~1_combout\ = (\OutputMux2|Mux3~0_combout\ & ((\RegistersGeneration:7:dff|Q\(4)) # ((!\i_RF.RB_ADR[0]~input_o\)))) # (!\OutputMux2|Mux3~0_combout\ & (((\RegistersGeneration:5:dff|Q\(4) & \i_RF.RB_ADR[0]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2966,8 +2966,8 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \OutputMux2|Mux3~0_combout\,
-	datab => \RegistersGeneration:7:REGn|Q\(4),
-	datac => \RegistersGeneration:5:REGn|Q\(4),
+	datab => \RegistersGeneration:7:dff|Q\(4),
+	datac => \RegistersGeneration:5:dff|Q\(4),
 	datad => \i_RF.RB_ADR[0]~input_o\,
 	combout => \OutputMux2|Mux3~1_combout\);
 
@@ -3016,7 +3016,7 @@ PORT MAP (
 	combout => \InputDemux|DataOut_2[5]~5_combout\);
 
 -- Location: FF_X4_Y4_N15
-\RegistersGeneration:2:REGn|Q[5]\ : dffeas
+\RegistersGeneration:2:dff|Q[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3029,7 +3029,7 @@ PORT MAP (
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:2:REGn|Q\(5));
+	q => \RegistersGeneration:2:dff|Q\(5));
 
 -- Location: LCCOMB_X5_Y4_N16
 \InputDemux|DataOut_0[5]~5\ : cycloneive_lcell_comb
@@ -3049,9 +3049,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_0[5]~5_combout\);
 
 -- Location: LCCOMB_X5_Y4_N22
-\RegistersGeneration:0:REGn|Q[5]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:0:dff|Q[5]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:0:REGn|Q[5]~feeder_combout\ = \InputDemux|DataOut_0[5]~5_combout\
+-- \RegistersGeneration:0:dff|Q[5]~feeder_combout\ = \InputDemux|DataOut_0[5]~5_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3060,10 +3060,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datac => \InputDemux|DataOut_0[5]~5_combout\,
-	combout => \RegistersGeneration:0:REGn|Q[5]~feeder_combout\);
+	combout => \RegistersGeneration:0:dff|Q[5]~feeder_combout\);
 
 -- Location: FF_X5_Y4_N23
-\RegistersGeneration:0:REGn|Q[5]\ : dffeas
+\RegistersGeneration:0:dff|Q[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3071,11 +3071,11 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[0]~clkctrl_outclk\,
-	d => \RegistersGeneration:0:REGn|Q[5]~feeder_combout\,
+	d => \RegistersGeneration:0:dff|Q[5]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:0:REGn|Q\(5));
+	q => \RegistersGeneration:0:dff|Q\(5));
 
 -- Location: LCCOMB_X5_Y4_N10
 \InputDemux|DataOut_1[5]~5\ : cycloneive_lcell_comb
@@ -3095,9 +3095,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_1[5]~5_combout\);
 
 -- Location: LCCOMB_X5_Y4_N24
-\RegistersGeneration:1:REGn|Q[5]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:1:dff|Q[5]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:1:REGn|Q[5]~feeder_combout\ = \InputDemux|DataOut_1[5]~5_combout\
+-- \RegistersGeneration:1:dff|Q[5]~feeder_combout\ = \InputDemux|DataOut_1[5]~5_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3106,10 +3106,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datab => \InputDemux|DataOut_1[5]~5_combout\,
-	combout => \RegistersGeneration:1:REGn|Q[5]~feeder_combout\);
+	combout => \RegistersGeneration:1:dff|Q[5]~feeder_combout\);
 
 -- Location: FF_X5_Y4_N25
-\RegistersGeneration:1:REGn|Q[5]\ : dffeas
+\RegistersGeneration:1:dff|Q[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3117,17 +3117,17 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[1]~clkctrl_outclk\,
-	d => \RegistersGeneration:1:REGn|Q[5]~feeder_combout\,
+	d => \RegistersGeneration:1:dff|Q[5]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:1:REGn|Q\(5));
+	q => \RegistersGeneration:1:dff|Q\(5));
 
 -- Location: LCCOMB_X5_Y4_N0
 \OutputMux2|Mux2~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux2~2_combout\ = (\i_RF.RB_ADR[1]~input_o\ & (((\i_RF.RB_ADR[0]~input_o\)))) # (!\i_RF.RB_ADR[1]~input_o\ & ((\i_RF.RB_ADR[0]~input_o\ & ((\RegistersGeneration:1:REGn|Q\(5)))) # (!\i_RF.RB_ADR[0]~input_o\ & 
--- (\RegistersGeneration:0:REGn|Q\(5)))))
+-- \OutputMux2|Mux2~2_combout\ = (\i_RF.RB_ADR[1]~input_o\ & (((\i_RF.RB_ADR[0]~input_o\)))) # (!\i_RF.RB_ADR[1]~input_o\ & ((\i_RF.RB_ADR[0]~input_o\ & ((\RegistersGeneration:1:dff|Q\(5)))) # (!\i_RF.RB_ADR[0]~input_o\ & 
+-- (\RegistersGeneration:0:dff|Q\(5)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3135,8 +3135,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \RegistersGeneration:0:REGn|Q\(5),
-	datab => \RegistersGeneration:1:REGn|Q\(5),
+	dataa => \RegistersGeneration:0:dff|Q\(5),
+	datab => \RegistersGeneration:1:dff|Q\(5),
 	datac => \i_RF.RB_ADR[1]~input_o\,
 	datad => \i_RF.RB_ADR[0]~input_o\,
 	combout => \OutputMux2|Mux2~2_combout\);
@@ -3159,7 +3159,7 @@ PORT MAP (
 	combout => \InputDemux|DataOut_3[5]~5_combout\);
 
 -- Location: FF_X4_Y4_N9
-\RegistersGeneration:3:REGn|Q[5]\ : dffeas
+\RegistersGeneration:3:dff|Q[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3172,12 +3172,12 @@ PORT MAP (
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:3:REGn|Q\(5));
+	q => \RegistersGeneration:3:dff|Q\(5));
 
 -- Location: LCCOMB_X5_Y4_N14
 \OutputMux2|Mux2~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux2~3_combout\ = (\OutputMux2|Mux2~2_combout\ & (((\RegistersGeneration:3:REGn|Q\(5)) # (!\i_RF.RB_ADR[1]~input_o\)))) # (!\OutputMux2|Mux2~2_combout\ & (\RegistersGeneration:2:REGn|Q\(5) & (\i_RF.RB_ADR[1]~input_o\)))
+-- \OutputMux2|Mux2~3_combout\ = (\OutputMux2|Mux2~2_combout\ & (((\RegistersGeneration:3:dff|Q\(5)) # (!\i_RF.RB_ADR[1]~input_o\)))) # (!\OutputMux2|Mux2~2_combout\ & (\RegistersGeneration:2:dff|Q\(5) & (\i_RF.RB_ADR[1]~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3185,10 +3185,10 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \RegistersGeneration:2:REGn|Q\(5),
+	dataa => \RegistersGeneration:2:dff|Q\(5),
 	datab => \OutputMux2|Mux2~2_combout\,
 	datac => \i_RF.RB_ADR[1]~input_o\,
-	datad => \RegistersGeneration:3:REGn|Q\(5),
+	datad => \RegistersGeneration:3:dff|Q\(5),
 	combout => \OutputMux2|Mux2~3_combout\);
 
 -- Location: LCCOMB_X3_Y1_N22
@@ -3209,9 +3209,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_7[5]~5_combout\);
 
 -- Location: LCCOMB_X3_Y1_N20
-\RegistersGeneration:7:REGn|Q[5]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:7:dff|Q[5]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:7:REGn|Q[5]~feeder_combout\ = \InputDemux|DataOut_7[5]~5_combout\
+-- \RegistersGeneration:7:dff|Q[5]~feeder_combout\ = \InputDemux|DataOut_7[5]~5_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3220,10 +3220,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datab => \InputDemux|DataOut_7[5]~5_combout\,
-	combout => \RegistersGeneration:7:REGn|Q[5]~feeder_combout\);
+	combout => \RegistersGeneration:7:dff|Q[5]~feeder_combout\);
 
 -- Location: FF_X3_Y1_N21
-\RegistersGeneration:7:REGn|Q[5]\ : dffeas
+\RegistersGeneration:7:dff|Q[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3231,11 +3231,11 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[7]~clkctrl_outclk\,
-	d => \RegistersGeneration:7:REGn|Q[5]~feeder_combout\,
+	d => \RegistersGeneration:7:dff|Q[5]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:7:REGn|Q\(5));
+	q => \RegistersGeneration:7:dff|Q\(5));
 
 -- Location: LCCOMB_X4_Y1_N0
 \InputDemux|DataOut_4[5]~5\ : cycloneive_lcell_comb
@@ -3255,7 +3255,7 @@ PORT MAP (
 	combout => \InputDemux|DataOut_4[5]~5_combout\);
 
 -- Location: FF_X5_Y1_N21
-\RegistersGeneration:4:REGn|Q[5]\ : dffeas
+\RegistersGeneration:4:dff|Q[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3268,7 +3268,7 @@ PORT MAP (
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:4:REGn|Q\(5));
+	q => \RegistersGeneration:4:dff|Q\(5));
 
 -- Location: LCCOMB_X1_Y1_N4
 \InputDemux|DataOut_6[5]~5\ : cycloneive_lcell_comb
@@ -3288,9 +3288,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_6[5]~5_combout\);
 
 -- Location: LCCOMB_X1_Y1_N24
-\RegistersGeneration:6:REGn|Q[5]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:6:dff|Q[5]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:6:REGn|Q[5]~feeder_combout\ = \InputDemux|DataOut_6[5]~5_combout\
+-- \RegistersGeneration:6:dff|Q[5]~feeder_combout\ = \InputDemux|DataOut_6[5]~5_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3299,10 +3299,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datab => \InputDemux|DataOut_6[5]~5_combout\,
-	combout => \RegistersGeneration:6:REGn|Q[5]~feeder_combout\);
+	combout => \RegistersGeneration:6:dff|Q[5]~feeder_combout\);
 
 -- Location: FF_X1_Y1_N25
-\RegistersGeneration:6:REGn|Q[5]\ : dffeas
+\RegistersGeneration:6:dff|Q[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3310,16 +3310,16 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[6]~clkctrl_outclk\,
-	d => \RegistersGeneration:6:REGn|Q[5]~feeder_combout\,
+	d => \RegistersGeneration:6:dff|Q[5]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:6:REGn|Q\(5));
+	q => \RegistersGeneration:6:dff|Q\(5));
 
 -- Location: LCCOMB_X5_Y1_N22
 \OutputMux2|Mux2~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux2~0_combout\ = (\i_RF.RB_ADR[1]~input_o\ & (((\RegistersGeneration:6:REGn|Q\(5)) # (\i_RF.RB_ADR[0]~input_o\)))) # (!\i_RF.RB_ADR[1]~input_o\ & (\RegistersGeneration:4:REGn|Q\(5) & ((!\i_RF.RB_ADR[0]~input_o\))))
+-- \OutputMux2|Mux2~0_combout\ = (\i_RF.RB_ADR[1]~input_o\ & (((\RegistersGeneration:6:dff|Q\(5)) # (\i_RF.RB_ADR[0]~input_o\)))) # (!\i_RF.RB_ADR[1]~input_o\ & (\RegistersGeneration:4:dff|Q\(5) & ((!\i_RF.RB_ADR[0]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3328,8 +3328,8 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \i_RF.RB_ADR[1]~input_o\,
-	datab => \RegistersGeneration:4:REGn|Q\(5),
-	datac => \RegistersGeneration:6:REGn|Q\(5),
+	datab => \RegistersGeneration:4:dff|Q\(5),
+	datac => \RegistersGeneration:6:dff|Q\(5),
 	datad => \i_RF.RB_ADR[0]~input_o\,
 	combout => \OutputMux2|Mux2~0_combout\);
 
@@ -3351,7 +3351,7 @@ PORT MAP (
 	combout => \InputDemux|DataOut_5[5]~5_combout\);
 
 -- Location: FF_X4_Y1_N3
-\RegistersGeneration:5:REGn|Q[5]\ : dffeas
+\RegistersGeneration:5:dff|Q[5]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3364,12 +3364,12 @@ PORT MAP (
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:5:REGn|Q\(5));
+	q => \RegistersGeneration:5:dff|Q\(5));
 
 -- Location: LCCOMB_X4_Y1_N2
 \OutputMux2|Mux2~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux2~1_combout\ = (\OutputMux2|Mux2~0_combout\ & ((\RegistersGeneration:7:REGn|Q\(5)) # ((!\i_RF.RB_ADR[0]~input_o\)))) # (!\OutputMux2|Mux2~0_combout\ & (((\RegistersGeneration:5:REGn|Q\(5) & \i_RF.RB_ADR[0]~input_o\))))
+-- \OutputMux2|Mux2~1_combout\ = (\OutputMux2|Mux2~0_combout\ & ((\RegistersGeneration:7:dff|Q\(5)) # ((!\i_RF.RB_ADR[0]~input_o\)))) # (!\OutputMux2|Mux2~0_combout\ & (((\RegistersGeneration:5:dff|Q\(5) & \i_RF.RB_ADR[0]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3377,9 +3377,9 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \RegistersGeneration:7:REGn|Q\(5),
+	dataa => \RegistersGeneration:7:dff|Q\(5),
 	datab => \OutputMux2|Mux2~0_combout\,
-	datac => \RegistersGeneration:5:REGn|Q\(5),
+	datac => \RegistersGeneration:5:dff|Q\(5),
 	datad => \i_RF.RB_ADR[0]~input_o\,
 	combout => \OutputMux2|Mux2~1_combout\);
 
@@ -3428,9 +3428,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_2[6]~6_combout\);
 
 -- Location: LCCOMB_X4_Y4_N6
-\RegistersGeneration:2:REGn|Q[6]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:2:dff|Q[6]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:2:REGn|Q[6]~feeder_combout\ = \InputDemux|DataOut_2[6]~6_combout\
+-- \RegistersGeneration:2:dff|Q[6]~feeder_combout\ = \InputDemux|DataOut_2[6]~6_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3439,10 +3439,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \InputDemux|DataOut_2[6]~6_combout\,
-	combout => \RegistersGeneration:2:REGn|Q[6]~feeder_combout\);
+	combout => \RegistersGeneration:2:dff|Q[6]~feeder_combout\);
 
 -- Location: FF_X4_Y4_N7
-\RegistersGeneration:2:REGn|Q[6]\ : dffeas
+\RegistersGeneration:2:dff|Q[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3450,11 +3450,11 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[2]~clkctrl_outclk\,
-	d => \RegistersGeneration:2:REGn|Q[6]~feeder_combout\,
+	d => \RegistersGeneration:2:dff|Q[6]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:2:REGn|Q\(6));
+	q => \RegistersGeneration:2:dff|Q\(6));
 
 -- Location: LCCOMB_X4_Y4_N2
 \InputDemux|DataOut_3[6]~6\ : cycloneive_lcell_comb
@@ -3474,7 +3474,7 @@ PORT MAP (
 	combout => \InputDemux|DataOut_3[6]~6_combout\);
 
 -- Location: FF_X4_Y4_N29
-\RegistersGeneration:3:REGn|Q[6]\ : dffeas
+\RegistersGeneration:3:dff|Q[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3487,7 +3487,7 @@ PORT MAP (
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:3:REGn|Q\(6));
+	q => \RegistersGeneration:3:dff|Q\(6));
 
 -- Location: LCCOMB_X3_Y4_N4
 \InputDemux|DataOut_1[6]~6\ : cycloneive_lcell_comb
@@ -3507,9 +3507,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_1[6]~6_combout\);
 
 -- Location: LCCOMB_X3_Y4_N16
-\RegistersGeneration:1:REGn|Q[6]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:1:dff|Q[6]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:1:REGn|Q[6]~feeder_combout\ = \InputDemux|DataOut_1[6]~6_combout\
+-- \RegistersGeneration:1:dff|Q[6]~feeder_combout\ = \InputDemux|DataOut_1[6]~6_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3518,10 +3518,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \InputDemux|DataOut_1[6]~6_combout\,
-	combout => \RegistersGeneration:1:REGn|Q[6]~feeder_combout\);
+	combout => \RegistersGeneration:1:dff|Q[6]~feeder_combout\);
 
 -- Location: FF_X3_Y4_N17
-\RegistersGeneration:1:REGn|Q[6]\ : dffeas
+\RegistersGeneration:1:dff|Q[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3529,11 +3529,11 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[1]~clkctrl_outclk\,
-	d => \RegistersGeneration:1:REGn|Q[6]~feeder_combout\,
+	d => \RegistersGeneration:1:dff|Q[6]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:1:REGn|Q\(6));
+	q => \RegistersGeneration:1:dff|Q\(6));
 
 -- Location: LCCOMB_X3_Y4_N10
 \InputDemux|DataOut_0[6]~6\ : cycloneive_lcell_comb
@@ -3553,9 +3553,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_0[6]~6_combout\);
 
 -- Location: LCCOMB_X3_Y4_N22
-\RegistersGeneration:0:REGn|Q[6]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:0:dff|Q[6]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:0:REGn|Q[6]~feeder_combout\ = \InputDemux|DataOut_0[6]~6_combout\
+-- \RegistersGeneration:0:dff|Q[6]~feeder_combout\ = \InputDemux|DataOut_0[6]~6_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3564,10 +3564,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datac => \InputDemux|DataOut_0[6]~6_combout\,
-	combout => \RegistersGeneration:0:REGn|Q[6]~feeder_combout\);
+	combout => \RegistersGeneration:0:dff|Q[6]~feeder_combout\);
 
 -- Location: FF_X3_Y4_N23
-\RegistersGeneration:0:REGn|Q[6]\ : dffeas
+\RegistersGeneration:0:dff|Q[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3575,17 +3575,17 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[0]~clkctrl_outclk\,
-	d => \RegistersGeneration:0:REGn|Q[6]~feeder_combout\,
+	d => \RegistersGeneration:0:dff|Q[6]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:0:REGn|Q\(6));
+	q => \RegistersGeneration:0:dff|Q\(6));
 
 -- Location: LCCOMB_X3_Y4_N28
 \OutputMux2|Mux1~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux1~2_combout\ = (\i_RF.RB_ADR[1]~input_o\ & (((\i_RF.RB_ADR[0]~input_o\)))) # (!\i_RF.RB_ADR[1]~input_o\ & ((\i_RF.RB_ADR[0]~input_o\ & (\RegistersGeneration:1:REGn|Q\(6))) # (!\i_RF.RB_ADR[0]~input_o\ & 
--- ((\RegistersGeneration:0:REGn|Q\(6))))))
+-- \OutputMux2|Mux1~2_combout\ = (\i_RF.RB_ADR[1]~input_o\ & (((\i_RF.RB_ADR[0]~input_o\)))) # (!\i_RF.RB_ADR[1]~input_o\ & ((\i_RF.RB_ADR[0]~input_o\ & (\RegistersGeneration:1:dff|Q\(6))) # (!\i_RF.RB_ADR[0]~input_o\ & 
+-- ((\RegistersGeneration:0:dff|Q\(6))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3594,15 +3594,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \i_RF.RB_ADR[1]~input_o\,
-	datab => \RegistersGeneration:1:REGn|Q\(6),
-	datac => \RegistersGeneration:0:REGn|Q\(6),
+	datab => \RegistersGeneration:1:dff|Q\(6),
+	datac => \RegistersGeneration:0:dff|Q\(6),
 	datad => \i_RF.RB_ADR[0]~input_o\,
 	combout => \OutputMux2|Mux1~2_combout\);
 
 -- Location: LCCOMB_X3_Y4_N30
 \OutputMux2|Mux1~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux1~3_combout\ = (\OutputMux2|Mux1~2_combout\ & (((\RegistersGeneration:3:REGn|Q\(6)) # (!\i_RF.RB_ADR[1]~input_o\)))) # (!\OutputMux2|Mux1~2_combout\ & (\RegistersGeneration:2:REGn|Q\(6) & ((\i_RF.RB_ADR[1]~input_o\))))
+-- \OutputMux2|Mux1~3_combout\ = (\OutputMux2|Mux1~2_combout\ & (((\RegistersGeneration:3:dff|Q\(6)) # (!\i_RF.RB_ADR[1]~input_o\)))) # (!\OutputMux2|Mux1~2_combout\ & (\RegistersGeneration:2:dff|Q\(6) & ((\i_RF.RB_ADR[1]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3610,8 +3610,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \RegistersGeneration:2:REGn|Q\(6),
-	datab => \RegistersGeneration:3:REGn|Q\(6),
+	dataa => \RegistersGeneration:2:dff|Q\(6),
+	datab => \RegistersGeneration:3:dff|Q\(6),
 	datac => \OutputMux2|Mux1~2_combout\,
 	datad => \i_RF.RB_ADR[1]~input_o\,
 	combout => \OutputMux2|Mux1~3_combout\);
@@ -3634,7 +3634,7 @@ PORT MAP (
 	combout => \InputDemux|DataOut_4[6]~6_combout\);
 
 -- Location: FF_X5_Y1_N31
-\RegistersGeneration:4:REGn|Q[6]\ : dffeas
+\RegistersGeneration:4:dff|Q[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3647,7 +3647,7 @@ PORT MAP (
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:4:REGn|Q\(6));
+	q => \RegistersGeneration:4:dff|Q\(6));
 
 -- Location: LCCOMB_X5_Y1_N24
 \InputDemux|DataOut_6[6]~6\ : cycloneive_lcell_comb
@@ -3667,7 +3667,7 @@ PORT MAP (
 	combout => \InputDemux|DataOut_6[6]~6_combout\);
 
 -- Location: FF_X5_Y1_N5
-\RegistersGeneration:6:REGn|Q[6]\ : dffeas
+\RegistersGeneration:6:dff|Q[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3680,13 +3680,13 @@ PORT MAP (
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:6:REGn|Q\(6));
+	q => \RegistersGeneration:6:dff|Q\(6));
 
 -- Location: LCCOMB_X5_Y1_N4
 \OutputMux2|Mux1~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux1~0_combout\ = (\i_RF.RB_ADR[0]~input_o\ & (((\i_RF.RB_ADR[1]~input_o\)))) # (!\i_RF.RB_ADR[0]~input_o\ & ((\i_RF.RB_ADR[1]~input_o\ & ((\RegistersGeneration:6:REGn|Q\(6)))) # (!\i_RF.RB_ADR[1]~input_o\ & 
--- (\RegistersGeneration:4:REGn|Q\(6)))))
+-- \OutputMux2|Mux1~0_combout\ = (\i_RF.RB_ADR[0]~input_o\ & (((\i_RF.RB_ADR[1]~input_o\)))) # (!\i_RF.RB_ADR[0]~input_o\ & ((\i_RF.RB_ADR[1]~input_o\ & ((\RegistersGeneration:6:dff|Q\(6)))) # (!\i_RF.RB_ADR[1]~input_o\ & 
+-- (\RegistersGeneration:4:dff|Q\(6)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3694,9 +3694,9 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \RegistersGeneration:4:REGn|Q\(6),
+	dataa => \RegistersGeneration:4:dff|Q\(6),
 	datab => \i_RF.RB_ADR[0]~input_o\,
-	datac => \RegistersGeneration:6:REGn|Q\(6),
+	datac => \RegistersGeneration:6:dff|Q\(6),
 	datad => \i_RF.RB_ADR[1]~input_o\,
 	combout => \OutputMux2|Mux1~0_combout\);
 
@@ -3718,9 +3718,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_5[6]~6_combout\);
 
 -- Location: LCCOMB_X4_Y1_N24
-\RegistersGeneration:5:REGn|Q[6]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:5:dff|Q[6]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:5:REGn|Q[6]~feeder_combout\ = \InputDemux|DataOut_5[6]~6_combout\
+-- \RegistersGeneration:5:dff|Q[6]~feeder_combout\ = \InputDemux|DataOut_5[6]~6_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3729,10 +3729,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \InputDemux|DataOut_5[6]~6_combout\,
-	combout => \RegistersGeneration:5:REGn|Q[6]~feeder_combout\);
+	combout => \RegistersGeneration:5:dff|Q[6]~feeder_combout\);
 
 -- Location: FF_X4_Y1_N25
-\RegistersGeneration:5:REGn|Q[6]\ : dffeas
+\RegistersGeneration:5:dff|Q[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3740,11 +3740,11 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[5]~clkctrl_outclk\,
-	d => \RegistersGeneration:5:REGn|Q[6]~feeder_combout\,
+	d => \RegistersGeneration:5:dff|Q[6]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:5:REGn|Q\(6));
+	q => \RegistersGeneration:5:dff|Q\(6));
 
 -- Location: LCCOMB_X1_Y4_N26
 \InputDemux|DataOut_7[6]~6\ : cycloneive_lcell_comb
@@ -3764,9 +3764,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_7[6]~6_combout\);
 
 -- Location: LCCOMB_X1_Y4_N30
-\RegistersGeneration:7:REGn|Q[6]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:7:dff|Q[6]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:7:REGn|Q[6]~feeder_combout\ = \InputDemux|DataOut_7[6]~6_combout\
+-- \RegistersGeneration:7:dff|Q[6]~feeder_combout\ = \InputDemux|DataOut_7[6]~6_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3775,10 +3775,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datac => \InputDemux|DataOut_7[6]~6_combout\,
-	combout => \RegistersGeneration:7:REGn|Q[6]~feeder_combout\);
+	combout => \RegistersGeneration:7:dff|Q[6]~feeder_combout\);
 
 -- Location: FF_X1_Y4_N31
-\RegistersGeneration:7:REGn|Q[6]\ : dffeas
+\RegistersGeneration:7:dff|Q[6]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3786,16 +3786,16 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[7]~clkctrl_outclk\,
-	d => \RegistersGeneration:7:REGn|Q[6]~feeder_combout\,
+	d => \RegistersGeneration:7:dff|Q[6]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:7:REGn|Q\(6));
+	q => \RegistersGeneration:7:dff|Q\(6));
 
 -- Location: LCCOMB_X4_Y2_N28
 \OutputMux2|Mux1~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux1~1_combout\ = (\i_RF.RB_ADR[0]~input_o\ & ((\OutputMux2|Mux1~0_combout\ & ((\RegistersGeneration:7:REGn|Q\(6)))) # (!\OutputMux2|Mux1~0_combout\ & (\RegistersGeneration:5:REGn|Q\(6))))) # (!\i_RF.RB_ADR[0]~input_o\ & 
+-- \OutputMux2|Mux1~1_combout\ = (\i_RF.RB_ADR[0]~input_o\ & ((\OutputMux2|Mux1~0_combout\ & ((\RegistersGeneration:7:dff|Q\(6)))) # (!\OutputMux2|Mux1~0_combout\ & (\RegistersGeneration:5:dff|Q\(6))))) # (!\i_RF.RB_ADR[0]~input_o\ & 
 -- (\OutputMux2|Mux1~0_combout\))
 
 -- pragma translate_off
@@ -3806,8 +3806,8 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \i_RF.RB_ADR[0]~input_o\,
 	datab => \OutputMux2|Mux1~0_combout\,
-	datac => \RegistersGeneration:5:REGn|Q\(6),
-	datad => \RegistersGeneration:7:REGn|Q\(6),
+	datac => \RegistersGeneration:5:dff|Q\(6),
+	datad => \RegistersGeneration:7:dff|Q\(6),
 	combout => \OutputMux2|Mux1~1_combout\);
 
 -- Location: LCCOMB_X3_Y2_N28
@@ -3855,9 +3855,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_7[7]~7_combout\);
 
 -- Location: LCCOMB_X3_Y1_N14
-\RegistersGeneration:7:REGn|Q[7]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:7:dff|Q[7]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:7:REGn|Q[7]~feeder_combout\ = \InputDemux|DataOut_7[7]~7_combout\
+-- \RegistersGeneration:7:dff|Q[7]~feeder_combout\ = \InputDemux|DataOut_7[7]~7_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3866,10 +3866,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \InputDemux|DataOut_7[7]~7_combout\,
-	combout => \RegistersGeneration:7:REGn|Q[7]~feeder_combout\);
+	combout => \RegistersGeneration:7:dff|Q[7]~feeder_combout\);
 
 -- Location: FF_X3_Y1_N15
-\RegistersGeneration:7:REGn|Q[7]\ : dffeas
+\RegistersGeneration:7:dff|Q[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3877,11 +3877,11 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[7]~clkctrl_outclk\,
-	d => \RegistersGeneration:7:REGn|Q[7]~feeder_combout\,
+	d => \RegistersGeneration:7:dff|Q[7]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:7:REGn|Q\(7));
+	q => \RegistersGeneration:7:dff|Q\(7));
 
 -- Location: LCCOMB_X1_Y1_N22
 \InputDemux|DataOut_4[7]~7\ : cycloneive_lcell_comb
@@ -3901,9 +3901,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_4[7]~7_combout\);
 
 -- Location: LCCOMB_X1_Y1_N10
-\RegistersGeneration:4:REGn|Q[7]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:4:dff|Q[7]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:4:REGn|Q[7]~feeder_combout\ = \InputDemux|DataOut_4[7]~7_combout\
+-- \RegistersGeneration:4:dff|Q[7]~feeder_combout\ = \InputDemux|DataOut_4[7]~7_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3912,10 +3912,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datab => \InputDemux|DataOut_4[7]~7_combout\,
-	combout => \RegistersGeneration:4:REGn|Q[7]~feeder_combout\);
+	combout => \RegistersGeneration:4:dff|Q[7]~feeder_combout\);
 
 -- Location: FF_X1_Y1_N11
-\RegistersGeneration:4:REGn|Q[7]\ : dffeas
+\RegistersGeneration:4:dff|Q[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3923,11 +3923,11 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[4]~clkctrl_outclk\,
-	d => \RegistersGeneration:4:REGn|Q[7]~feeder_combout\,
+	d => \RegistersGeneration:4:dff|Q[7]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:4:REGn|Q\(7));
+	q => \RegistersGeneration:4:dff|Q\(7));
 
 -- Location: LCCOMB_X5_Y1_N0
 \InputDemux|DataOut_6[7]~7\ : cycloneive_lcell_comb
@@ -3947,7 +3947,7 @@ PORT MAP (
 	combout => \InputDemux|DataOut_6[7]~7_combout\);
 
 -- Location: FF_X5_Y1_N9
-\RegistersGeneration:6:REGn|Q[7]\ : dffeas
+\RegistersGeneration:6:dff|Q[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -3960,12 +3960,12 @@ PORT MAP (
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:6:REGn|Q\(7));
+	q => \RegistersGeneration:6:dff|Q\(7));
 
 -- Location: LCCOMB_X5_Y1_N8
 \OutputMux2|Mux0~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux0~0_combout\ = (\i_RF.RB_ADR[1]~input_o\ & (((\RegistersGeneration:6:REGn|Q\(7)) # (\i_RF.RB_ADR[0]~input_o\)))) # (!\i_RF.RB_ADR[1]~input_o\ & (\RegistersGeneration:4:REGn|Q\(7) & ((!\i_RF.RB_ADR[0]~input_o\))))
+-- \OutputMux2|Mux0~0_combout\ = (\i_RF.RB_ADR[1]~input_o\ & (((\RegistersGeneration:6:dff|Q\(7)) # (\i_RF.RB_ADR[0]~input_o\)))) # (!\i_RF.RB_ADR[1]~input_o\ & (\RegistersGeneration:4:dff|Q\(7) & ((!\i_RF.RB_ADR[0]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3974,8 +3974,8 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \i_RF.RB_ADR[1]~input_o\,
-	datab => \RegistersGeneration:4:REGn|Q\(7),
-	datac => \RegistersGeneration:6:REGn|Q\(7),
+	datab => \RegistersGeneration:4:dff|Q\(7),
+	datac => \RegistersGeneration:6:dff|Q\(7),
 	datad => \i_RF.RB_ADR[0]~input_o\,
 	combout => \OutputMux2|Mux0~0_combout\);
 
@@ -3997,7 +3997,7 @@ PORT MAP (
 	combout => \InputDemux|DataOut_5[7]~7_combout\);
 
 -- Location: FF_X4_Y1_N7
-\RegistersGeneration:5:REGn|Q[7]\ : dffeas
+\RegistersGeneration:5:dff|Q[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -4010,12 +4010,12 @@ PORT MAP (
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:5:REGn|Q\(7));
+	q => \RegistersGeneration:5:dff|Q\(7));
 
 -- Location: LCCOMB_X4_Y1_N6
 \OutputMux2|Mux0~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux0~1_combout\ = (\OutputMux2|Mux0~0_combout\ & ((\RegistersGeneration:7:REGn|Q\(7)) # ((!\i_RF.RB_ADR[0]~input_o\)))) # (!\OutputMux2|Mux0~0_combout\ & (((\RegistersGeneration:5:REGn|Q\(7) & \i_RF.RB_ADR[0]~input_o\))))
+-- \OutputMux2|Mux0~1_combout\ = (\OutputMux2|Mux0~0_combout\ & ((\RegistersGeneration:7:dff|Q\(7)) # ((!\i_RF.RB_ADR[0]~input_o\)))) # (!\OutputMux2|Mux0~0_combout\ & (((\RegistersGeneration:5:dff|Q\(7) & \i_RF.RB_ADR[0]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4023,9 +4023,9 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \RegistersGeneration:7:REGn|Q\(7),
+	dataa => \RegistersGeneration:7:dff|Q\(7),
 	datab => \OutputMux2|Mux0~0_combout\,
-	datac => \RegistersGeneration:5:REGn|Q\(7),
+	datac => \RegistersGeneration:5:dff|Q\(7),
 	datad => \i_RF.RB_ADR[0]~input_o\,
 	combout => \OutputMux2|Mux0~1_combout\);
 
@@ -4047,9 +4047,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_3[7]~7_combout\);
 
 -- Location: LCCOMB_X4_Y2_N18
-\RegistersGeneration:3:REGn|Q[7]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:3:dff|Q[7]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:3:REGn|Q[7]~feeder_combout\ = \InputDemux|DataOut_3[7]~7_combout\
+-- \RegistersGeneration:3:dff|Q[7]~feeder_combout\ = \InputDemux|DataOut_3[7]~7_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4058,10 +4058,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \InputDemux|DataOut_3[7]~7_combout\,
-	combout => \RegistersGeneration:3:REGn|Q[7]~feeder_combout\);
+	combout => \RegistersGeneration:3:dff|Q[7]~feeder_combout\);
 
 -- Location: FF_X4_Y2_N19
-\RegistersGeneration:3:REGn|Q[7]\ : dffeas
+\RegistersGeneration:3:dff|Q[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -4069,11 +4069,11 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[3]~clkctrl_outclk\,
-	d => \RegistersGeneration:3:REGn|Q[7]~feeder_combout\,
+	d => \RegistersGeneration:3:dff|Q[7]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:3:REGn|Q\(7));
+	q => \RegistersGeneration:3:dff|Q\(7));
 
 -- Location: LCCOMB_X4_Y2_N14
 \InputDemux|DataOut_2[7]~7\ : cycloneive_lcell_comb
@@ -4093,7 +4093,7 @@ PORT MAP (
 	combout => \InputDemux|DataOut_2[7]~7_combout\);
 
 -- Location: FF_X4_Y2_N31
-\RegistersGeneration:2:REGn|Q[7]\ : dffeas
+\RegistersGeneration:2:dff|Q[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -4106,7 +4106,7 @@ PORT MAP (
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:2:REGn|Q\(7));
+	q => \RegistersGeneration:2:dff|Q\(7));
 
 -- Location: LCCOMB_X3_Y2_N0
 \InputDemux|DataOut_1[7]~7\ : cycloneive_lcell_comb
@@ -4126,9 +4126,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_1[7]~7_combout\);
 
 -- Location: LCCOMB_X3_Y2_N6
-\RegistersGeneration:1:REGn|Q[7]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:1:dff|Q[7]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:1:REGn|Q[7]~feeder_combout\ = \InputDemux|DataOut_1[7]~7_combout\
+-- \RegistersGeneration:1:dff|Q[7]~feeder_combout\ = \InputDemux|DataOut_1[7]~7_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4137,10 +4137,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datab => \InputDemux|DataOut_1[7]~7_combout\,
-	combout => \RegistersGeneration:1:REGn|Q[7]~feeder_combout\);
+	combout => \RegistersGeneration:1:dff|Q[7]~feeder_combout\);
 
 -- Location: FF_X3_Y2_N7
-\RegistersGeneration:1:REGn|Q[7]\ : dffeas
+\RegistersGeneration:1:dff|Q[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -4148,11 +4148,11 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[1]~clkctrl_outclk\,
-	d => \RegistersGeneration:1:REGn|Q[7]~feeder_combout\,
+	d => \RegistersGeneration:1:dff|Q[7]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:1:REGn|Q\(7));
+	q => \RegistersGeneration:1:dff|Q\(7));
 
 -- Location: LCCOMB_X3_Y2_N22
 \InputDemux|DataOut_0[7]~7\ : cycloneive_lcell_comb
@@ -4172,9 +4172,9 @@ PORT MAP (
 	combout => \InputDemux|DataOut_0[7]~7_combout\);
 
 -- Location: LCCOMB_X3_Y2_N24
-\RegistersGeneration:0:REGn|Q[7]~feeder\ : cycloneive_lcell_comb
+\RegistersGeneration:0:dff|Q[7]~feeder\ : cycloneive_lcell_comb
 -- Equation(s):
--- \RegistersGeneration:0:REGn|Q[7]~feeder_combout\ = \InputDemux|DataOut_0[7]~7_combout\
+-- \RegistersGeneration:0:dff|Q[7]~feeder_combout\ = \InputDemux|DataOut_0[7]~7_combout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4183,10 +4183,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datac => \InputDemux|DataOut_0[7]~7_combout\,
-	combout => \RegistersGeneration:0:REGn|Q[7]~feeder_combout\);
+	combout => \RegistersGeneration:0:dff|Q[7]~feeder_combout\);
 
 -- Location: FF_X3_Y2_N25
-\RegistersGeneration:0:REGn|Q[7]\ : dffeas
+\RegistersGeneration:0:dff|Q[7]\ : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -4194,16 +4194,16 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \Decoder|OutputDecode[0]~clkctrl_outclk\,
-	d => \RegistersGeneration:0:REGn|Q[7]~feeder_combout\,
+	d => \RegistersGeneration:0:dff|Q[7]~feeder_combout\,
 	clrn => \ALT_INV_i_RF.RESET~inputclkctrl_outclk\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \RegistersGeneration:0:REGn|Q\(7));
+	q => \RegistersGeneration:0:dff|Q\(7));
 
 -- Location: LCCOMB_X4_Y2_N4
 \OutputMux2|Mux0~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux0~2_combout\ = (\i_RF.RB_ADR[0]~input_o\ & ((\RegistersGeneration:1:REGn|Q\(7)) # ((\i_RF.RB_ADR[1]~input_o\)))) # (!\i_RF.RB_ADR[0]~input_o\ & (((!\i_RF.RB_ADR[1]~input_o\ & \RegistersGeneration:0:REGn|Q\(7)))))
+-- \OutputMux2|Mux0~2_combout\ = (\i_RF.RB_ADR[0]~input_o\ & ((\RegistersGeneration:1:dff|Q\(7)) # ((\i_RF.RB_ADR[1]~input_o\)))) # (!\i_RF.RB_ADR[0]~input_o\ & (((!\i_RF.RB_ADR[1]~input_o\ & \RegistersGeneration:0:dff|Q\(7)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4212,15 +4212,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \i_RF.RB_ADR[0]~input_o\,
-	datab => \RegistersGeneration:1:REGn|Q\(7),
+	datab => \RegistersGeneration:1:dff|Q\(7),
 	datac => \i_RF.RB_ADR[1]~input_o\,
-	datad => \RegistersGeneration:0:REGn|Q\(7),
+	datad => \RegistersGeneration:0:dff|Q\(7),
 	combout => \OutputMux2|Mux0~2_combout\);
 
 -- Location: LCCOMB_X4_Y2_N20
 \OutputMux2|Mux0~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux2|Mux0~3_combout\ = (\i_RF.RB_ADR[1]~input_o\ & ((\OutputMux2|Mux0~2_combout\ & (\RegistersGeneration:3:REGn|Q\(7))) # (!\OutputMux2|Mux0~2_combout\ & ((\RegistersGeneration:2:REGn|Q\(7)))))) # (!\i_RF.RB_ADR[1]~input_o\ & 
+-- \OutputMux2|Mux0~3_combout\ = (\i_RF.RB_ADR[1]~input_o\ & ((\OutputMux2|Mux0~2_combout\ & (\RegistersGeneration:3:dff|Q\(7))) # (!\OutputMux2|Mux0~2_combout\ & ((\RegistersGeneration:2:dff|Q\(7)))))) # (!\i_RF.RB_ADR[1]~input_o\ & 
 -- (((\OutputMux2|Mux0~2_combout\))))
 
 -- pragma translate_off
@@ -4230,8 +4230,8 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \i_RF.RB_ADR[1]~input_o\,
-	datab => \RegistersGeneration:3:REGn|Q\(7),
-	datac => \RegistersGeneration:2:REGn|Q\(7),
+	datab => \RegistersGeneration:3:dff|Q\(7),
+	datac => \RegistersGeneration:2:dff|Q\(7),
 	datad => \OutputMux2|Mux0~2_combout\,
 	combout => \OutputMux2|Mux0~3_combout\);
 
@@ -4276,7 +4276,7 @@ PORT MAP (
 -- Location: LCCOMB_X5_Y2_N16
 \OutputMux1|Mux7~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux7~2_combout\ = (\i_RF.RA_ADR[0]~input_o\ & (((\RegistersGeneration:1:REGn|Q\(0)) # (\i_RF.RA_ADR[1]~input_o\)))) # (!\i_RF.RA_ADR[0]~input_o\ & (\RegistersGeneration:0:REGn|Q\(0) & ((!\i_RF.RA_ADR[1]~input_o\))))
+-- \OutputMux1|Mux7~2_combout\ = (\i_RF.RA_ADR[0]~input_o\ & (((\RegistersGeneration:1:dff|Q\(0)) # (\i_RF.RA_ADR[1]~input_o\)))) # (!\i_RF.RA_ADR[0]~input_o\ & (\RegistersGeneration:0:dff|Q\(0) & ((!\i_RF.RA_ADR[1]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4284,8 +4284,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \RegistersGeneration:0:REGn|Q\(0),
-	datab => \RegistersGeneration:1:REGn|Q\(0),
+	dataa => \RegistersGeneration:0:dff|Q\(0),
+	datab => \RegistersGeneration:1:dff|Q\(0),
 	datac => \i_RF.RA_ADR[0]~input_o\,
 	datad => \i_RF.RA_ADR[1]~input_o\,
 	combout => \OutputMux1|Mux7~2_combout\);
@@ -4293,7 +4293,7 @@ PORT MAP (
 -- Location: LCCOMB_X6_Y2_N26
 \OutputMux1|Mux7~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux7~3_combout\ = (\i_RF.RA_ADR[1]~input_o\ & ((\OutputMux1|Mux7~2_combout\ & ((\RegistersGeneration:3:REGn|Q\(0)))) # (!\OutputMux1|Mux7~2_combout\ & (\RegistersGeneration:2:REGn|Q\(0))))) # (!\i_RF.RA_ADR[1]~input_o\ & 
+-- \OutputMux1|Mux7~3_combout\ = (\i_RF.RA_ADR[1]~input_o\ & ((\OutputMux1|Mux7~2_combout\ & ((\RegistersGeneration:3:dff|Q\(0)))) # (!\OutputMux1|Mux7~2_combout\ & (\RegistersGeneration:2:dff|Q\(0))))) # (!\i_RF.RA_ADR[1]~input_o\ & 
 -- (((\OutputMux1|Mux7~2_combout\))))
 
 -- pragma translate_off
@@ -4303,15 +4303,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \i_RF.RA_ADR[1]~input_o\,
-	datab => \RegistersGeneration:2:REGn|Q\(0),
+	datab => \RegistersGeneration:2:dff|Q\(0),
 	datac => \OutputMux1|Mux7~2_combout\,
-	datad => \RegistersGeneration:3:REGn|Q\(0),
+	datad => \RegistersGeneration:3:dff|Q\(0),
 	combout => \OutputMux1|Mux7~3_combout\);
 
 -- Location: LCCOMB_X5_Y1_N12
 \OutputMux1|Mux7~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux7~0_combout\ = (\i_RF.RA_ADR[1]~input_o\ & ((\RegistersGeneration:6:REGn|Q\(0)) # ((\i_RF.RA_ADR[0]~input_o\)))) # (!\i_RF.RA_ADR[1]~input_o\ & (((\RegistersGeneration:4:REGn|Q\(0) & !\i_RF.RA_ADR[0]~input_o\))))
+-- \OutputMux1|Mux7~0_combout\ = (\i_RF.RA_ADR[1]~input_o\ & ((\RegistersGeneration:6:dff|Q\(0)) # ((\i_RF.RA_ADR[0]~input_o\)))) # (!\i_RF.RA_ADR[1]~input_o\ & (((\RegistersGeneration:4:dff|Q\(0) & !\i_RF.RA_ADR[0]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4320,15 +4320,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \i_RF.RA_ADR[1]~input_o\,
-	datab => \RegistersGeneration:6:REGn|Q\(0),
-	datac => \RegistersGeneration:4:REGn|Q\(0),
+	datab => \RegistersGeneration:6:dff|Q\(0),
+	datac => \RegistersGeneration:4:dff|Q\(0),
 	datad => \i_RF.RA_ADR[0]~input_o\,
 	combout => \OutputMux1|Mux7~0_combout\);
 
 -- Location: LCCOMB_X6_Y1_N0
 \OutputMux1|Mux7~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux7~1_combout\ = (\OutputMux1|Mux7~0_combout\ & ((\RegistersGeneration:7:REGn|Q\(0)) # ((!\i_RF.RA_ADR[0]~input_o\)))) # (!\OutputMux1|Mux7~0_combout\ & (((\i_RF.RA_ADR[0]~input_o\ & \RegistersGeneration:5:REGn|Q\(0)))))
+-- \OutputMux1|Mux7~1_combout\ = (\OutputMux1|Mux7~0_combout\ & ((\RegistersGeneration:7:dff|Q\(0)) # ((!\i_RF.RA_ADR[0]~input_o\)))) # (!\OutputMux1|Mux7~0_combout\ & (((\i_RF.RA_ADR[0]~input_o\ & \RegistersGeneration:5:dff|Q\(0)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4337,9 +4337,9 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \OutputMux1|Mux7~0_combout\,
-	datab => \RegistersGeneration:7:REGn|Q\(0),
+	datab => \RegistersGeneration:7:dff|Q\(0),
 	datac => \i_RF.RA_ADR[0]~input_o\,
-	datad => \RegistersGeneration:5:REGn|Q\(0),
+	datad => \RegistersGeneration:5:dff|Q\(0),
 	combout => \OutputMux1|Mux7~1_combout\);
 
 -- Location: IOIBUF_X0_Y5_N15
@@ -4372,8 +4372,8 @@ PORT MAP (
 -- Location: LCCOMB_X5_Y1_N28
 \OutputMux1|Mux6~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux6~0_combout\ = (\i_RF.RA_ADR[0]~input_o\ & (((\i_RF.RA_ADR[1]~input_o\)))) # (!\i_RF.RA_ADR[0]~input_o\ & ((\i_RF.RA_ADR[1]~input_o\ & (\RegistersGeneration:6:REGn|Q\(1))) # (!\i_RF.RA_ADR[1]~input_o\ & 
--- ((\RegistersGeneration:4:REGn|Q\(1))))))
+-- \OutputMux1|Mux6~0_combout\ = (\i_RF.RA_ADR[0]~input_o\ & (((\i_RF.RA_ADR[1]~input_o\)))) # (!\i_RF.RA_ADR[0]~input_o\ & ((\i_RF.RA_ADR[1]~input_o\ & (\RegistersGeneration:6:dff|Q\(1))) # (!\i_RF.RA_ADR[1]~input_o\ & 
+-- ((\RegistersGeneration:4:dff|Q\(1))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4381,16 +4381,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \RegistersGeneration:6:REGn|Q\(1),
+	dataa => \RegistersGeneration:6:dff|Q\(1),
 	datab => \i_RF.RA_ADR[0]~input_o\,
-	datac => \RegistersGeneration:4:REGn|Q\(1),
+	datac => \RegistersGeneration:4:dff|Q\(1),
 	datad => \i_RF.RA_ADR[1]~input_o\,
 	combout => \OutputMux1|Mux6~0_combout\);
 
 -- Location: LCCOMB_X6_Y1_N22
 \OutputMux1|Mux6~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux6~1_combout\ = (\i_RF.RA_ADR[0]~input_o\ & ((\OutputMux1|Mux6~0_combout\ & (\RegistersGeneration:7:REGn|Q\(1))) # (!\OutputMux1|Mux6~0_combout\ & ((\RegistersGeneration:5:REGn|Q\(1)))))) # (!\i_RF.RA_ADR[0]~input_o\ & 
+-- \OutputMux1|Mux6~1_combout\ = (\i_RF.RA_ADR[0]~input_o\ & ((\OutputMux1|Mux6~0_combout\ & (\RegistersGeneration:7:dff|Q\(1))) # (!\OutputMux1|Mux6~0_combout\ & ((\RegistersGeneration:5:dff|Q\(1)))))) # (!\i_RF.RA_ADR[0]~input_o\ & 
 -- (\OutputMux1|Mux6~0_combout\))
 
 -- pragma translate_off
@@ -4401,14 +4401,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \i_RF.RA_ADR[0]~input_o\,
 	datab => \OutputMux1|Mux6~0_combout\,
-	datac => \RegistersGeneration:7:REGn|Q\(1),
-	datad => \RegistersGeneration:5:REGn|Q\(1),
+	datac => \RegistersGeneration:7:dff|Q\(1),
+	datad => \RegistersGeneration:5:dff|Q\(1),
 	combout => \OutputMux1|Mux6~1_combout\);
 
 -- Location: LCCOMB_X5_Y2_N14
 \OutputMux1|Mux6~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux6~2_combout\ = (\i_RF.RA_ADR[1]~input_o\ & (\i_RF.RA_ADR[0]~input_o\)) # (!\i_RF.RA_ADR[1]~input_o\ & ((\i_RF.RA_ADR[0]~input_o\ & ((\RegistersGeneration:1:REGn|Q\(1)))) # (!\i_RF.RA_ADR[0]~input_o\ & (\RegistersGeneration:0:REGn|Q\(1)))))
+-- \OutputMux1|Mux6~2_combout\ = (\i_RF.RA_ADR[1]~input_o\ & (\i_RF.RA_ADR[0]~input_o\)) # (!\i_RF.RA_ADR[1]~input_o\ & ((\i_RF.RA_ADR[0]~input_o\ & ((\RegistersGeneration:1:dff|Q\(1)))) # (!\i_RF.RA_ADR[0]~input_o\ & (\RegistersGeneration:0:dff|Q\(1)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4418,14 +4418,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \i_RF.RA_ADR[1]~input_o\,
 	datab => \i_RF.RA_ADR[0]~input_o\,
-	datac => \RegistersGeneration:0:REGn|Q\(1),
-	datad => \RegistersGeneration:1:REGn|Q\(1),
+	datac => \RegistersGeneration:0:dff|Q\(1),
+	datad => \RegistersGeneration:1:dff|Q\(1),
 	combout => \OutputMux1|Mux6~2_combout\);
 
 -- Location: LCCOMB_X6_Y2_N16
 \OutputMux1|Mux6~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux6~3_combout\ = (\i_RF.RA_ADR[1]~input_o\ & ((\OutputMux1|Mux6~2_combout\ & ((\RegistersGeneration:3:REGn|Q\(1)))) # (!\OutputMux1|Mux6~2_combout\ & (\RegistersGeneration:2:REGn|Q\(1))))) # (!\i_RF.RA_ADR[1]~input_o\ & 
+-- \OutputMux1|Mux6~3_combout\ = (\i_RF.RA_ADR[1]~input_o\ & ((\OutputMux1|Mux6~2_combout\ & ((\RegistersGeneration:3:dff|Q\(1)))) # (!\OutputMux1|Mux6~2_combout\ & (\RegistersGeneration:2:dff|Q\(1))))) # (!\i_RF.RA_ADR[1]~input_o\ & 
 -- (((\OutputMux1|Mux6~2_combout\))))
 
 -- pragma translate_off
@@ -4435,8 +4435,8 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \i_RF.RA_ADR[1]~input_o\,
-	datab => \RegistersGeneration:2:REGn|Q\(1),
-	datac => \RegistersGeneration:3:REGn|Q\(1),
+	datab => \RegistersGeneration:2:dff|Q\(1),
+	datac => \RegistersGeneration:3:dff|Q\(1),
 	datad => \OutputMux1|Mux6~2_combout\,
 	combout => \OutputMux1|Mux6~3_combout\);
 
@@ -4459,8 +4459,8 @@ PORT MAP (
 -- Location: LCCOMB_X4_Y1_N4
 \OutputMux1|Mux5~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux5~0_combout\ = (\i_RF.RA_ADR[0]~input_o\ & (((\i_RF.RA_ADR[1]~input_o\)))) # (!\i_RF.RA_ADR[0]~input_o\ & ((\i_RF.RA_ADR[1]~input_o\ & (\RegistersGeneration:6:REGn|Q\(2))) # (!\i_RF.RA_ADR[1]~input_o\ & 
--- ((\RegistersGeneration:4:REGn|Q\(2))))))
+-- \OutputMux1|Mux5~0_combout\ = (\i_RF.RA_ADR[0]~input_o\ & (((\i_RF.RA_ADR[1]~input_o\)))) # (!\i_RF.RA_ADR[0]~input_o\ & ((\i_RF.RA_ADR[1]~input_o\ & (\RegistersGeneration:6:dff|Q\(2))) # (!\i_RF.RA_ADR[1]~input_o\ & 
+-- ((\RegistersGeneration:4:dff|Q\(2))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4469,15 +4469,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \i_RF.RA_ADR[0]~input_o\,
-	datab => \RegistersGeneration:6:REGn|Q\(2),
-	datac => \RegistersGeneration:4:REGn|Q\(2),
+	datab => \RegistersGeneration:6:dff|Q\(2),
+	datac => \RegistersGeneration:4:dff|Q\(2),
 	datad => \i_RF.RA_ADR[1]~input_o\,
 	combout => \OutputMux1|Mux5~0_combout\);
 
 -- Location: LCCOMB_X3_Y1_N16
 \OutputMux1|Mux5~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux5~1_combout\ = (\OutputMux1|Mux5~0_combout\ & (((\RegistersGeneration:7:REGn|Q\(2)) # (!\i_RF.RA_ADR[0]~input_o\)))) # (!\OutputMux1|Mux5~0_combout\ & (\RegistersGeneration:5:REGn|Q\(2) & ((\i_RF.RA_ADR[0]~input_o\))))
+-- \OutputMux1|Mux5~1_combout\ = (\OutputMux1|Mux5~0_combout\ & (((\RegistersGeneration:7:dff|Q\(2)) # (!\i_RF.RA_ADR[0]~input_o\)))) # (!\OutputMux1|Mux5~0_combout\ & (\RegistersGeneration:5:dff|Q\(2) & ((\i_RF.RA_ADR[0]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4486,16 +4486,16 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \OutputMux1|Mux5~0_combout\,
-	datab => \RegistersGeneration:5:REGn|Q\(2),
-	datac => \RegistersGeneration:7:REGn|Q\(2),
+	datab => \RegistersGeneration:5:dff|Q\(2),
+	datac => \RegistersGeneration:7:dff|Q\(2),
 	datad => \i_RF.RA_ADR[0]~input_o\,
 	combout => \OutputMux1|Mux5~1_combout\);
 
 -- Location: LCCOMB_X5_Y2_N28
 \OutputMux1|Mux5~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux5~2_combout\ = (\i_RF.RA_ADR[1]~input_o\ & (((\i_RF.RA_ADR[0]~input_o\)))) # (!\i_RF.RA_ADR[1]~input_o\ & ((\i_RF.RA_ADR[0]~input_o\ & ((\RegistersGeneration:1:REGn|Q\(2)))) # (!\i_RF.RA_ADR[0]~input_o\ & 
--- (\RegistersGeneration:0:REGn|Q\(2)))))
+-- \OutputMux1|Mux5~2_combout\ = (\i_RF.RA_ADR[1]~input_o\ & (((\i_RF.RA_ADR[0]~input_o\)))) # (!\i_RF.RA_ADR[1]~input_o\ & ((\i_RF.RA_ADR[0]~input_o\ & ((\RegistersGeneration:1:dff|Q\(2)))) # (!\i_RF.RA_ADR[0]~input_o\ & 
+-- (\RegistersGeneration:0:dff|Q\(2)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4504,15 +4504,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \i_RF.RA_ADR[1]~input_o\,
-	datab => \RegistersGeneration:0:REGn|Q\(2),
+	datab => \RegistersGeneration:0:dff|Q\(2),
 	datac => \i_RF.RA_ADR[0]~input_o\,
-	datad => \RegistersGeneration:1:REGn|Q\(2),
+	datad => \RegistersGeneration:1:dff|Q\(2),
 	combout => \OutputMux1|Mux5~2_combout\);
 
 -- Location: LCCOMB_X5_Y2_N6
 \OutputMux1|Mux5~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux5~3_combout\ = (\i_RF.RA_ADR[1]~input_o\ & ((\OutputMux1|Mux5~2_combout\ & ((\RegistersGeneration:3:REGn|Q\(2)))) # (!\OutputMux1|Mux5~2_combout\ & (\RegistersGeneration:2:REGn|Q\(2))))) # (!\i_RF.RA_ADR[1]~input_o\ & 
+-- \OutputMux1|Mux5~3_combout\ = (\i_RF.RA_ADR[1]~input_o\ & ((\OutputMux1|Mux5~2_combout\ & ((\RegistersGeneration:3:dff|Q\(2)))) # (!\OutputMux1|Mux5~2_combout\ & (\RegistersGeneration:2:dff|Q\(2))))) # (!\i_RF.RA_ADR[1]~input_o\ & 
 -- (\OutputMux1|Mux5~2_combout\))
 
 -- pragma translate_off
@@ -4523,8 +4523,8 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \i_RF.RA_ADR[1]~input_o\,
 	datab => \OutputMux1|Mux5~2_combout\,
-	datac => \RegistersGeneration:2:REGn|Q\(2),
-	datad => \RegistersGeneration:3:REGn|Q\(2),
+	datac => \RegistersGeneration:2:dff|Q\(2),
+	datad => \RegistersGeneration:3:dff|Q\(2),
 	combout => \OutputMux1|Mux5~3_combout\);
 
 -- Location: LCCOMB_X4_Y2_N10
@@ -4546,7 +4546,7 @@ PORT MAP (
 -- Location: LCCOMB_X5_Y1_N26
 \OutputMux1|Mux4~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux4~0_combout\ = (\i_RF.RA_ADR[1]~input_o\ & (((\RegistersGeneration:6:REGn|Q\(3)) # (\i_RF.RA_ADR[0]~input_o\)))) # (!\i_RF.RA_ADR[1]~input_o\ & (\RegistersGeneration:4:REGn|Q\(3) & ((!\i_RF.RA_ADR[0]~input_o\))))
+-- \OutputMux1|Mux4~0_combout\ = (\i_RF.RA_ADR[1]~input_o\ & (((\RegistersGeneration:6:dff|Q\(3)) # (\i_RF.RA_ADR[0]~input_o\)))) # (!\i_RF.RA_ADR[1]~input_o\ & (\RegistersGeneration:4:dff|Q\(3) & ((!\i_RF.RA_ADR[0]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4555,15 +4555,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \i_RF.RA_ADR[1]~input_o\,
-	datab => \RegistersGeneration:4:REGn|Q\(3),
-	datac => \RegistersGeneration:6:REGn|Q\(3),
+	datab => \RegistersGeneration:4:dff|Q\(3),
+	datac => \RegistersGeneration:6:dff|Q\(3),
 	datad => \i_RF.RA_ADR[0]~input_o\,
 	combout => \OutputMux1|Mux4~0_combout\);
 
 -- Location: LCCOMB_X4_Y1_N14
 \OutputMux1|Mux4~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux4~1_combout\ = (\i_RF.RA_ADR[0]~input_o\ & ((\OutputMux1|Mux4~0_combout\ & ((\RegistersGeneration:7:REGn|Q\(3)))) # (!\OutputMux1|Mux4~0_combout\ & (\RegistersGeneration:5:REGn|Q\(3))))) # (!\i_RF.RA_ADR[0]~input_o\ & 
+-- \OutputMux1|Mux4~1_combout\ = (\i_RF.RA_ADR[0]~input_o\ & ((\OutputMux1|Mux4~0_combout\ & ((\RegistersGeneration:7:dff|Q\(3)))) # (!\OutputMux1|Mux4~0_combout\ & (\RegistersGeneration:5:dff|Q\(3))))) # (!\i_RF.RA_ADR[0]~input_o\ & 
 -- (((\OutputMux1|Mux4~0_combout\))))
 
 -- pragma translate_off
@@ -4573,15 +4573,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \i_RF.RA_ADR[0]~input_o\,
-	datab => \RegistersGeneration:5:REGn|Q\(3),
-	datac => \RegistersGeneration:7:REGn|Q\(3),
+	datab => \RegistersGeneration:5:dff|Q\(3),
+	datac => \RegistersGeneration:7:dff|Q\(3),
 	datad => \OutputMux1|Mux4~0_combout\,
 	combout => \OutputMux1|Mux4~1_combout\);
 
 -- Location: LCCOMB_X5_Y4_N6
 \OutputMux1|Mux4~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux4~2_combout\ = (\i_RF.RA_ADR[0]~input_o\ & ((\i_RF.RA_ADR[1]~input_o\) # ((\RegistersGeneration:1:REGn|Q\(3))))) # (!\i_RF.RA_ADR[0]~input_o\ & (!\i_RF.RA_ADR[1]~input_o\ & (\RegistersGeneration:0:REGn|Q\(3))))
+-- \OutputMux1|Mux4~2_combout\ = (\i_RF.RA_ADR[0]~input_o\ & ((\i_RF.RA_ADR[1]~input_o\) # ((\RegistersGeneration:1:dff|Q\(3))))) # (!\i_RF.RA_ADR[0]~input_o\ & (!\i_RF.RA_ADR[1]~input_o\ & (\RegistersGeneration:0:dff|Q\(3))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4591,14 +4591,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \i_RF.RA_ADR[0]~input_o\,
 	datab => \i_RF.RA_ADR[1]~input_o\,
-	datac => \RegistersGeneration:0:REGn|Q\(3),
-	datad => \RegistersGeneration:1:REGn|Q\(3),
+	datac => \RegistersGeneration:0:dff|Q\(3),
+	datad => \RegistersGeneration:1:dff|Q\(3),
 	combout => \OutputMux1|Mux4~2_combout\);
 
 -- Location: LCCOMB_X4_Y4_N18
 \OutputMux1|Mux4~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux4~3_combout\ = (\OutputMux1|Mux4~2_combout\ & (((\RegistersGeneration:3:REGn|Q\(3)) # (!\i_RF.RA_ADR[1]~input_o\)))) # (!\OutputMux1|Mux4~2_combout\ & (\RegistersGeneration:2:REGn|Q\(3) & ((\i_RF.RA_ADR[1]~input_o\))))
+-- \OutputMux1|Mux4~3_combout\ = (\OutputMux1|Mux4~2_combout\ & (((\RegistersGeneration:3:dff|Q\(3)) # (!\i_RF.RA_ADR[1]~input_o\)))) # (!\OutputMux1|Mux4~2_combout\ & (\RegistersGeneration:2:dff|Q\(3) & ((\i_RF.RA_ADR[1]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4607,8 +4607,8 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \OutputMux1|Mux4~2_combout\,
-	datab => \RegistersGeneration:2:REGn|Q\(3),
-	datac => \RegistersGeneration:3:REGn|Q\(3),
+	datab => \RegistersGeneration:2:dff|Q\(3),
+	datac => \RegistersGeneration:3:dff|Q\(3),
 	datad => \i_RF.RA_ADR[1]~input_o\,
 	combout => \OutputMux1|Mux4~3_combout\);
 
@@ -4631,7 +4631,7 @@ PORT MAP (
 -- Location: LCCOMB_X3_Y4_N20
 \OutputMux1|Mux3~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux3~2_combout\ = (\i_RF.RA_ADR[0]~input_o\ & ((\RegistersGeneration:1:REGn|Q\(4)) # ((\i_RF.RA_ADR[1]~input_o\)))) # (!\i_RF.RA_ADR[0]~input_o\ & (((\RegistersGeneration:0:REGn|Q\(4) & !\i_RF.RA_ADR[1]~input_o\))))
+-- \OutputMux1|Mux3~2_combout\ = (\i_RF.RA_ADR[0]~input_o\ & ((\RegistersGeneration:1:dff|Q\(4)) # ((\i_RF.RA_ADR[1]~input_o\)))) # (!\i_RF.RA_ADR[0]~input_o\ & (((\RegistersGeneration:0:dff|Q\(4) & !\i_RF.RA_ADR[1]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4639,8 +4639,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \RegistersGeneration:1:REGn|Q\(4),
-	datab => \RegistersGeneration:0:REGn|Q\(4),
+	dataa => \RegistersGeneration:1:dff|Q\(4),
+	datab => \RegistersGeneration:0:dff|Q\(4),
 	datac => \i_RF.RA_ADR[0]~input_o\,
 	datad => \i_RF.RA_ADR[1]~input_o\,
 	combout => \OutputMux1|Mux3~2_combout\);
@@ -4648,7 +4648,7 @@ PORT MAP (
 -- Location: LCCOMB_X3_Y4_N14
 \OutputMux1|Mux3~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux3~3_combout\ = (\OutputMux1|Mux3~2_combout\ & (((\RegistersGeneration:3:REGn|Q\(4)) # (!\i_RF.RA_ADR[1]~input_o\)))) # (!\OutputMux1|Mux3~2_combout\ & (\RegistersGeneration:2:REGn|Q\(4) & ((\i_RF.RA_ADR[1]~input_o\))))
+-- \OutputMux1|Mux3~3_combout\ = (\OutputMux1|Mux3~2_combout\ & (((\RegistersGeneration:3:dff|Q\(4)) # (!\i_RF.RA_ADR[1]~input_o\)))) # (!\OutputMux1|Mux3~2_combout\ & (\RegistersGeneration:2:dff|Q\(4) & ((\i_RF.RA_ADR[1]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4656,17 +4656,17 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \RegistersGeneration:2:REGn|Q\(4),
+	dataa => \RegistersGeneration:2:dff|Q\(4),
 	datab => \OutputMux1|Mux3~2_combout\,
-	datac => \RegistersGeneration:3:REGn|Q\(4),
+	datac => \RegistersGeneration:3:dff|Q\(4),
 	datad => \i_RF.RA_ADR[1]~input_o\,
 	combout => \OutputMux1|Mux3~3_combout\);
 
 -- Location: LCCOMB_X4_Y1_N30
 \OutputMux1|Mux3~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux3~0_combout\ = (\i_RF.RA_ADR[0]~input_o\ & (((\i_RF.RA_ADR[1]~input_o\)))) # (!\i_RF.RA_ADR[0]~input_o\ & ((\i_RF.RA_ADR[1]~input_o\ & ((\RegistersGeneration:6:REGn|Q\(4)))) # (!\i_RF.RA_ADR[1]~input_o\ & 
--- (\RegistersGeneration:4:REGn|Q\(4)))))
+-- \OutputMux1|Mux3~0_combout\ = (\i_RF.RA_ADR[0]~input_o\ & (((\i_RF.RA_ADR[1]~input_o\)))) # (!\i_RF.RA_ADR[0]~input_o\ & ((\i_RF.RA_ADR[1]~input_o\ & ((\RegistersGeneration:6:dff|Q\(4)))) # (!\i_RF.RA_ADR[1]~input_o\ & 
+-- (\RegistersGeneration:4:dff|Q\(4)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4675,15 +4675,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \i_RF.RA_ADR[0]~input_o\,
-	datab => \RegistersGeneration:4:REGn|Q\(4),
-	datac => \RegistersGeneration:6:REGn|Q\(4),
+	datab => \RegistersGeneration:4:dff|Q\(4),
+	datac => \RegistersGeneration:6:dff|Q\(4),
 	datad => \i_RF.RA_ADR[1]~input_o\,
 	combout => \OutputMux1|Mux3~0_combout\);
 
 -- Location: LCCOMB_X3_Y1_N30
 \OutputMux1|Mux3~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux3~1_combout\ = (\OutputMux1|Mux3~0_combout\ & (((\RegistersGeneration:7:REGn|Q\(4)) # (!\i_RF.RA_ADR[0]~input_o\)))) # (!\OutputMux1|Mux3~0_combout\ & (\RegistersGeneration:5:REGn|Q\(4) & ((\i_RF.RA_ADR[0]~input_o\))))
+-- \OutputMux1|Mux3~1_combout\ = (\OutputMux1|Mux3~0_combout\ & (((\RegistersGeneration:7:dff|Q\(4)) # (!\i_RF.RA_ADR[0]~input_o\)))) # (!\OutputMux1|Mux3~0_combout\ & (\RegistersGeneration:5:dff|Q\(4) & ((\i_RF.RA_ADR[0]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4692,8 +4692,8 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \OutputMux1|Mux3~0_combout\,
-	datab => \RegistersGeneration:5:REGn|Q\(4),
-	datac => \RegistersGeneration:7:REGn|Q\(4),
+	datab => \RegistersGeneration:5:dff|Q\(4),
+	datac => \RegistersGeneration:7:dff|Q\(4),
 	datad => \i_RF.RA_ADR[0]~input_o\,
 	combout => \OutputMux1|Mux3~1_combout\);
 
@@ -4716,8 +4716,8 @@ PORT MAP (
 -- Location: LCCOMB_X5_Y1_N20
 \OutputMux1|Mux2~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux2~0_combout\ = (\i_RF.RA_ADR[0]~input_o\ & (((\i_RF.RA_ADR[1]~input_o\)))) # (!\i_RF.RA_ADR[0]~input_o\ & ((\i_RF.RA_ADR[1]~input_o\ & (\RegistersGeneration:6:REGn|Q\(5))) # (!\i_RF.RA_ADR[1]~input_o\ & 
--- ((\RegistersGeneration:4:REGn|Q\(5))))))
+-- \OutputMux1|Mux2~0_combout\ = (\i_RF.RA_ADR[0]~input_o\ & (((\i_RF.RA_ADR[1]~input_o\)))) # (!\i_RF.RA_ADR[0]~input_o\ & ((\i_RF.RA_ADR[1]~input_o\ & (\RegistersGeneration:6:dff|Q\(5))) # (!\i_RF.RA_ADR[1]~input_o\ & 
+-- ((\RegistersGeneration:4:dff|Q\(5))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4726,15 +4726,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \i_RF.RA_ADR[0]~input_o\,
-	datab => \RegistersGeneration:6:REGn|Q\(5),
-	datac => \RegistersGeneration:4:REGn|Q\(5),
+	datab => \RegistersGeneration:6:dff|Q\(5),
+	datac => \RegistersGeneration:4:dff|Q\(5),
 	datad => \i_RF.RA_ADR[1]~input_o\,
 	combout => \OutputMux1|Mux2~0_combout\);
 
 -- Location: LCCOMB_X4_Y2_N16
 \OutputMux1|Mux2~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux2~1_combout\ = (\i_RF.RA_ADR[0]~input_o\ & ((\OutputMux1|Mux2~0_combout\ & (\RegistersGeneration:7:REGn|Q\(5))) # (!\OutputMux1|Mux2~0_combout\ & ((\RegistersGeneration:5:REGn|Q\(5)))))) # (!\i_RF.RA_ADR[0]~input_o\ & 
+-- \OutputMux1|Mux2~1_combout\ = (\i_RF.RA_ADR[0]~input_o\ & ((\OutputMux1|Mux2~0_combout\ & (\RegistersGeneration:7:dff|Q\(5))) # (!\OutputMux1|Mux2~0_combout\ & ((\RegistersGeneration:5:dff|Q\(5)))))) # (!\i_RF.RA_ADR[0]~input_o\ & 
 -- (((\OutputMux1|Mux2~0_combout\))))
 
 -- pragma translate_off
@@ -4743,16 +4743,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \RegistersGeneration:7:REGn|Q\(5),
+	dataa => \RegistersGeneration:7:dff|Q\(5),
 	datab => \i_RF.RA_ADR[0]~input_o\,
-	datac => \RegistersGeneration:5:REGn|Q\(5),
+	datac => \RegistersGeneration:5:dff|Q\(5),
 	datad => \OutputMux1|Mux2~0_combout\,
 	combout => \OutputMux1|Mux2~1_combout\);
 
 -- Location: LCCOMB_X5_Y4_N20
 \OutputMux1|Mux2~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux2~2_combout\ = (\i_RF.RA_ADR[0]~input_o\ & ((\i_RF.RA_ADR[1]~input_o\) # ((\RegistersGeneration:1:REGn|Q\(5))))) # (!\i_RF.RA_ADR[0]~input_o\ & (!\i_RF.RA_ADR[1]~input_o\ & (\RegistersGeneration:0:REGn|Q\(5))))
+-- \OutputMux1|Mux2~2_combout\ = (\i_RF.RA_ADR[0]~input_o\ & ((\i_RF.RA_ADR[1]~input_o\) # ((\RegistersGeneration:1:dff|Q\(5))))) # (!\i_RF.RA_ADR[0]~input_o\ & (!\i_RF.RA_ADR[1]~input_o\ & (\RegistersGeneration:0:dff|Q\(5))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4762,14 +4762,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \i_RF.RA_ADR[0]~input_o\,
 	datab => \i_RF.RA_ADR[1]~input_o\,
-	datac => \RegistersGeneration:0:REGn|Q\(5),
-	datad => \RegistersGeneration:1:REGn|Q\(5),
+	datac => \RegistersGeneration:0:dff|Q\(5),
+	datad => \RegistersGeneration:1:dff|Q\(5),
 	combout => \OutputMux1|Mux2~2_combout\);
 
 -- Location: LCCOMB_X4_Y4_N8
 \OutputMux1|Mux2~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux2~3_combout\ = (\OutputMux1|Mux2~2_combout\ & (((\RegistersGeneration:3:REGn|Q\(5)) # (!\i_RF.RA_ADR[1]~input_o\)))) # (!\OutputMux1|Mux2~2_combout\ & (\RegistersGeneration:2:REGn|Q\(5) & ((\i_RF.RA_ADR[1]~input_o\))))
+-- \OutputMux1|Mux2~3_combout\ = (\OutputMux1|Mux2~2_combout\ & (((\RegistersGeneration:3:dff|Q\(5)) # (!\i_RF.RA_ADR[1]~input_o\)))) # (!\OutputMux1|Mux2~2_combout\ & (\RegistersGeneration:2:dff|Q\(5) & ((\i_RF.RA_ADR[1]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4778,8 +4778,8 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \OutputMux1|Mux2~2_combout\,
-	datab => \RegistersGeneration:2:REGn|Q\(5),
-	datac => \RegistersGeneration:3:REGn|Q\(5),
+	datab => \RegistersGeneration:2:dff|Q\(5),
+	datac => \RegistersGeneration:3:dff|Q\(5),
 	datad => \i_RF.RA_ADR[1]~input_o\,
 	combout => \OutputMux1|Mux2~3_combout\);
 
@@ -4802,7 +4802,7 @@ PORT MAP (
 -- Location: LCCOMB_X3_Y4_N12
 \OutputMux1|Mux1~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux1~2_combout\ = (\i_RF.RA_ADR[0]~input_o\ & ((\RegistersGeneration:1:REGn|Q\(6)) # ((\i_RF.RA_ADR[1]~input_o\)))) # (!\i_RF.RA_ADR[0]~input_o\ & (((\RegistersGeneration:0:REGn|Q\(6) & !\i_RF.RA_ADR[1]~input_o\))))
+-- \OutputMux1|Mux1~2_combout\ = (\i_RF.RA_ADR[0]~input_o\ & ((\RegistersGeneration:1:dff|Q\(6)) # ((\i_RF.RA_ADR[1]~input_o\)))) # (!\i_RF.RA_ADR[0]~input_o\ & (((\RegistersGeneration:0:dff|Q\(6) & !\i_RF.RA_ADR[1]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4811,15 +4811,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \i_RF.RA_ADR[0]~input_o\,
-	datab => \RegistersGeneration:1:REGn|Q\(6),
-	datac => \RegistersGeneration:0:REGn|Q\(6),
+	datab => \RegistersGeneration:1:dff|Q\(6),
+	datac => \RegistersGeneration:0:dff|Q\(6),
 	datad => \i_RF.RA_ADR[1]~input_o\,
 	combout => \OutputMux1|Mux1~2_combout\);
 
 -- Location: LCCOMB_X4_Y4_N28
 \OutputMux1|Mux1~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux1~3_combout\ = (\OutputMux1|Mux1~2_combout\ & (((\RegistersGeneration:3:REGn|Q\(6))) # (!\i_RF.RA_ADR[1]~input_o\))) # (!\OutputMux1|Mux1~2_combout\ & (\i_RF.RA_ADR[1]~input_o\ & ((\RegistersGeneration:2:REGn|Q\(6)))))
+-- \OutputMux1|Mux1~3_combout\ = (\OutputMux1|Mux1~2_combout\ & (((\RegistersGeneration:3:dff|Q\(6))) # (!\i_RF.RA_ADR[1]~input_o\))) # (!\OutputMux1|Mux1~2_combout\ & (\i_RF.RA_ADR[1]~input_o\ & ((\RegistersGeneration:2:dff|Q\(6)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4829,14 +4829,14 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \OutputMux1|Mux1~2_combout\,
 	datab => \i_RF.RA_ADR[1]~input_o\,
-	datac => \RegistersGeneration:3:REGn|Q\(6),
-	datad => \RegistersGeneration:2:REGn|Q\(6),
+	datac => \RegistersGeneration:3:dff|Q\(6),
+	datad => \RegistersGeneration:2:dff|Q\(6),
 	combout => \OutputMux1|Mux1~3_combout\);
 
 -- Location: LCCOMB_X5_Y1_N30
 \OutputMux1|Mux1~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux1~0_combout\ = (\i_RF.RA_ADR[1]~input_o\ & ((\RegistersGeneration:6:REGn|Q\(6)) # ((\i_RF.RA_ADR[0]~input_o\)))) # (!\i_RF.RA_ADR[1]~input_o\ & (((\RegistersGeneration:4:REGn|Q\(6) & !\i_RF.RA_ADR[0]~input_o\))))
+-- \OutputMux1|Mux1~0_combout\ = (\i_RF.RA_ADR[1]~input_o\ & ((\RegistersGeneration:6:dff|Q\(6)) # ((\i_RF.RA_ADR[0]~input_o\)))) # (!\i_RF.RA_ADR[1]~input_o\ & (((\RegistersGeneration:4:dff|Q\(6) & !\i_RF.RA_ADR[0]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4845,15 +4845,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \i_RF.RA_ADR[1]~input_o\,
-	datab => \RegistersGeneration:6:REGn|Q\(6),
-	datac => \RegistersGeneration:4:REGn|Q\(6),
+	datab => \RegistersGeneration:6:dff|Q\(6),
+	datac => \RegistersGeneration:4:dff|Q\(6),
 	datad => \i_RF.RA_ADR[0]~input_o\,
 	combout => \OutputMux1|Mux1~0_combout\);
 
 -- Location: LCCOMB_X4_Y2_N12
 \OutputMux1|Mux1~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux1~1_combout\ = (\OutputMux1|Mux1~0_combout\ & (((\RegistersGeneration:7:REGn|Q\(6))) # (!\i_RF.RA_ADR[0]~input_o\))) # (!\OutputMux1|Mux1~0_combout\ & (\i_RF.RA_ADR[0]~input_o\ & (\RegistersGeneration:5:REGn|Q\(6))))
+-- \OutputMux1|Mux1~1_combout\ = (\OutputMux1|Mux1~0_combout\ & (((\RegistersGeneration:7:dff|Q\(6))) # (!\i_RF.RA_ADR[0]~input_o\))) # (!\OutputMux1|Mux1~0_combout\ & (\i_RF.RA_ADR[0]~input_o\ & (\RegistersGeneration:5:dff|Q\(6))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4863,8 +4863,8 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \OutputMux1|Mux1~0_combout\,
 	datab => \i_RF.RA_ADR[0]~input_o\,
-	datac => \RegistersGeneration:5:REGn|Q\(6),
-	datad => \RegistersGeneration:7:REGn|Q\(6),
+	datac => \RegistersGeneration:5:dff|Q\(6),
+	datad => \RegistersGeneration:7:dff|Q\(6),
 	combout => \OutputMux1|Mux1~1_combout\);
 
 -- Location: LCCOMB_X4_Y2_N26
@@ -4886,7 +4886,7 @@ PORT MAP (
 -- Location: LCCOMB_X4_Y1_N12
 \OutputMux1|Mux0~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux0~0_combout\ = (\i_RF.RA_ADR[1]~input_o\ & (((\RegistersGeneration:6:REGn|Q\(7)) # (\i_RF.RA_ADR[0]~input_o\)))) # (!\i_RF.RA_ADR[1]~input_o\ & (\RegistersGeneration:4:REGn|Q\(7) & ((!\i_RF.RA_ADR[0]~input_o\))))
+-- \OutputMux1|Mux0~0_combout\ = (\i_RF.RA_ADR[1]~input_o\ & (((\RegistersGeneration:6:dff|Q\(7)) # (\i_RF.RA_ADR[0]~input_o\)))) # (!\i_RF.RA_ADR[1]~input_o\ & (\RegistersGeneration:4:dff|Q\(7) & ((!\i_RF.RA_ADR[0]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4895,15 +4895,15 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \i_RF.RA_ADR[1]~input_o\,
-	datab => \RegistersGeneration:4:REGn|Q\(7),
-	datac => \RegistersGeneration:6:REGn|Q\(7),
+	datab => \RegistersGeneration:4:dff|Q\(7),
+	datac => \RegistersGeneration:6:dff|Q\(7),
 	datad => \i_RF.RA_ADR[0]~input_o\,
 	combout => \OutputMux1|Mux0~0_combout\);
 
 -- Location: LCCOMB_X3_Y1_N18
 \OutputMux1|Mux0~1\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux0~1_combout\ = (\OutputMux1|Mux0~0_combout\ & (((\RegistersGeneration:7:REGn|Q\(7)) # (!\i_RF.RA_ADR[0]~input_o\)))) # (!\OutputMux1|Mux0~0_combout\ & (\RegistersGeneration:5:REGn|Q\(7) & ((\i_RF.RA_ADR[0]~input_o\))))
+-- \OutputMux1|Mux0~1_combout\ = (\OutputMux1|Mux0~0_combout\ & (((\RegistersGeneration:7:dff|Q\(7)) # (!\i_RF.RA_ADR[0]~input_o\)))) # (!\OutputMux1|Mux0~0_combout\ & (\RegistersGeneration:5:dff|Q\(7) & ((\i_RF.RA_ADR[0]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4911,16 +4911,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \RegistersGeneration:5:REGn|Q\(7),
+	dataa => \RegistersGeneration:5:dff|Q\(7),
 	datab => \OutputMux1|Mux0~0_combout\,
-	datac => \RegistersGeneration:7:REGn|Q\(7),
+	datac => \RegistersGeneration:7:dff|Q\(7),
 	datad => \i_RF.RA_ADR[0]~input_o\,
 	combout => \OutputMux1|Mux0~1_combout\);
 
 -- Location: LCCOMB_X3_Y2_N26
 \OutputMux1|Mux0~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux0~2_combout\ = (\i_RF.RA_ADR[0]~input_o\ & ((\RegistersGeneration:1:REGn|Q\(7)) # ((\i_RF.RA_ADR[1]~input_o\)))) # (!\i_RF.RA_ADR[0]~input_o\ & (((\RegistersGeneration:0:REGn|Q\(7) & !\i_RF.RA_ADR[1]~input_o\))))
+-- \OutputMux1|Mux0~2_combout\ = (\i_RF.RA_ADR[0]~input_o\ & ((\RegistersGeneration:1:dff|Q\(7)) # ((\i_RF.RA_ADR[1]~input_o\)))) # (!\i_RF.RA_ADR[0]~input_o\ & (((\RegistersGeneration:0:dff|Q\(7) & !\i_RF.RA_ADR[1]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4928,8 +4928,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \RegistersGeneration:1:REGn|Q\(7),
-	datab => \RegistersGeneration:0:REGn|Q\(7),
+	dataa => \RegistersGeneration:1:dff|Q\(7),
+	datab => \RegistersGeneration:0:dff|Q\(7),
 	datac => \i_RF.RA_ADR[0]~input_o\,
 	datad => \i_RF.RA_ADR[1]~input_o\,
 	combout => \OutputMux1|Mux0~2_combout\);
@@ -4937,7 +4937,7 @@ PORT MAP (
 -- Location: LCCOMB_X3_Y2_N12
 \OutputMux1|Mux0~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \OutputMux1|Mux0~3_combout\ = (\OutputMux1|Mux0~2_combout\ & (((\RegistersGeneration:3:REGn|Q\(7)) # (!\i_RF.RA_ADR[1]~input_o\)))) # (!\OutputMux1|Mux0~2_combout\ & (\RegistersGeneration:2:REGn|Q\(7) & ((\i_RF.RA_ADR[1]~input_o\))))
+-- \OutputMux1|Mux0~3_combout\ = (\OutputMux1|Mux0~2_combout\ & (((\RegistersGeneration:3:dff|Q\(7)) # (!\i_RF.RA_ADR[1]~input_o\)))) # (!\OutputMux1|Mux0~2_combout\ & (\RegistersGeneration:2:dff|Q\(7) & ((\i_RF.RA_ADR[1]~input_o\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4945,8 +4945,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \RegistersGeneration:2:REGn|Q\(7),
-	datab => \RegistersGeneration:3:REGn|Q\(7),
+	dataa => \RegistersGeneration:2:dff|Q\(7),
+	datab => \RegistersGeneration:3:dff|Q\(7),
 	datac => \OutputMux1|Mux0~2_combout\,
 	datad => \i_RF.RA_ADR[1]~input_o\,
 	combout => \OutputMux1|Mux0~3_combout\);

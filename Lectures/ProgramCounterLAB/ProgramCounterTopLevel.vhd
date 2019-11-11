@@ -44,23 +44,11 @@ DataOut :out std_logic
 end component;
 
 begin
-GenerateDFFs:
-for i  in 0 to 7 generate 
-DFFn : DFF_1 port map (DATA_DMUX_BitFF(i),COUNT_CMUX_BitFF(i),i_PC.RESET ,o_PC.PC_COUNT_OUT(i),COUNT_BitFF_CMUX_DMUX(i));
-end generate;
 
-GenerateDMUX:
-for i  in 0 to 7 generate 
-DMUX : MUX_2_1 port map (COUNT_BitFF_CMUX_DMUX(i) , i_PC.PC_DATA_IN(i) ,i_PC.LOAD , DATA_DMUX_BitFF(i));
-end generate;
 
 
 CMUX1 : MUX_2_1 port map (i_pc.COUNT , i_pc.WRITE_DATA ,i_pc.LOAD , COUNT_CMUX_BitFF(0));
 
 
-GenerateCMUX:
-for i  in 1 to 7 generate 
-CMUX : MUX_2_1 port map (COUNT_BitFF_CMUX_DMUX(i-1) , i_pc.WRITE_DATA ,i_pc.LOAD , COUNT_CMUX_BitFF(i));
-end generate;
 
 end;

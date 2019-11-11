@@ -82,7 +82,7 @@ begin
 RegistersGeneration:
 --Generating  Registers 
 for i  in 0 to 7 generate 
-
+dff : DFF_8 port map (WIRE_DEMUXO_REGFI(i),WIRE_DECODEO_REGCLK(i),i_RF.reset ,WIRE_MUXI_REGFO(i));
 end generate ;  
 
 --Generating Output multiplexers

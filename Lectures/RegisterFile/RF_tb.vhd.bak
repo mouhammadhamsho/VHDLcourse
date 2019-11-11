@@ -1,0 +1,20 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+ENTITY RF_tb IS
+END RF_tb;
+ARCHITECTURE RF_tb OF RF_tb IS 
+    COMPONENT RegisterFileTopLeve
+    PORT(
+		i_RF					: in r_RF_IN;
+		o_RF					: out r_RF_OUT
+        );
+    END COMPONENT;
+ SIGNAL i_RF					: r_RF_IN;
+SIGNA o_RF					:  r_RF_OUT;
+BEGIN
+ uut: RegisterFileTopLeve PORT MAP (
+       i_RF					: in r_RF_IN;
+o_RF					: out r_RF_OUT
+        );
+   
+END;
