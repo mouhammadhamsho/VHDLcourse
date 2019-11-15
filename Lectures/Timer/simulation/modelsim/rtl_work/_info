@@ -1,0 +1,79 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\temp\VHDLcourse\VHDLcourse\Lectures\Timer\simulation\modelsim
+Etimer
+Z1 w1573825694
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\temp\VHDLcourse\VHDLcourse\Lectures\Timer\simulation\modelsim
+Z6 8C:/temp/VHDLcourse/VHDLcourse/Lectures/Timer/Timer.vhd
+Z7 FC:/temp/VHDLcourse/VHDLcourse/Lectures/Timer/Timer.vhd
+l0
+L6
+VR1ZU_d>gHDFX=o[GLC75_0
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1573827240.517000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/temp/VHDLcourse/VHDLcourse/Lectures/Timer/Timer.vhd|
+Z11 !s107 C:/temp/VHDLcourse/VHDLcourse/Lectures/Timer/Timer.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 >F13I<Z9PAaoU^d_LWF>L3
+!i10b 1
+Artl
+R2
+R3
+R4
+DEx4 work 5 timer 0 22 R1ZU_d>gHDFX=o[GLC75_0
+l21
+L16
+VIfU8K`7XCzQjSYX3^KGb33
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 4MXS7fhWk25@6[FF9GajR3
+!i10b 1
+Etimertb
+Z14 w1573826774
+R2
+R3
+R4
+R5
+Z15 8C:/temp/VHDLcourse/VHDLcourse/Lectures/Timer/Timer_tb.vhd
+Z16 FC:/temp/VHDLcourse/VHDLcourse/Lectures/Timer/Timer_tb.vhd
+l0
+L5
+VKR5Vg8j=aHBZk:hNlVD?J1
+!s100 ]P7lYzNl;?eLfMM5E@mV72
+R8
+31
+!i10b 1
+Z17 !s108 1573827240.677000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/temp/VHDLcourse/VHDLcourse/Lectures/Timer/Timer_tb.vhd|
+Z19 !s107 C:/temp/VHDLcourse/VHDLcourse/Lectures/Timer/Timer_tb.vhd|
+R12
+R13
+Asim
+R2
+R3
+R4
+DEx4 work 7 timertb 0 22 KR5Vg8j=aHBZk:hNlVD?J1
+l25
+L8
+V`U5EU8abe6jdlNlNbCPcI2
+!s100 Shf3W0Dh1Z5KF7@HMlD8P2
+R8
+31
+!i10b 1
+R17
+R18
+R19
+R12
+R13
